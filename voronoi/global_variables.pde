@@ -1,4 +1,4 @@
-int lineNumber = 9; // Line of the partitions file which we want to load
+int lineNumber = 9; // Line of the partition file which we want to load
 
 // Variables that will be used for reading the partition from a file
 BufferedReader reader;
@@ -13,3 +13,5 @@ float partition[][][];
 float barycenters[][];
 
 Voronoi my_voronoi;
+
+float symmetric_diff;
