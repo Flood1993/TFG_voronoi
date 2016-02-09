@@ -26,15 +26,15 @@ void drawPoints() {
         stroke(0,255,0); //draw in green
         
         for (int i = 0; i < partition.length; i++) { // for each polygon
-                line( partition[i][0][0] * scale, // connect first and last
-                        partition[i][0][1] * scale,
-                        partition[i][partition[i].length - 1][0] * scale,
-                        partition[i][partition[i].length - 1][1] * scale); 
+                line( partition[i][0][0], // connect first and last
+                        partition[i][0][1],
+                        partition[i][partition[i].length - 1][0],
+                        partition[i][partition[i].length - 1][1]); 
                 for (int j = 0; j < partition[i].length - 1; j++)
-                        line( partition[i][j][0] * scale, 
-                                partition[i][j][1] * scale,
-                                partition[i][j+1][0] * scale,
-                                partition[i][j+1][1] * scale);
+                        line( partition[i][j][0], 
+                                partition[i][j][1],
+                                partition[i][j+1][0],
+                                partition[i][j+1][1]);
         }
         stroke(0); //draw in black
 }

@@ -7,8 +7,8 @@ void initializeBarycenters() {
                 sumX = 0;
                 sumY = 0;
                 for (int j = 0; j < partition[i].length; j++) {
-                        sumX += partition[i][j][0]*scale;
-                        sumY += partition[i][j][1]*scale;
+                        sumX += partition[i][j][0];
+                        sumY += partition[i][j][1];
                 }
                 barycenters[i][0] = sumX/partition[i].length;
                 barycenters[i][1] = sumY/partition[i].length;
@@ -54,8 +54,8 @@ void initializePartition(int lineNumber) {
 
                 for (int j = 1; j < pointPairs.length; j++) {
                         String[] point = pointPairs[j].split(",");
-                        partition[i-2][j-1][0] = Float.parseFloat(point[0]); 
-                        partition[i-2][j-1][1] = Float.parseFloat(point[1]);
+                        partition[i-2][j-1][0] = Float.parseFloat(point[0]) * scale; 
+                        partition[i-2][j-1][1] = Float.parseFloat(point[1]) * scale;
                 }
         }
 
