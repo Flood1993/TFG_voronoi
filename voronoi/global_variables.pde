@@ -10,5 +10,6 @@ float partition[][][]; // [polygon][point][x or y coordinate]
 float barycenters[][]; // [polygon][x or y coordinate]
 
 Voronoi my_voronoi;
+float[][][] fl_voronoi;
 
 float symmetric_diff;
