@@ -21,7 +21,6 @@ void setup() {
 
 // Executed every frame
 void draw() {
-
         // order of drawing is important because of overlapping
         drawVoronoi();
         drawPoints();
