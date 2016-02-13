@@ -23,6 +23,6 @@ void setup() {
 void draw() {
   // order of drawing is important because of overlapping
   drawVoronoi();
-  drawPoints();
+  drawPartition();
   drawBarycenters();
 }

@@ -21,8 +21,8 @@ void drawVoronoi() {
   fill(0); //fill in black
 }
 
-// Draws the "points" array to the screen
-void drawPoints() {
+// Draws the "partition" array to the screen
+void drawPartition() {
   stroke(0,255,0); //draw in green
   
   for (int i = 0; i < partition.length; i++) { //for each polygon
