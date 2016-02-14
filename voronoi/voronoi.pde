@@ -308,7 +308,7 @@ float[][] intersect_points(float pts[][]) {
                 tmp2[cnt2][1] = 0;
                 cnt2++;
             }
-            if (hack == 3) {// top right must be added
+            if (hack == 3) { // top right must be added
                 tmp2[cnt2][0] = scale;
                 tmp2[cnt2][1] = 0;
                 cnt2++;
@@ -318,10 +318,46 @@ float[][] intersect_points(float pts[][]) {
                 tmp2[cnt2][1] = scale;
                 cnt2++;
             }
-            if (hack == 6) {// bottom right must be added
+            if (hack == 6) { // bottom right must be added
                 tmp2[cnt2][0] = scale;
                 tmp2[cnt2][1] = scale;
                 cnt2++;
+            }
+
+            // FIXME: This patch doesn't always work.
+            // Only works if opposite edges come from going around the square
+            // Not if there is a direct line between them
+            if (edge_cur == 1 && edge_next == 3) {
+                tmp2[cnt2][0] = scale;
+                tmp2[cnt2][1] = 0;
+                cnt2++;
+                tmp2[cnt2][0] = scale;
+                tmp2[cnt2][1] = scale;
+                cnt2++; 
+            }
+            if (edge_cur == 2 && edge_next == 4) {
+                tmp2[cnt2][0] = scale;
+                tmp2[cnt2][1] = scale;
+                cnt2++;
+                tmp2[cnt2][0] = 0;
+                tmp2[cnt2][1] = scale;
+                cnt2++; 
+            }
+            if (edge_cur == 3 && edge_next == 1) {
+                tmp2[cnt2][0] = 0;
+                tmp2[cnt2][1] = scale;
+                cnt2++;
+                tmp2[cnt2][0] = 0;
+                tmp2[cnt2][1] = 0;
+                cnt2++; 
+            }
+            if (edge_cur == 4 && edge_next == 2) {
+                tmp2[cnt2][0] = 0;
+                tmp2[cnt2][1] = 0;
+                cnt2++;
+                tmp2[cnt2][0] = scale;
+                tmp2[cnt2][1] = 0;
+                cnt2++; 
             }
         }
     }
@@ -371,7 +407,94 @@ float ver_inter(float p1[], float p2[], float x_pos) {
     return (t >= 0 && t <= 1 && res >= 0 && res <= scale) ? res : -1;
 }
 
+
+// Returns whether segments P1P2 and P3P4 cross or not
+boolean cross(float p1[], float p2[], float p3[], float p4[]) {
+    float x1 = p1[0];
+    float y1 = p1[1];
+    float x2 = p2[0];
+    float y2 = p2[1];
+    float x3 = p3[0];
+    float y3 = p3[1];
+    float x4 = p4[0];
+    float y4 = p4[1];
+
+    float den = (x2 - x1)*(y4 - y3) - (y2 - y1)*(x4 - x3);
+
+    if (den == 0)
+        return false;
+
+    float num = (x2 - x1)*(y1 - y3) + (y2 - y1)*(x3 - x1);
+
+    float k = num/den;
+
+    if (k >= 0 && k <= 1)
+        return true;
+
+    return false;
+}
+
+
+// Returns the intersection point between P1P2 and P3P4
+// Call only checking with cross before
+float[] intersection_point(float p1[], float p2[], float p3[], float p4[]) {
+    float x1 = p1[0];
+    float y1 = p1[1];
+    float x2 = p2[0];
+    float y2 = p2[1];
+    float x3 = p3[0];
+    float y3 = p3[1];
+    float x4 = p4[0];
+    float y4 = p4[1];
+
+    float num = (x2 - x1)*(y1 - y3) + (y2 - y1)*(x3 - x1);
+    float den = (x2 - x1)*(y4 - y3) - (y2 - y1)*(x4 - x3);
+
+    float k = num/den;
+
+    float res[] = new float[2];
+    res[0] = x3 + (x4 - x3)*k;
+    res[1] = y3 + (y4 - y3)*k;
+
+    return res;
+}
+
+// Returns the symmetric difference for the polygon i
+float symmetric_diff(int i) {
+    // elegir un inicio. cuando dos aristas se crucen, sus inicios nos valen
+    // así, una ira por fuera y la otra por dentro.
+    boolean found = false;
+
+    // Initialize copies
+    float _part[][] = copy_array(partition, i);
+    float _vor[][] = copy_array(fl_voronoi, i);
+
+    while (!found) { // FIXME: If there is no intersection, infinite loop
+
+    }
+
+    // despues, empezando en cada uno, tengo que generarme un nuevo poligono
+    // siempre moviendome por la que estoy, y en cada interseccion, cambiar
+
+    // cuando tenga esos dos poligonos, miro a ver las areas de cada uno
+    // desde el baricentro. la diferencia simetrica es la mayor menos la menor
+
+    // muevo puntos aleatoriamente y comparo
+    return 1;
+}
+
 void dbg(String txt) {
     System.out.println("dbg " + txt);
     delay(200);
+}
+
+float[][] copy_array(float arr[][][], int pos) {
+    float res[][] = new float[arr[pos].length][2];
+
+    for (int i = 0; i < arr[pos].length; i++) {
+        res[i][0] = arr[pos][i][0];
+        res[i][1] = arr[pos][i][1];
+    }
+
+    return res;
 }

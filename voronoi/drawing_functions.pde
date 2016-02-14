@@ -38,7 +38,7 @@ void drawFlVoronoi() {
                     fl_voronoi[i][j][1],
                     fl_voronoi[i][j+1][0],
                     fl_voronoi[i][j+1][1]);
-    }       
+    } 
       
     stroke(0); //fill in black
     strokeWeight(1); // draw normal size
