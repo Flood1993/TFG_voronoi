@@ -31,22 +31,6 @@ float[][][] intersectVoronoi(Voronoi vor) {
     return res;
 }
 
-// Intersects the Voronoi diagram to the scale*scale square
-float[][][] intersectVoronoi(Voronoi vor) {
-        float res[][][];
-
-        MPolygon[] my_regions = vor.getRegions();
-        res = new float[my_regions.length][][];
-
-        for (int i = 0; i < my_regions.length; i++) {
-                float[][] coords = my_regions[i].getCoords();
-                
-                res[i] = intersect_points(coords);
-        }
-
-        return res;
-}
-
 // Loads information from an external file, storing it in "partition"
 //
 // Information from file to be read is considered to be as follows:

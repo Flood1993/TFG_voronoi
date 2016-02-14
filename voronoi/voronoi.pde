@@ -17,7 +17,7 @@ void setup() {
     initializePartition(lineNumber);
     initializeBarycenters();
     my_voronoi = new Voronoi(barycenters);
-    fl_voronoi = intersectVoronoi(my_voronoi);
+    //fl_voronoi = intersectVoronoi(my_voronoi);
     
     System.out.println(init_succesful);
 }
@@ -48,6 +48,14 @@ int find_first_point(int n) {
     return cur;
 }
 
+// 1. Para cada polígono, meto en la lista ordenadamente todas las
+//    intersecciones, hasta llegar al punto de partida.
+// 2. Si empece en un punto de fuera, cuidado, que al volver puedo haber
+//    recortado una esquina.
+// 3. Después, simplemente tengo que ir mirando que puntos me sobran de esa
+//    lista
+// 4. Mucho cuidado con las intersecciones, si salgo y vuelvo por otra cara,
+//    hay que meter la esquina a mano
 float[][] intersect_points(float pts[][]) {
     float[][] res = pts.clone();
 
@@ -70,14 +78,14 @@ float[][] intersect_points(float pts[][]) {
             if (res[0][0] == res[res.length - 1][0]) {
                 if (res[0][1] < 0)
                     res[0][1] = 0;
-                else
+                if (res[0][1] > scale)
                     res[0][1] = scale;
             }
             // same y coord
             else if (res[0][1] == res[res.length - 1][1]) {
                 if (res[0][0] < 0)
                     res[0][0] = 0;
-                else
+                if (res[0][0] > scale)
                     res[0][0] = scale;
             }
             else { // diagonal line
@@ -89,7 +97,7 @@ float[][] intersect_points(float pts[][]) {
                         res[0][1] = y_inter;
                     }
                 }
-                else if (res[0][0] > scale) {
+                if (res[0][0] > scale) {
                     float y_inter = ver_inter(res[0][0], res[0][1],
                             res[res.length - 1][0], res[res.length - 1][1],
                             scale);
@@ -98,7 +106,7 @@ float[][] intersect_points(float pts[][]) {
                         res[0][1] = y_inter;
                     }
                 }
-                else if (res[0][1] < 0) {
+                if (res[0][1] < 0) {
                     float x_inter = hor_inter(res[0][0], res[0][1],
                             res[res.length - 1][0], res[res.length - 1][1], 0);
                     if (x_inter >= 0 && x_inter <= scale) {
@@ -106,7 +114,7 @@ float[][] intersect_points(float pts[][]) {
                         res[0][1] = 0;
                     }
                 }
-                else if (res[0][1] > scale) {
+                if (res[0][1] > scale) {
                     float x_inter = hor_inter(res[0][0], res[0][1],
                             res[res.length - 1][0], res[res.length - 1][1],
                             scale);
@@ -129,19 +137,18 @@ float[][] intersect_points(float pts[][]) {
                     res[i - 1][0] <= scale &&
                     res[i - 1][1] >= 0 &&
                     res[i - 1][1] <= scale)) {
-                System.out.println("Bugging...");
                 // same x coord
                 if (res[i][0] == res[i - 1][0]) {
                     if (res[i][1] < 0)
                         res[i][1] = 0;
-                    else
+                    if (res[i][1] > scale)
                         res[i][1] = scale;
                 }
                 // same y coord
                 else if (res[i][1] == res[i - 1][1]) {
                     if (res[i][0] < 0)
                         res[i][0] = 0;
-                    else
+                    if (res[i][0] > scale)
                         res[i][0] = scale;
                 }
                 else { // diagonal line
@@ -153,7 +160,7 @@ float[][] intersect_points(float pts[][]) {
                             res[i][1] = y_inter;
                         }
                     }
-                    else if (res[i][0] > scale) {
+                    if (res[i][0] > scale) {
                         float y_inter = ver_inter(res[i][0], res[i][1],
                                 res[i - 1][0], res[i - 1][1], scale);
                         if (y_inter >= 0 && y_inter <= scale) {
@@ -161,7 +168,7 @@ float[][] intersect_points(float pts[][]) {
                             res[i][1] = y_inter;
                         }
                     }
-                    else if (res[i][1] < 0) {
+                    if (res[i][1] < 0) {
                         float x_inter = hor_inter(res[i][0], res[i][1],
                                 res[i - 1][0], res[i - 1][1], 0);
                         if (x_inter >= 0 && x_inter <= scale) {
@@ -169,13 +176,13 @@ float[][] intersect_points(float pts[][]) {
                             res[i][1] = 0;
                         }
                     }
-                    else if (res[i][1] > scale) {
+                    if (res[i][1] > scale) {
                         float x_inter = hor_inter(res[i][0], res[i][1],
                                 res[i - 1][0], res[i - 1][1], scale);
                         if (x_inter >= 0 && x_inter <= scale) {
                             res[i][0] = x_inter;
                             res[i][1] = scale;
-                        } 
+                        }
                     }
                 }
                 changed = true;
@@ -196,4 +203,9 @@ float hor_inter(float x1, float y1, float x2, float y2, float y_pos) {
 float ver_inter(float x1, float y1, float x2, float y2, float x_pos) {
     float t = (x_pos - x1)/(x2 - x1);
     return (y1 + (y2 - y1)*t);
+}
+
+void dbg(String txt) {
+    System.out.println("dbg " + txt);
+    delay(200);
 }
