@@ -10,6 +10,7 @@ float partition[][][]; // [polygon][point][x or y coordinate]
 float barycenters[][]; // [polygon][x or y coordinate]
 
 Voronoi my_voronoi;
-float[][][] fl_voronoi;
+float[][][] fl_voronoi; // will contain the voronoi diagram adjusted to the
+						// scale*scale square
 
 float symmetric_diff;
