@@ -33,7 +33,8 @@ void draw() {
     //drawFlVoronoi(); // adjusted voronoi to square
 }
 
-// Returns a value in [0, 1] if the point is contained in segment
+// Returns a value in [0, 1) if the point is contained in segment or is the
+//      start of it
 // Furthermore, that value is the value of the parameter P = s1+(s2-s1)*t
 // -1 if its not
 float point_in_segment(float[] s1, float[] s2, float[] point) {
@@ -48,7 +49,7 @@ float point_in_segment(float[] s1, float[] s2, float[] point) {
 
     float t = (p1 - x1)/(x2 - x1);
 
-    if (p2 == (y1 + (y2 - y1)*t) && t > 0 && t < 1)
+    if (p2 == (y1 + (y2 - y1)*t) && t >= 0 && t < 1)
         return t;
 
     return -1;
@@ -169,7 +170,7 @@ ArrayList<float []> segment_intersection(float[] l1, float[] l2, float[] s1,
     }
 }
 
-/*
+
 // Returns a list with the raw intersection points of two polygons
 ArrayList<float []> raw_intersection_points(float[][] pol1, float[][] pol2) {
     ArrayList<float []> res = new ArrayList<float []>();
@@ -183,13 +184,28 @@ ArrayList<float []> raw_intersection_points(float[][] pol1, float[][] pol2) {
             next_j = (j == pol2.length - 1) ? 0 : j+1;
 
             tmp.clear();
-            tmp = segment_intersection()
+            tmp = segment_intersection(pol1[i], pol1[next_i], pol2[j],
+                    pol2[next_j]);
+
+            for (int k = 0; k < tmp.size(); k++) {
+                res.add(tmp.get(k));
+            }
         }
     }
 
     return res;
 }
-*/
+
+// Returns the area of a triangle using cross product
+// Orientation of ABC is assumed to be positive (counter-clockwise)
+float area_triang(float A[], float B[], float C[]) {
+    float ax = A[0], ay = A[1];
+    float bx = B[0], by = B[1];
+    float cx = C[0], cy = C[1];
+
+    return ((bx*cy - cx*by) - (ax*cy - cx*ay) + (ax*by - bx*ay))/2;
+}
+
 
 /*
 // First point above the height of the barycenter for a partition polygon
