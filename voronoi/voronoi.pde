@@ -14,23 +14,184 @@ void setup() {
         exit();
     }
 
-    initializePartition(lineNumber);
-    initializeBarycenters();
-    my_voronoi = new Voronoi(barycenters);
-    fl_voronoi = intersectVoronoi(my_voronoi);
-    
-    System.out.println(init_succesful);
+    t_call(); // Functions starting with t_* are related to testing
+
+    //initializePartition(lineNumber);
+    //initializeBarycenters();
+    //my_voronoi = new Voronoi(barycenters);
+    //fl_voronoi = intersectVoronoi(my_voronoi);
+    //
+    //System.out.println(init_succesful);
 }
 
 // Executed every frame
 void draw() {
     // order of drawing is important because of overlapping
     //drawVoronoi(); // voronoi calculated from "barycenters" - DEPRECATED
-    drawPoints(); // given partition
-    drawBarycenters(); // calculated "barycenters"
-    drawFlVoronoi(); // adjusted voronoi to square
+    //drawPoints(); // given partition
+    //drawBarycenters(); // calculated "barycenters"
+    //drawFlVoronoi(); // adjusted voronoi to square
 }
 
+// Returns a value in [0, 1] if the point is contained in segment
+// Furthermore, that value is the value of the parameter P = s1+(s2-s1)*t
+// -1 if its not
+float point_in_segment(float[] s1, float[] s2, float[] point) {
+    float x1 = s1[0];
+    float y1 = s1[1];
+
+    float x2 = s2[0];
+    float y2 = s2[1];
+
+    float p1 = point[0];
+    float p2 = point[1];
+
+    float t = (p1 - x1)/(x2 - x1);
+
+    if (p2 == (y1 + (y2 - y1)*t) && t > 0 && t < 1)
+        return t;
+
+    return -1;
+}
+
+ArrayList<float []> segment_intersection(float[] l1, float[] l2, float[] s1,
+        float[] s2) {
+    ArrayList<float []> res = new ArrayList<float []>();
+
+    float x1 = l1[0];
+    float y1 = l1[1];
+
+    float x2 = l2[0];
+    float y2 = l2[1];
+
+    float x3 = s1[0];
+    float y3 = s1[1];
+
+    float x4 = s2[0];
+    float y4 = s2[1];
+
+    // Same segments
+    if (x1 == x3 && x2 == x4 && y1 == y3 && y2 == y4) {
+        res.add(l1);
+        res.add(l2);
+
+        return res;
+    }
+    // Both are vertical
+    // FIXME: Maybe the order of checking is wrong
+    if (x1 == x2 && x3 == x4) { // Both vectors are vertical
+        if (x1 == x3) { // Both vectors belong to the same line
+            if (y1 == y3 || y1 == y4)
+                res.add(l1);
+            if (y2 == y3 || y2 == y4)
+                res.add(l2);
+            if ((y1 > y3 && y1 < y4) || (y1 < y3 && y1 > y4))
+                res.add(l1); // y1
+            if ((y2 > y3 && y2 < y4) || (y2 < y3 && y2 > y4))
+                res.add(l2); // y2
+            if ((y3 > y1 && y3 < y2) || (y3 < y1 && y3 > y2))
+                res.add(s1); // y3
+            if ((y4 > y1 && y4 < y2) || (y4 < y1 && y4 > y2))
+                res.add(s2); // y4
+        }
+        // Vectors belong to different lines. In any case, end.
+        return res;
+    }
+    // One is vertical
+    // FIXME: Check that t is a correct value (> 0 && < 1)
+    if (x1 == x2 || x3 == x4) {
+        if (x1 == x2) { // First is vertical
+            float t = (x1 - x3)/(x4 - x3);
+            if (t >= 0 && t <= 1) {
+                float y_itsc = y3 + (y4 - y3)*t;
+
+                if ((y1 >= y_itsc && y2 <= y_itsc) || 
+                        (y1 <= y_itsc && y2 >= y_itsc))
+                    res.add(new float[]{x1, y_itsc});
+            }
+        }
+
+        if (x3 == x4) { // Second is vertical
+            float t = (x3 - x1)/(x2 - x1);
+            if (t >= 0 && t <= 1) {
+                float y_itsc = y1 + (y2 - y1)*t;
+
+                if ((y3 >= y_itsc && y4 <= y_itsc) ||
+                        (y3 <= y_itsc && y4 >= y_itsc))
+                    res.add(new float[]{x3, y_itsc});
+            }
+        }
+
+        return res;
+    }
+    // Diagonal. Check slopes of vectors
+    float slope_l1 = (x1 < x2) ? (y2 - y1)/(x2 - x1) : (y1 - y2)/(x1 - x2);
+    float slope_l2 = (x3 < x4) ? (y4 - y3)/(x4 - x3) : (y3 - y4)/(x3 - x4);
+    //      Same slope
+    if (slope_l1 == slope_l2) {
+        float t1 = (x3 - x1)/(x2 - x1);
+        //float t2 = (y3 - y1)/(y2 - y1);
+    //          Same line - check for all points and get intersection
+        //if (t1 == t2) { // Point from one is contained in the other
+                        // Since its diagonal, we just check the x coordinates
+        if (y3 == (y1 + (y2 - y1)*t1)) {
+            if (x1 == x3 || x1 == x4)
+                res.add(l1);
+            if (x2 == x3 || x2 == x4)
+                res.add(l2);
+            if ((x1 > x3 && x1 < x4) || (x1 < x3 && x1 > x4))
+                res.add(l1); // y1
+            if ((x2 > x3 && x2 < x4) || (x2 < x3 && x2 > x4))
+                res.add(l2); // y2
+            if ((x3 > x1 && x3 < x2) || (x3 < x1 && x3 > x2))
+                res.add(s1); // y3
+            if ((x4 > x1 && x4 < x2) || (x4 < x1 && x4 > x2))
+                res.add(s2); // y4
+            // FIXME: This code is copypasted from above
+        }
+    //          Different line - empty intersection
+    // In any case, end
+        return res; 
+    }
+
+    //      Different slope
+    else {
+    //          Check for normal intersection (reuse formula)
+        // TODO: Check k in [0, 1] and t in [0, 1]
+        float num = (x2 - x1)*(y1 - y3) + (y2 - y1)*(x3 - x1);
+        float den = (x2 - x1)*(y4 - y3) - (y2 - y1)*(x4 - x3);
+
+        float k = num/den;
+        if (k >= 0 && k <= 1)
+            res.add(new float[]{x3 + (x4 - x3)*k, y3 + (y4 - y3)*k});
+
+        return res;
+    }
+}
+
+/*
+// Returns a list with the raw intersection points of two polygons
+ArrayList<float []> raw_intersection_points(float[][] pol1, float[][] pol2) {
+    ArrayList<float []> res = new ArrayList<float []>();
+    ArrayList<float []> tmp = new ArrayList<float []>();
+
+    int next_i = 0, next_j = 0;
+
+    for (int i = 0; i < pol1.length; i++) {
+        next_i = (i == pol1.length - 1) ? 0 : i+1;
+        for (int j = 0; j < pol2.length; j++) {
+            next_j = (j == pol2.length - 1) ? 0 : j+1;
+
+            tmp.clear();
+            tmp = segment_intersection()
+        }
+    }
+
+    return res;
+}
+*/
+
+/*
 // First point above the height of the barycenter for a partition polygon
 int find_first_point(int n) {
     int cur = 0;
@@ -48,7 +209,9 @@ int find_first_point(int n) {
 
     return cur;
 }
+*/
 
+/*
 // 1. Para cada polígono, meto en la lista ordenadamente todas las
 //    intersecciones, hasta llegar al punto de partida.
 // 2. Si empece en un punto de fuera, cuidado, que al volver puedo haber
@@ -371,13 +534,17 @@ float[][] intersect_points(float pts[][]) {
 
     return pts;
 }
+*/
 
+/*
 // Returns the edge a point is in. -1 if its not.
 // Point is assumed to be inside
 boolean is_point_in(float pt[]) {
     return (pt[0] >= 0 && pt[0] <= scale && pt[1] >= 0 && pt[1] <= scale);
 }
+*/
 
+/*
 int point_in_edge(float pt[]) {
     if (pt[1] == 0) // top
         return 1;
@@ -390,7 +557,9 @@ int point_in_edge(float pt[]) {
 
     return -1; //not in edge
 }
+*/
 
+/*
 // Returns the x coordinate at which a segment intersects y = y_pos
 // -1 if it doesn't intersect in the square (in direction p1p2)
 float hor_inter(float p1[], float p2[], float y_pos) {
@@ -406,8 +575,9 @@ float ver_inter(float p1[], float p2[], float x_pos) {
     float res = (p1[1] + (p2[1] - p1[1])*t);
     return (t >= 0 && t <= 1 && res >= 0 && res <= scale) ? res : -1;
 }
+*/
 
-
+/*
 // Returns whether segments P1P2 and P3P4 cross or not
 boolean cross(float p1[], float p2[], float p3[], float p4[]) {
     float x1 = p1[0];
@@ -433,8 +603,9 @@ boolean cross(float p1[], float p2[], float p3[], float p4[]) {
 
     return false;
 }
+*/
 
-
+/*
 // Returns the intersection point between P1P2 and P3P4
 // Call only checking with cross before
 float[] intersection_point(float p1[], float p2[], float p3[], float p4[]) {
@@ -458,6 +629,7 @@ float[] intersection_point(float p1[], float p2[], float p3[], float p4[]) {
 
     return res;
 }
+*/
 
 // Returns the symmetric difference for the polygon i
 float symmetric_diff(int i) {

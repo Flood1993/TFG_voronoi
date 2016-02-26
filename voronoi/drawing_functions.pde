@@ -26,7 +26,7 @@ void drawVoronoi() {
 // Draws the Voronoi diagram from the float points
 void drawFlVoronoi() {
     stroke(0,0,255); //fill in blue
-    strokeWeight(5); // draw thick lines
+    strokeWeight(2); // draw thick lines
       
     for(int i = 0; i < fl_voronoi.length; i++) {
         line( fl_voronoi[i][0][0], // connect first and last
@@ -47,7 +47,7 @@ void drawFlVoronoi() {
 // Draws the "points" array to the screen
 void drawPoints() {
     stroke(0,255,0); //draw in green
-    strokeWeight(3); // draw thick lines
+    strokeWeight(2); // draw thick lines
     
     for (int i = 0; i < partition.length; i++) { // for each polygon
         line( partition[i][0][0], // connect first and last
