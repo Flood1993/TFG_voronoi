@@ -22,6 +22,8 @@ void setup() {
 
     t_call(); // Functions starting with t_* are related to testing
 
+    System.out.println("Diferencia simétrica total: " + 
+            total_diff(partition, fl_voronoi));
     //System.out.println(init_succesful);
 }
 
@@ -48,9 +50,23 @@ float point_in_segment(float[] s1, float[] s2, float[] point) {
     float p1 = point[0];
     float p2 = point[1];
 
-    float t = (p1 - x1)/(x2 - x1);
+    float t = -1;
+    
+    if (x2 == x1) { // Vertical segment
+        t = (p2 - y1)/(y2 - y1);
 
-    if (p2 == (y1 + (y2 - y1)*t) && t >= 0 && t < 1)
+        if (t >= 0 && t < 1)
+            return t;
+
+        return -1;
+    }
+
+    t = (p1 - x1)/(x2 - x1);
+
+    // Testing rounding
+    //if (p2 == (y1 + (y2 - y1)*t) && t >= 0 && t < 1)
+    float offset = p2 - (y1 + (y2 - y1)*t);
+    if (offset < 0.01 && offset > -0.01 && t >= 0 && t < 1)
         return t;
 
     return -1;
@@ -262,6 +278,9 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
     for (int i = 0; i < itsc_pts.size(); i++) {
         int next_i = (i == itsc_pts.size() - 1) ? 0 : i + 1;
         
+        //System.out.println("\tsymmetric_diff " + i);
+        //delay(200);
+
         pol1_path.clear();
         pol2_path.clear();
 
@@ -272,6 +291,15 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
         // while I haven't found any of them
         while (!found_origin || !found_end) {
             int next_j = (j == pol1.length - 1) ? 0 : j + 1;
+            /*
+            System.out.println("AA I'm stuck here " + i + ", " + j);
+            System.out.println("Origin: " + found_origin + " End: " +
+                    found_end + " End coord: " + itsc_pts.get(next_i)[0] + 
+                    ", " + itsc_pts.get(next_i)[1]);
+            System.out.println("start " + pol1[j][0] + ", " + pol1[j][1] + 
+                    " end " + pol1[next_j][0] + ", " + pol1[next_j][1]);
+            delay(200);
+            */
             // if haven't found origin yet
             if (!found_origin) {
                 if (point_in_segment(pol1[j], pol1[next_j], 
@@ -300,6 +328,15 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
         // while I haven't found any of them
         while (!found_origin || !found_end) {
             int next_j = (j == pol2.length - 1) ? 0 : j + 1;
+            /*
+            System.out.println("BB I'm stuck here " + i + ", " + j);
+            System.out.println("Origin: " + found_origin + " End: " +
+                    found_end + " End coord: " + itsc_pts.get(next_i)[0] + 
+                    ", " + itsc_pts.get(next_i)[1]);
+            System.out.println("start " + pol2[j][0] + ", " + pol2[j][1] + 
+                    " end " + pol2[next_j][0] + ", " + pol2[next_j][1]);
+            delay(200);
+            */
             // if haven't found origin yet
             if (!found_origin) {
                 if (point_in_segment(pol2[j], pol2[next_j], 
@@ -324,7 +361,7 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
         // Calculate total areas of each list of triangles
         float area1 = 0;
         float area2 = 0;
-        float _fds[] = new float[]{13, 43};
+        float _fds[] = new float[]{145, 633}; // 13, 43
 
         for (int q = 0; q < pol1_path.size() - 1; q++) {
             area1 += area_triang(pol1_path.get(q), pol1_path.get(q + 1),
@@ -347,6 +384,22 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
     }
     
     return union_area - 2*itsc_area;
+}
+
+float total_diff(float part1[][][], float part2[][][]) {
+    if (part1.length != part2.length)
+        System.out.println("ERROR: Calculando diferencia simétrica de dos" + 
+                "particiones con distinto número de polígonos.");
+
+    float res = 0;
+
+    System.out.println("part1.length == " + part1.length);
+    for (int i = 0; i < part1.length; i++) { // TODO: Change i = 5 to i = 0
+        System.out.println("\nDebugging from total diff = " + i);
+        res += symmetric_diff(part1[i], part2[i]);
+    }
+
+    return res;
 }
 
 // Returns the area of a triangle using cross product
