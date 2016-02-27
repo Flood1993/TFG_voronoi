@@ -15,7 +15,7 @@ void initializeBarycenters() {
     }
 }
 
-/*
+
 // Intersects the Voronoi diagram to the scale*scale square
 float[][][] intersectVoronoi(Voronoi vor) {
     float res[][][];
@@ -31,7 +31,7 @@ float[][][] intersectVoronoi(Voronoi vor) {
 
     return res;
 }
-*/
+
 
 // Loads information from an external file, storing it in "partition"
 //

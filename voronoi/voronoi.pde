@@ -14,13 +14,14 @@ void setup() {
         exit();
     }
 
+    initializePartition(lineNumber);
+    initializeBarycenters();
+    my_voronoi = new Voronoi(barycenters);
+
+    fl_voronoi = intersectVoronoi(my_voronoi);
+
     t_call(); // Functions starting with t_* are related to testing
 
-    //initializePartition(lineNumber);
-    //initializeBarycenters();
-    //my_voronoi = new Voronoi(barycenters);
-    //fl_voronoi = intersectVoronoi(my_voronoi);
-    //
     //System.out.println(init_succesful);
 }
 
@@ -28,9 +29,9 @@ void setup() {
 void draw() {
     // order of drawing is important because of overlapping
     //drawVoronoi(); // voronoi calculated from "barycenters" - DEPRECATED
-    //drawPoints(); // given partition
-    //drawBarycenters(); // calculated "barycenters"
-    //drawFlVoronoi(); // adjusted voronoi to square
+    drawPoints(); // given partition
+    drawBarycenters(); // calculated "barycenters"
+    drawFlVoronoi(); // adjusted voronoi to square
 }
 
 // Returns a value in [0, 1) if the point is contained in segment or is the
@@ -55,6 +56,7 @@ float point_in_segment(float[] s1, float[] s2, float[] point) {
     return -1;
 }
 
+// Returns an array list containing the intersection points of two segments
 ArrayList<float []> segment_intersection(float[] l1, float[] l2, float[] s1,
         float[] s2) {
     ArrayList<float []> res = new ArrayList<float []>();
@@ -196,6 +198,157 @@ ArrayList<float []> raw_intersection_points(float[][] pol1, float[][] pol2) {
     return res;
 }
 
+
+ArrayList<float []> order_intersections(ArrayList<float []> intersection,
+        float[][] pol) {
+    ArrayList<float []> res = new ArrayList<float []>();
+    ArrayList<float []> tmp = new ArrayList<float []>();
+
+    for (int i = 0; i < pol.length; i++) { // For each edge of pol
+        int next_i = (i == pol.length - 1) ? 0 : i + 1;
+        tmp.clear();
+
+        // For each intersection, check if it is contained in edge
+        for (int j = 0; j < intersection.size(); j++) {
+            if (point_in_segment(pol[i], pol[next_i], intersection.get(j)) 
+                    != -1) {
+                tmp.add(intersection.get(j));
+            }
+        }
+
+        float lowest_t = 8; // Value should be in [0, 1)
+        int lowest_t_index = -1; // Initialize with incorrect
+        float cur_t_value = -1; // t value for current point
+
+        // For all intersections
+        while (tmp.size() != 0) {
+            lowest_t = 8;
+            lowest_t_index = -1;
+            cur_t_value = -1;
+
+            for (int k = 0; k < tmp.size(); k++) { // For all points, find
+                    // closest to start
+                cur_t_value = point_in_segment(pol[i], pol[next_i], 
+                        tmp.get(k));
+                if (cur_t_value < lowest_t && cur_t_value != -1) {
+                    lowest_t = cur_t_value;
+                    lowest_t_index = k;
+                }
+            }
+
+            res.add(tmp.get(lowest_t_index));
+            tmp.remove(lowest_t_index);
+        }
+    }
+
+    return res;
+}
+
+// Returns the symmetric difference for two given polygons
+float symmetric_diff(float pol1[][], float pol2[][]) {
+    ArrayList<float []> itsc_pts = raw_intersection_points(pol1, pol2);
+    itsc_pts = order_intersections(itsc_pts, pol1); // Order them
+
+    // These will contain the paths between each pair of consecutive 
+    //  intersection points
+    ArrayList<float []> pol1_path = new ArrayList<float []>();
+    ArrayList<float []> pol2_path = new ArrayList<float []>();
+
+    // itsc_pts contains a sorted list of the intersections of pol1 and pol2
+    float union_area = 0;
+    float itsc_area = 0;
+
+    // For each intersection point
+    for (int i = 0; i < itsc_pts.size(); i++) {
+        int next_i = (i == itsc_pts.size() - 1) ? 0 : i + 1;
+        
+        pol1_path.clear();
+        pol2_path.clear();
+
+        boolean found_origin = false;
+        boolean found_end = false;
+        // Check pol1
+        int j = 0;
+        // while I haven't found any of them
+        while (!found_origin || !found_end) {
+            int next_j = (j == pol1.length - 1) ? 0 : j + 1;
+            // if haven't found origin yet
+            if (!found_origin) {
+                if (point_in_segment(pol1[j], pol1[next_j], 
+                        itsc_pts.get(i)) != -1) {
+                    pol1_path.add(itsc_pts.get(i));
+                    found_origin = true;
+                }
+            }
+            // else, origin has been already found
+            else {
+                pol1_path.add(itsc_pts.get(i));
+                if (point_in_segment(pol1[j], pol1[next_j], 
+                        itsc_pts.get(next_i)) != -1) {
+                    pol1_path.add(itsc_pts.get(next_i));
+                    found_end = true;
+                }
+            }
+
+            j = next_j;
+        }
+
+        found_origin = false;
+        found_end = false;
+        // Check pol2
+        j = 0;
+        // while I haven't found any of them
+        while (!found_origin || !found_end) {
+            int next_j = (j == pol2.length - 1) ? 0 : j + 1;
+            // if haven't found origin yet
+            if (!found_origin) {
+                if (point_in_segment(pol2[j], pol2[next_j], 
+                        itsc_pts.get(i)) != -1) {
+                    pol2_path.add(itsc_pts.get(i));
+                    found_origin = true;
+                }
+            }
+            // else, origin has been already found
+            else {
+                pol2_path.add(itsc_pts.get(i));
+                if (point_in_segment(pol2[j], pol2[next_j], 
+                        itsc_pts.get(next_i)) != -1) {
+                    pol2_path.add(itsc_pts.get(next_i));
+                    found_end = true;
+                }
+            }
+
+            j = next_j;
+        }
+
+        // Calculate total areas of each list of triangles
+        float area1 = 0;
+        float area2 = 0;
+        float _fds[] = new float[]{13, 43};
+
+        for (int q = 0; q < pol1_path.size() - 1; q++) {
+            area1 += area_triang(pol1_path.get(q), pol1_path.get(q + 1),
+                    _fds);
+        }
+
+        for (int r = 0; r < pol2_path.size() - 1; r++) {
+            area2 += area_triang(pol2_path.get(r), pol2_path.get(r + 1),
+                    _fds);
+        }
+
+        if (area1 <= area2) {
+            union_area += area1;
+            itsc_area += area2;
+        }
+        else {
+            union_area += area2;
+            itsc_area += area1;
+        }
+    }
+    
+    return union_area - 2*itsc_area;
+}
+
 // Returns the area of a triangle using cross product
 // Orientation of ABC is assumed to be positive (counter-clockwise)
 float area_triang(float A[], float B[], float C[]) {
@@ -206,8 +359,18 @@ float area_triang(float A[], float B[], float C[]) {
     return ((bx*cy - cx*by) - (ax*cy - cx*ay) + (ax*by - bx*ay))/2;
 }
 
+// Things I have: unsorted list of intersection points
+//   I want to get it sorted following the orientation of one polygon
+// Careful: The given partition is stored in negative orientation (clockwise)
+//          I think the calculated Voronoi is in positive orientation
+// Once I have got that down:
+//  For the union, I take between every intersection, the highest area from
+//      a neutral point (from barycenters[][][] as of now)
+//  For the intersection, I take between every intersection, the lowest area
+//      from a neutral point (from barycenters[][][] as of now)
 
-/*
+
+
 // First point above the height of the barycenter for a partition polygon
 int find_first_point(int n) {
     int cur = 0;
@@ -225,9 +388,9 @@ int find_first_point(int n) {
 
     return cur;
 }
-*/
 
-/*
+
+
 // 1. Para cada polígono, meto en la lista ordenadamente todas las
 //    intersecciones, hasta llegar al punto de partida.
 // 2. Si empece en un punto de fuera, cuidado, que al volver puedo haber
@@ -550,17 +713,17 @@ float[][] intersect_points(float pts[][]) {
 
     return pts;
 }
-*/
 
-/*
+
+
 // Returns the edge a point is in. -1 if its not.
 // Point is assumed to be inside
 boolean is_point_in(float pt[]) {
     return (pt[0] >= 0 && pt[0] <= scale && pt[1] >= 0 && pt[1] <= scale);
 }
-*/
 
-/*
+
+
 int point_in_edge(float pt[]) {
     if (pt[1] == 0) // top
         return 1;
@@ -573,9 +736,9 @@ int point_in_edge(float pt[]) {
 
     return -1; //not in edge
 }
-*/
 
-/*
+
+
 // Returns the x coordinate at which a segment intersects y = y_pos
 // -1 if it doesn't intersect in the square (in direction p1p2)
 float hor_inter(float p1[], float p2[], float y_pos) {
@@ -591,9 +754,9 @@ float ver_inter(float p1[], float p2[], float x_pos) {
     float res = (p1[1] + (p2[1] - p1[1])*t);
     return (t >= 0 && t <= 1 && res >= 0 && res <= scale) ? res : -1;
 }
-*/
 
-/*
+
+
 // Returns whether segments P1P2 and P3P4 cross or not
 boolean cross(float p1[], float p2[], float p3[], float p4[]) {
     float x1 = p1[0];
@@ -619,9 +782,9 @@ boolean cross(float p1[], float p2[], float p3[], float p4[]) {
 
     return false;
 }
-*/
 
-/*
+
+
 // Returns the intersection point between P1P2 and P3P4
 // Call only checking with cross before
 float[] intersection_point(float p1[], float p2[], float p3[], float p4[]) {
@@ -645,8 +808,8 @@ float[] intersection_point(float p1[], float p2[], float p3[], float p4[]) {
 
     return res;
 }
-*/
 
+/*
 // Returns the symmetric difference for the polygon i
 float symmetric_diff(int i) {
     // elegir un inicio. cuando dos aristas se crucen, sus inicios nos valen
@@ -669,7 +832,8 @@ float symmetric_diff(int i) {
 
     // muevo puntos aleatoriamente y comparo
     return 1;
-}
+} 
+*/
 
 void dbg(String txt) {
     System.out.println("dbg " + txt);
