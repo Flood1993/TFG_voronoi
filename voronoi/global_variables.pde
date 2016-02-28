@@ -1,4 +1,4 @@
-int lineNumber = 7; // Line of the partition file which we want to load
+int lineNumber = 8; // Line of the partition file which we want to load
 
 // Variables that will be used for reading the partition from a file
 BufferedReader reader;
@@ -18,8 +18,8 @@ float[][][] fl_voronoi; // will contain the voronoi diagram adjusted to the
 float[][][] tmp_fl_vor;
 
 
-float symmetric_diff;
-float tmp_sym_diff;
+float symmetric_diff = -80000000000.0;
+float tmp_sym_diff = -80000000000.0;
 int rndm_seed = 0;
 
 float t_s1[], t_s2[], t_l1[], t_l2[];

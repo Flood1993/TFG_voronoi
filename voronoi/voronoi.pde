@@ -24,9 +24,9 @@ void setup() {
 
     t_call(); // Functions starting with t_* are related to testing
 
-    symmetric_diff = total_diff(partition, fl_voronoi);
-    System.out.println("Diferencia simétrica total: " + 
-            symmetric_diff);
+    //symmetric_diff = total_diff(partition, fl_voronoi);
+    //System.out.println("Diferencia simétrica total: " + 
+    //        symmetric_diff);
     //System.out.println(init_succesful);
 }
 
@@ -50,7 +50,7 @@ void draw() {
     tmp_fl_vor = negative_orientation(tmp_fl_vor, tmp_bary);
     tmp_sym_diff = total_diff(partition, tmp_fl_vor);
     // if improved results
-    if (tmp_sym_diff < symmetric_diff) {
+    if (tmp_sym_diff > symmetric_diff) {
         fl_voronoi = tmp_fl_vor;
         my_voronoi = tmp_vor;
         barycenters = tmp_bary;
@@ -60,7 +60,7 @@ void draw() {
     textSize(26);
     text("Current symmetric diff: " + symmetric_diff, 10, 30); 
   
-    delay(5);
+    //delay(5);
 }
 
 float[][] randomize_barycenters(float[][] _barycenters) {
@@ -72,21 +72,20 @@ float[][] randomize_barycenters(float[][] _barycenters) {
     for (int i = 0; i < _barycenters.length; i++) {
         int rndm = (int) random(4);
 
+        res[i][0] = _barycenters[i][0];
+        res[i][1] = _barycenters[i][1];
+
         switch (rndm) {
             case 0:
                 res[i][0] = _barycenters[i][0] + _offset;
-                res[i][1] = _barycenters[i][1]; 
                 break;
             case 1:
                 res[i][0] = _barycenters[i][0] - _offset;
-                res[i][1] = _barycenters[i][1];
                 break;
             case 2:
-                res[i][0] = _barycenters[i][0];
                 res[i][1] = _barycenters[i][1] + _offset;
                 break;
             case 3:
-                res[i][0] = _barycenters[i][0];
                 res[i][1] = _barycenters[i][1] - _offset;
                 break;
         }
@@ -101,9 +100,11 @@ float[][][] negative_orientation(float [][][] part, float[][] barycenters) {
     float[][][] res = new float[part.length][][];
     
     for (int i = 0; i < part.length; i++) {
-        System.out.println("Polygon " + i + " was badly oriented");
         // If the first two points have a positive area, all do
         if (area_triang(barycenters[i], part[i][0], part[i][1]) > 0) {
+            //System.out.println("Polygon " + i + " was badly oriented");
+            //delay(20);
+
             float tmp[][] = new float[part[i].length][2];
 
             for (int j = part[i].length - 1; j >= 0; j--) {
@@ -113,8 +114,13 @@ float[][][] negative_orientation(float [][][] part, float[][] barycenters) {
             res[i] = tmp; // Change
         }
 
-        else
+        else {
+            System.out.println("Polygon " + i + " was correctly oriented");
             res[i] = part[i];
+        }
+
+        if (area_triang(barycenters[i], res[i][0], res[i][1]) > 0)
+            System.out.println("And I am still badly oriented :(");
     }
 
     return res;
@@ -394,7 +400,7 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
             }
             // else, origin has been already found
             else {
-                pol1_path.add(itsc_pts.get(i));
+                pol1_path.add(pol1[j]); // itsc_pts.get(i)
                 if (point_in_segment(pol1[j], pol1[next_j], 
                         itsc_pts.get(next_i)) != -1) {
                     pol1_path.add(itsc_pts.get(next_i));
@@ -431,7 +437,7 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
             }
             // else, origin has been already found
             else {
-                pol2_path.add(itsc_pts.get(i));
+                pol2_path.add(pol2[j]); // itsc_pts.get(i)
                 if (point_in_segment(pol2[j], pol2[next_j], 
                         itsc_pts.get(next_i)) != -1) {
                     pol2_path.add(itsc_pts.get(next_i));
@@ -443,19 +449,25 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
         }
 
         // Calculate total areas of each list of triangles
-        float area1 = 0;
-        float area2 = 0;
-        float _fds[] = new float[]{145, 633}; // 13, 43
+        float area1 = 0; // area of path from pol1 between two intersections
+        float area2 = 0; // area of path from pol2 between two intersections
+        float _fds[] = barycenters[i]; // 13, 43
+
+        //System.out.println("pol1_path len: " + pol1_path.size());
+        //System.out.println("pol2_path len: " + pol2_path.size());
 
         for (int q = 0; q < pol1_path.size() - 1; q++) {
-            area1 += area_triang(pol1_path.get(q), pol1_path.get(q + 1),
-                    _fds);
+            area1 += area_triang(_fds, pol1_path.get(q), pol1_path.get(q + 1));
         }
 
         for (int r = 0; r < pol2_path.size() - 1; r++) {
-            area2 += area_triang(pol2_path.get(r), pol2_path.get(r + 1),
-                    _fds);
+            area2 += area_triang(_fds, pol2_path.get(r), pol2_path.get(r + 1));
         }
+
+        //System.out.println("Area 1: " + area1);
+        //System.out.println("Area 2: " + area2);
+
+        //delay(80);
 
         if (area1 <= area2) {
             union_area += area1;
@@ -465,9 +477,23 @@ float symmetric_diff(float pol1[][], float pol2[][]) {
             union_area += area2;
             itsc_area += area1;
         }
+
+        
     }
     
-    return union_area - 2*itsc_area;
+    //System.out.println("union_area: " + union_area);
+    //System.out.println("itsc_area: " + itsc_area);
+
+    float diff = union_area - itsc_area;
+
+    if (diff == 0)
+        System.out.println("union: " + union_area + " itsc: " + itsc_area);
+    if (diff > 0)
+        System.out.println("WTF, symmetric difference is > 0...");
+   
+    //delay(80);
+
+    return union_area - itsc_area;
 }
 
 float total_diff(float part1[][][], float part2[][][]) {
@@ -477,9 +503,9 @@ float total_diff(float part1[][][], float part2[][][]) {
 
     float res = 0;
 
-    System.out.println("part1.length == " + part1.length);
+    //System.out.println("part1.length == " + part1.length);
     for (int i = 0; i < part1.length; i++) { // TODO: Change i = 5 to i = 0
-        System.out.println("\nDebugging from total diff = " + i);
+        //System.out.println("\tDebugging from total diff = " + i);
         res += symmetric_diff(part1[i], part2[i]);
     }
 
