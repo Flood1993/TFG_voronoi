@@ -56,8 +56,11 @@ void draw() {
         barycenters = tmp_bary;
         symmetric_diff = tmp_sym_diff;
     }
-
-    delay(50);
+  
+    textSize(26);
+    text("Current symmetric diff: " + symmetric_diff, 10, 30); 
+  
+    delay(5);
 }
 
 float[][] randomize_barycenters(float[][] _barycenters) {
