@@ -19,21 +19,102 @@ void setup() {
     my_voronoi = new Voronoi(barycenters);
 
     fl_voronoi = intersectVoronoi(my_voronoi);
+    // We need to make sure all polygons are oriented negatively
+    fl_voronoi = negative_orientation(fl_voronoi, barycenters);
 
     t_call(); // Functions starting with t_* are related to testing
 
+    symmetric_diff = total_diff(partition, fl_voronoi);
     System.out.println("Diferencia simétrica total: " + 
-            total_diff(partition, fl_voronoi));
+            symmetric_diff);
     //System.out.println(init_succesful);
 }
 
 // Executed every frame
 void draw() {
+    background(100);
     // order of drawing is important because of overlapping
     //drawVoronoi(); // voronoi calculated from "barycenters" - DEPRECATED
+
+    // If results are better, keep and repeat
+    // If results are worse, discard
+
     drawPoints(); // given partition
     drawBarycenters(); // calculated "barycenters"
     drawFlVoronoi(); // adjusted voronoi to square
+    
+    // Slightly move barycenters
+    tmp_bary = randomize_barycenters(barycenters);
+    tmp_vor = new Voronoi(tmp_bary);
+    tmp_fl_vor = intersectVoronoi(tmp_vor);
+    tmp_fl_vor = negative_orientation(tmp_fl_vor, tmp_bary);
+    tmp_sym_diff = total_diff(partition, tmp_fl_vor);
+    // if improved results
+    if (tmp_sym_diff < symmetric_diff) {
+        fl_voronoi = tmp_fl_vor;
+        my_voronoi = tmp_vor;
+        barycenters = tmp_bary;
+        symmetric_diff = tmp_sym_diff;
+    }
+
+    delay(50);
+}
+
+float[][] randomize_barycenters(float[][] _barycenters) {
+    randomSeed(rndm_seed++);
+
+    float[][] res = new float[_barycenters.length][2];
+    float _offset = 1;
+
+    for (int i = 0; i < _barycenters.length; i++) {
+        int rndm = (int) random(4);
+
+        switch (rndm) {
+            case 0:
+                res[i][0] = _barycenters[i][0] + _offset;
+                res[i][1] = _barycenters[i][1]; 
+                break;
+            case 1:
+                res[i][0] = _barycenters[i][0] - _offset;
+                res[i][1] = _barycenters[i][1];
+                break;
+            case 2:
+                res[i][0] = _barycenters[i][0];
+                res[i][1] = _barycenters[i][1] + _offset;
+                break;
+            case 3:
+                res[i][0] = _barycenters[i][0];
+                res[i][1] = _barycenters[i][1] - _offset;
+                break;
+        }
+    }
+
+    return res;
+}
+
+// Makes sure all polygons are negatively oriented
+float[][][] negative_orientation(float [][][] part, float[][] barycenters) {
+    // For each polygon
+    float[][][] res = new float[part.length][][];
+    
+    for (int i = 0; i < part.length; i++) {
+        System.out.println("Polygon " + i + " was badly oriented");
+        // If the first two points have a positive area, all do
+        if (area_triang(barycenters[i], part[i][0], part[i][1]) > 0) {
+            float tmp[][] = new float[part[i].length][2];
+
+            for (int j = part[i].length - 1; j >= 0; j--) {
+                tmp[j] = part[i][part[i].length - 1 - j];
+            }
+
+            res[i] = tmp; // Change
+        }
+
+        else
+            res[i] = part[i];
+    }
+
+    return res;
 }
 
 // Returns a value in [0, 1) if the point is contained in segment or is the

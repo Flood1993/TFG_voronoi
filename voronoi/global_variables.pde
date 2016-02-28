@@ -9,12 +9,18 @@ String polygons[];
 float partition[][][]; // [polygon][point][x or y coordinate]
 float barycenters[][]; // [polygon][x or y coordinate]
 
+float tmp_bary[][];
+
 Voronoi my_voronoi;
+Voronoi tmp_vor;
 float[][][] fl_voronoi; // will contain the voronoi diagram adjusted to the
                         // scale*scale square
+float[][][] tmp_fl_vor;
+
 
 float symmetric_diff;
-
+float tmp_sym_diff;
+int rndm_seed = 0;
 
 float t_s1[], t_s2[], t_l1[], t_l2[];
 float t_point[];
