@@ -63,6 +63,21 @@ void draw() {
     //delay(5);
 }
 
+// Clips a polygon with the given line.
+// Note that in this project, we will be working with both polygons having a
+//  negative orientation.
+/*
+void clip_line(ArrayList<float []> pol, float line_start[], float line_end[]) {
+    ArrayList<float []> res = new ArrayList<float []>();
+
+    for (int i = 0; i < pol.size(); i++) {
+        int next_i = (i == pol.size() - 1) ? 0 : i + 1;
+
+
+    }
+}
+*/
+
 float[][] randomize_barycenters(float[][] _barycenters) {
     randomSeed(rndm_seed++);
 
@@ -160,6 +175,15 @@ float point_in_segment(float[] s1, float[] s2, float[] point) {
         return t;
 
     return -1;
+}
+
+boolean sgm_its_line(float l1[], float l2[], float s1[], float s2[]) {
+    float tmp1 = area_triang(l1, l2, s1);
+    float tmp2 = area_triang(l1, l2, s2);
+
+    // If one (or both) is zero, one point is lying in the line
+    // If mult is < 0, they lie in different sides
+    return (tmp1*tmp2 <= 0);
 }
 
 // Returns an array list containing the intersection points of two segments
@@ -512,8 +536,12 @@ float total_diff(float part1[][][], float part2[][][]) {
     return res;
 }
 
-// Returns the area of a triangle using cross product
-// Orientation of ABC is assumed to be positive (counter-clockwise)
+// Returns the signed area of a triangle using cross product
+// If first two parameters represent a line and its direction, the location of
+// the third parameter is:
+//      left of the line if result > 0
+//      on the line if result == 0
+//      right of the line if result < 0
 float area_triang(float A[], float B[], float C[]) {
     float ax = A[0], ay = A[1];
     float bx = B[0], by = B[1];
