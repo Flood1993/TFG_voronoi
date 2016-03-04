@@ -10,6 +10,14 @@ void drawBarycenters() {
     strokeWeight(1); // draw normal size
 }
 
+void draw_pol(ArrayList<float []> pol) {
+    for (int i = 0; i < pol.size(); i++){
+      int next_i = (i == pol.size() - 1) ? 0 : i + 1;
+      
+      line(pol.get(i)[0], pol.get(i)[1], pol.get(next_i)[0], pol.get(next_i)[1]);
+    }
+}
+
 // Draws the Voronoi diagram - DEPRECATED
 void drawVoronoi() {
     MPolygon[] myRegions = my_voronoi.getRegions();
