@@ -158,6 +158,34 @@ ArrayList<float []> clip_line(ArrayList<float []> pol, float line_start[],
     return res;
 }
 
+// pol is assumed to be negatively oriented
+ArrayList<float []> clip_to_square(ArrayList<float []> pol) {
+    ArrayList<float []> res = new ArrayList<float []>();
+    float c1[] = new float[]{0, 0};
+    float c2[] = new float[]{scale, 0};
+    float c3[] = new float[]{scale, scale};
+    float c4[] = new float[]{0, scale};
+
+    res = clip_line(pol, c1, c2);
+    res = clip_line(res, c2, c3);
+    res = clip_line(res, c3, c4);
+    res = clip_line(res, c4, c1);
+
+    return res;
+}
+
+// returns a new polygon which is the intersection of the two
+ArrayList<float []> clip_polygons(ArrayList<float []> pol1,
+        ArrayList<float []> pol2) {
+    ArrayList<float []> res = new ArrayList<float []>();
+
+    // Clonarme el primer array. Hacerle clip para todas las lineas del segundo.
+    // TODO
+    for ()
+}
+
+
+
 // Makes sure all polygons are negatively oriented
 float[][][] negative_orientation(float [][][] part, float[][] barycenters) {
     // For each polygon
