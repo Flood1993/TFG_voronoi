@@ -1,37 +1,51 @@
 // Calculates the barycenter for each polygon of "points"
 void initializeBarycenters() {
-    barycenters = new float[partition.length][2];
+    barycenters = new ArrayList<float []>();
     float sumX, sumY;
 
-    for (int i = 0; i < partition.length; i++) { // for each polygon
+    for (int i = 0; i < partition.size(); i++) { // for each polygon
         sumX = 0;
         sumY = 0;
-        for (int j = 0; j < partition[i].length; j++) {
-            sumX += partition[i][j][0];
-            sumY += partition[i][j][1];
+        for (int j = 0; j < partition.get(i).size(); j++) {
+            sumX += partition.get(i).get(j)[0];
+            sumY += partition.get(i).get(j)[1];
         }
-        barycenters[i][0] = sumX/partition[i].length;
-        barycenters[i][1] = sumY/partition[i].length;
+        barycenters.add(new float[]
+                            {
+                                sumX/partition.get(i).size(),
+                                sumY/partition.get(i).size()
+                            });
     }
 }
 
-/*
-// Intersects the Voronoi diagram to the scale*scale square
-float[][][] intersectVoronoi(Voronoi vor) {
-    float res[][][];
+// Converts Voronoi structure to our format, so we can calculate on it
+ArrayList<ArrayList<float []>> store_voronoi(Voronoi vor) {
+    ArrayList<ArrayList<float []>> res = new ArrayList<ArrayList<float []>>();
+    ArrayList<float []> tmp;
+    MPolygon[] myRegions = vor.getRegions();
 
-    MPolygon[] my_regions = vor.getRegions();
-    res = new float[my_regions.length][][];
+    for(int i = 0; i < myRegions.length; i++) {
+        tmp = new ArrayList<float []>();
+        float[][] regionCoordinates = myRegions[i].getCoords();
 
-    for (int i = 0; i < my_regions.length; i++) {
-        float[][] coords = my_regions[i].getCoords();
-        
-        res[i] = intersect_points(coords);
+        for (int j = 0; j < regionCoordinates.length; j++)
+            tmp.add(regionCoordinates[j]);
+
+        res.add(tmp);
     }
 
     return res;
 }
-*/
+
+float[][] array_barycenters(ArrayList<float []> points) {
+    float res[][] = new float[points.size()][2];
+
+    for (int i = 0; i < points.size(); i++) {
+        res[i] = points.get(i);
+    }
+
+    return res;
+}
 
 // Loads information from an external file, storing it in "partition"
 //
@@ -63,17 +77,23 @@ void initializePartition(int lineNumber) {
 
     polygons = line.split("\\["); //The first 2 elements will be trash
 
-    partition = new float[polygons.length - 2][][];
+    partition = new ArrayList<ArrayList<float []>>();
+    ArrayList<float []> tmp = new ArrayList<float []>();
 
     for (int i = 2; i < polygons.length; i++) {  // first 2 are trash
+        tmp = new ArrayList<float []>(); // CRITICAL?
         String pointPairs[] = polygons[i].split("\\("); // first trash
-
-        partition[i-2] = new float[pointPairs.length - 1][2];
 
         for (int j = 1; j < pointPairs.length; j++) {
             String[] point = pointPairs[j].split(",");
-            partition[i-2][j-1][0] = Float.parseFloat(point[0]) * scale; 
-            partition[i-2][j-1][1] = Float.parseFloat(point[1]) * scale;
+
+            tmp.add(new float[]
+                        {
+                            Float.parseFloat(point[0]) * scale,
+                            Float.parseFloat(point[1]) * scale
+                        });
         }
+
+        partition.add(tmp);
     }
 }

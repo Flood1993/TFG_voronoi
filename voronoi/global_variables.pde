@@ -6,16 +6,20 @@ String line;
 String polygons[];
 
 // "partition" will contain information about the given partition.
-float partition[][][]; // [polygon][point][x or y coordinate]
-float barycenters[][]; // [polygon][x or y coordinate]
+//float partition[][][]; // [polygon][point][x or y coordinate]
+ArrayList<ArrayList<float []>> partition;
+ArrayList<float []> barycenters;
+float float_barycenters[][]; // [polygon][x or y coordinate]
 
-float tmp_bary[][];
+//float tmp_bary[][];
 
 Voronoi my_voronoi;
 Voronoi tmp_vor;
-float[][][] fl_voronoi; // will contain the voronoi diagram adjusted to the
+
+ArrayList<ArrayList<float []>> fl_voronoi;
+//float[][][] fl_voronoi; // will contain the voronoi diagram adjusted to the
                         // scale*scale square
-float[][][] tmp_fl_vor;
+//float[][][] tmp_fl_vor;
 
 
 float symmetric_diff = -80000000000.0;
