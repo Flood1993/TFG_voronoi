@@ -33,10 +33,11 @@ void setup() {
     
     initializePartition(lineNumber);
     initializeBarycenters();
-    float_barycenters = array_barycenters(barycenters);
+    float_barycenters = array_barycenters(barycenters); // Convert barycenters to array (Voronoi input format)
     my_voronoi = new Voronoi(float_barycenters);
-    fl_voronoi = store_voronoi(my_voronoi);
+    fl_voronoi = store_voronoi(my_voronoi); // Store to array list from the voronoi format
     fl_voronoi = negative_orientation(fl_voronoi, barycenters);
+    fl_voronoi = clip_partition_to_square(fl_voronoi);
     symmetric_diff = total_sym_diff(partition, fl_voronoi);
 
 
@@ -95,13 +96,18 @@ void setup() {
 
 // Executed every frame
 void draw() {
-    //background(100);
+    background(100);
     // order of drawing is important because of overlapping
     //drawVoronoi(); // voronoi calculated from "barycenters" - DEPRECATED
 
     // If results are better, keep and repeat
     // If results are worse, discard
 
+    gradient_method();
+
+    draw_part(partition);
+    draw_part(fl_voronoi);
+    drawBarycenters();
 /*    drawBarycenters(); // calculated "barycenters"
     drawFlVoronoi(); // adjusted voronoi to square
     */
@@ -190,18 +196,110 @@ ArrayList<float []> clip_line(ArrayList<float []> pol, float line_start[],
     return res;
 }
 
+void gradient_method() {
+    /*
+    Randomize barycenters order
+    For each barycenter
+        Compare against all of its neighbours. Take the best neighbour and replace
+    Repeat
+    */
+    // TODO: randomize barycenter order
+
+    for (int i = 0; i < barycenters.size(); i++) { // for each point
+        ArrayList<float []> best_solution = barycenters;
+        float best_sym_diff = total_sym_diff(partition, fl_voronoi);
+        
+        ArrayList<float []> cloned_barycenters = clone_arraylist(barycenters);
+        cloned_barycenters.get(i)[0] = cloned_barycenters.get(i)[0] + 1;
+        float [][] new_barycenters = array_barycenters(cloned_barycenters);
+        tmp_vor = new Voronoi(new_barycenters);
+        ArrayList<ArrayList<float []>> tmp_new_stuff = store_voronoi(tmp_vor);
+        tmp_new_stuff = negative_orientation(tmp_new_stuff, cloned_barycenters);
+        tmp_new_stuff = clip_partition_to_square(tmp_new_stuff);
+        float diff = total_sym_diff(partition, tmp_new_stuff);
+        if (diff > best_sym_diff) {
+            best_solution = cloned_barycenters;
+            best_sym_diff = diff;
+        }
+
+        cloned_barycenters = clone_arraylist(barycenters);
+        cloned_barycenters.get(i)[0] = cloned_barycenters.get(i)[0] - 1;
+        new_barycenters = array_barycenters(cloned_barycenters);
+        tmp_vor = new Voronoi(new_barycenters);
+        tmp_new_stuff = store_voronoi(tmp_vor);
+        tmp_new_stuff = negative_orientation(tmp_new_stuff, cloned_barycenters);
+        tmp_new_stuff = clip_partition_to_square(tmp_new_stuff);
+        diff = total_sym_diff(partition, tmp_new_stuff);
+        if (diff > best_sym_diff) {
+            best_solution = cloned_barycenters;
+            best_sym_diff = diff;
+        }
+
+        cloned_barycenters = clone_arraylist(barycenters);
+        cloned_barycenters.get(i)[1] = cloned_barycenters.get(i)[1] + 1;
+        new_barycenters = array_barycenters(cloned_barycenters);
+        tmp_vor = new Voronoi(new_barycenters);
+        tmp_new_stuff = store_voronoi(tmp_vor);
+        tmp_new_stuff = negative_orientation(tmp_new_stuff, cloned_barycenters);
+        tmp_new_stuff = clip_partition_to_square(tmp_new_stuff);
+        diff = total_sym_diff(partition, tmp_new_stuff);
+        if (diff > best_sym_diff) {
+            best_solution = cloned_barycenters;
+            best_sym_diff = diff;
+        }
+
+        cloned_barycenters = clone_arraylist(barycenters);
+        cloned_barycenters.get(i)[1] = cloned_barycenters.get(i)[1] - 1;
+        new_barycenters = array_barycenters(cloned_barycenters);
+        tmp_vor = new Voronoi(new_barycenters);
+        tmp_new_stuff = store_voronoi(tmp_vor);
+        tmp_new_stuff = negative_orientation(tmp_new_stuff, cloned_barycenters);
+        tmp_new_stuff = clip_partition_to_square(tmp_new_stuff);
+        diff = total_sym_diff(partition, tmp_new_stuff);
+        if (diff > best_sym_diff) {
+            best_solution = cloned_barycenters;
+            best_sym_diff = diff;
+        }
+
+        symmetric_diff = best_sym_diff;
+        barycenters = best_solution;
+        float_barycenters = array_barycenters(barycenters); // Convert barycenters to array (Voronoi input format)
+        my_voronoi = new Voronoi(float_barycenters);
+        fl_voronoi = store_voronoi(my_voronoi); // Store to array list from the 
+    }
+}
+
+// Clips a whole partition to the square
+ArrayList<ArrayList<float []>> clip_partition_to_square(
+        ArrayList<ArrayList<float []>> partition) {
+    ArrayList<ArrayList<float []>> res = new ArrayList<ArrayList<float []>>();
+
+    for (int i = 0; i < partition.size(); i++) {
+        ArrayList<float []> tmp = clip_to_square(partition.get(i));
+
+        //System.out.println("partition " + i + " size: " + partition.get(i).size());
+        //System.out.println("tmp size: " + tmp.size());
+
+        res.add(tmp);
+    }
+
+    return res;
+}
+
 // pol is assumed to be negatively oriented
 ArrayList<float []> clip_to_square(ArrayList<float []> pol) {
     ArrayList<float []> res = new ArrayList<float []>();
     float c1[] = new float[]{0, 0};
-    float c2[] = new float[]{scale, 0};
+    float c2[] = new float[]{0, scale}; // scale 0
     float c3[] = new float[]{scale, scale};
-    float c4[] = new float[]{0, scale};
+    float c4[] = new float[]{scale, 0}; // 0 scale
 
     res = clip_line(pol, c1, c2);
     res = clip_line(res, c2, c3);
     res = clip_line(res, c3, c4);
     res = clip_line(res, c4, c1);
+
+    //System.out.println("res.size(): " + res.size());
 
     return res;
 }
@@ -240,6 +338,13 @@ float sym_diff(ArrayList<float []> pol1, ArrayList<float []> pol2) {
     float area2 = area_polygon(pol2);
     float area_intersection = area_polygon(intersection);
 
+    float res = area1 + area2 - 2*area_intersection;
+
+    /*if (res < -10000.0) {
+        System.out.println("\tarea 1: " + area1);
+        System.out.println("\tarea 2: " + area2);
+        System.out.println("\tarea intersection: " + area_intersection);
+    }*/
     //System.out.println("area 1 = " + area1);
     //System.out.println("area 2 = " + area2);
     //System.out.println("area intersection = " + area_intersection);
@@ -251,8 +356,11 @@ float total_sym_diff(ArrayList<ArrayList<float []>> x,
         ArrayList<ArrayList<float []>> y) {
     float res = 0;
 
-    for (int i = 0; i < x.size(); i++)
-        res += sym_diff(x.get(i), y.get(i));
+    for (int i = 0; i < x.size(); i++) {
+        float cur_area = sym_diff(x.get(i), y.get(i));
+        //System.out.println("Cur area: " + cur_area);
+        res += cur_area;
+    }
 
     return res;
 }
@@ -266,29 +374,30 @@ ArrayList<ArrayList<float []>> negative_orientation(
     
     for (int i = 0; i < part.size(); i++) {
         // If the first two points have a positive area, all do
-        if (area_triang(barycenters.get(i), part.get(i).get(0),
-                part.get(i).get(1)) > 0) {
-            System.out.println("Polygon " + i + " was badly oriented");
+        //if (area_triang(barycenters.get(i), part.get(i).get(0),
+        //        part.get(i).get(1)) > 0) {
+        if (area_polygon(part.get(i)) > 0) {
+            //System.out.println("Polygon " + i + " was badly oriented");
             //delay(20);
 
             ArrayList<float []> tmp = new ArrayList<float []>();
             //float tmp[][] = new float[part[i].length][2];
 
             for (int j = part.get(i).size() - 1; j >= 0; j--) {
-                tmp.add(part.get(i).get(part.get(i).size() - 1 - j)); // = part[i][part[i].length - 1 - j];
+                tmp.add(part.get(i).get(j)); // = part[i][part[i].length - 1 - j];
             }
 
             res.add(tmp); // Change
         }
 
         else {
-            System.out.println("Polygon " + i + " was correctly oriented");
+            //System.out.println("Polygon " + i + " was correctly oriented");
             res.add(part.get(i)); // Simply add it
         }
 
-        if (area_triang(barycenters.get(i), res.get(i).get(0),
-                res.get(i).get(1)) > 0)
-            System.out.println("And I am still badly oriented :(");
+        //if (area_triang(barycenters.get(i), res.get(i).get(0),
+        //        res.get(i).get(1)) > 0)
+            //System.out.println("And I am still badly oriented :(");
     }
 
     return res;
@@ -300,7 +409,7 @@ boolean sgm_its_line(float l1[], float l2[], float s1[], float s2[]) {
     float tmp2 = area_triang(l1, l2, s2);
 
     // If one (or both) is zero, one point is lying in the line
-    // If mult is < 0, they lie in different sides
+    // If multiplication is < 0, they lie in different sides
     return (tmp1*tmp2 <= 0);
 }
 
@@ -359,13 +468,13 @@ float segment_intersection(float[] l1, float[] l2, float[] s1, float[] s2) {
     float slope_l2 = (x3 < x4) ? (y4 - y3)/(x4 - x3) : (y3 - y4)/(x3 - x4);
     // Same slope
     if (slope_l1 == slope_l2) {
-        System.out.println("misma diagonal");
+        // System.out.println("misma diagonal");
         return -1;
     }
 
     // Different slope
     else {
-        System.out.println("Clipping lineas con diferente slope");
+        // System.out.println("Clipping lineas con diferente slope");
     //          Check for normal intersection (reuse formula)
         // TODO: Check k in [0, 1] and t in [0, 1]
         float num = (x2 - x1)*(y1 - y3) + (y2 - y1)*(x3 - x1);
@@ -377,6 +486,16 @@ float segment_intersection(float[] l1, float[] l2, float[] s1, float[] s2) {
 
         return -1;
     }
+}
+
+ArrayList<float []> clone_arraylist(ArrayList<float []> obj) {
+    ArrayList<float []> res = new ArrayList<float []>();
+
+    for (int i = 0; i < obj.size(); i++) {
+        res.add(new float[]{obj.get(i)[0], obj.get(i)[1]});
+    }
+
+    return res;
 }
 
 void dbg(String txt) {
