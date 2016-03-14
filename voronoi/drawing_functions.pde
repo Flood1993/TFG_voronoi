@@ -11,10 +11,8 @@ void drawBarycenters() {
 }
 
 void draw_part(ArrayList<ArrayList<float []>> partition) {
-    for (int i = 0; i < partition.size(); i++) {
+    for (int i = 0; i < partition.size(); i++)
         draw_pol(partition.get(i));
-        //System.out.println("size of partition " + i + ": " + partition.get(i).size());
-    }
 }
 
 void draw_pol(ArrayList<float []> pol) {
