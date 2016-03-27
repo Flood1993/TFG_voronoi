@@ -1,23 +1,6 @@
 // Author: Guillermo Alonso Nunez
 // e-mail: guillermo.alonso.nunez@alumnos.upm.es
 
-/*
-    GENERAL WORKFLOW:
-
-    Initialize given partition
-    Calculate starting points
-    Generate voronoi diagram
-    Make sure all polygons are negatively oriented
-    Adjust that diagram to the square
-        Clip each segment to the four lines of the square
-    Once we have done that, calculate the intersection polygon
-        Clip each segment of the partition with each segment of the voronoi
-    One we have done that, the symmetric difference is A + B - 2(A intersect B)
-    Accumulate symmetric difference for each polygon, and keep that value
-    Move each point to its 4 neighbours and check the result. If its better,
-            update points and keep going in that direction
-*/
-
 import megamu.mesh.*;
 
 final int scale = 500; // size parameters should have this value
@@ -43,13 +26,7 @@ void setup() {
 
 // Executed every frame
 void draw() {
-    background(100);
-    // order of drawing is important because of overlapping
-    //drawVoronoi(); // voronoi calculated from "barycenters" - DEPRECATED
-
-    // If results are better, keep and repeat
-    // If results are worse, discard
-
+    background(100); // clear screen
     gradient_method();
 
     draw_part(partition);
@@ -68,6 +45,7 @@ float area_triang(float A[], float B[], float C[]) {
     return ((bx*cy - cx*by) - (ax*cy - cx*ay) + (ax*by - bx*ay))/2;
 }
 
+// Returns the signed area of a polygon
 float area_polygon(ArrayList<float []> pol) {
     float res = 0;
     float point[] = new float[]{scale/2, scale/2};
@@ -81,10 +59,7 @@ float area_polygon(ArrayList<float []> pol) {
     return res;
 }
 
-
-// Clips a polygon with the given line.
-// Note that in this project, we will be working with both polygons having a
-//  negative orientation.
+// Clips a polygon with a given line
 ArrayList<float []> clip_line(ArrayList<float []> pol, float line_start[],
         float line_end[]) {
     ArrayList<float []> res = new ArrayList<float []>();
@@ -125,6 +100,10 @@ void gradient_method() {
         ArrayList<float []> best_solution = barycenters;
         float best_sym_diff = total_sym_diff(partition, fl_voronoi);
         
+
+
+
+
         ArrayList<float []> cloned_barycenters = clone_arraylist(barycenters);
         cloned_barycenters.get(i)[0] = cloned_barycenters.get(i)[0] + 1;
         float [][] new_barycenters = array_barycenters(cloned_barycenters);
@@ -132,11 +111,17 @@ void gradient_method() {
         ArrayList<ArrayList<float []>> tmp_new_stuff = store_voronoi(tmp_vor);
         tmp_new_stuff = negative_orientation(tmp_new_stuff, cloned_barycenters);
         tmp_new_stuff = clip_partition_to_square(tmp_new_stuff);
+
         float diff = total_sym_diff(partition, tmp_new_stuff);
+
+
         if (diff > best_sym_diff) {
             best_solution = cloned_barycenters;
             best_sym_diff = diff;
         }
+
+
+
 
         cloned_barycenters = clone_arraylist(barycenters);
         cloned_barycenters.get(i)[0] = cloned_barycenters.get(i)[0] - 1;
@@ -278,16 +263,6 @@ ArrayList<ArrayList<float []>> negative_orientation(
     }
 
     return res;
-}
-
-
-boolean sgm_its_line(float l1[], float l2[], float s1[], float s2[]) {
-    float tmp1 = area_triang(l1, l2, s1);
-    float tmp2 = area_triang(l1, l2, s2);
-
-    // If one (or both) is zero, one point is lying in the line
-    // If multiplication is < 0, they lie in different sides
-    return (tmp1*tmp2 <= 0);
 }
 
 // Returns -1 if there is no intersection. A value in [0, 1] if they intersect
