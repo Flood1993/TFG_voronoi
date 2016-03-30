@@ -34,6 +34,7 @@ void setup() {
     
     if (debugging)
         System.out.println("Sym diff setup: " + symmetric_diff);
+    delay(400);
 }
 
 // Executed every frame
