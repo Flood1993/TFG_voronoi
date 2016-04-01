@@ -1,7 +1,9 @@
-# Adjusting a partition of the plane through Voronoi diagrams
+# Adjusting partitions of the plane through Voronoi diagrams
 
-The aim of this project is to study and design strategies for adjusting a given partition of the square unit through Voronoi diagrams.
+The aim of my final year project is to study and design strategies for adjusting a given partition of the square unit through [Voronoi diagrams](http://mathworld.wolfram.com/VoronoiDiagram.html).
 
-Since checking the whole search space is not doable, we will be using and comparing different techniques: the "gradient method" and the "simulated annealing technique".
+Since checking the whole search space is not doable, we will be using and comparing different techniques, specifically the [gradient method](http://mathworld.wolfram.com/ConjugateGradientMethod.html) and the [simulated annealing technique](http://mathworld.wolfram.com/SimulatedAnnealing.html).
 
-You can contact me at guillermo.alonso.nunez@alumnos.upm.es
+I am developing my project under the [Processing](https://processing.org/) integrated development environment. For computing the Voronoi diagrams, I am using a library made by [Lee Byron](http://leebyron.com/mesh/).
+
+If you have any question, suggestion or comment, please feel free to write me at guillermo.alonso.nunez@alumnos.upm.es
