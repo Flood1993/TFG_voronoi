@@ -14,10 +14,10 @@ How would all of the above look like?
 
 Let's throw some "random" starting points to a given partition (in black) and calculate the corresponding Voronoi diagram (in green)!
 
-![alt text](https://github.com/Flood1993/TFG_voronoi/images/start.png "Before adjusting")
+![alt text](https://github.com/Flood1993/TFG_voronoi/blob/master/images/start.png "Before adjusting")
 
 Oops, it doesn't look like a good approximation... Maybe we can do something about it?
 
-![alt text](https://github.com/Flood1993/TFG_voronoi/images/end.png "After adjusting")
+![alt text](https://github.com/Flood1993/TFG_voronoi/blob/master/images/end.png "After adjusting")
 
 But... Is it the best we can do?
