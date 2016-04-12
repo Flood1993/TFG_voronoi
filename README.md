@@ -7,3 +7,17 @@ Since checking the whole search space is not doable, we will be using and compar
 I am developing my project under the [Processing](https://processing.org/) integrated development environment. For computing the Voronoi diagrams, I am using a library made by [Lee Byron](http://leebyron.com/mesh/).
 
 If you have any question, suggestion or comment, please feel free to write me at guillermo.alonso.nunez@alumnos.upm.es
+
+***
+
+How would all of the above look like?
+
+Let's throw some "random" starting points to a given partition (in black) and calculate the corresponding Voronoi diagram (in green)!
+
+// TODO: Insert start image
+
+Oops, it doesn't look like a good approximation... Maybe we can do something about it?
+
+// TODO: Insert end image
+
+But... Is it the best we can do?

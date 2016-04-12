@@ -24,3 +24,9 @@ float t_s1[], t_s2[], t_l1[], t_l2[];
 float t_point[];
 
 PrintWriter output;
+
+color defaultBlack = color(0, 0, 0);
+color backgroundColor = color(215, 215, 215);
+color defaultGreen = color(55,126,68);
+
+boolean firstScreenSaved = false;

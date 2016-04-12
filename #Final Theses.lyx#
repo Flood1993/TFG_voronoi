@@ -147,20 +147,12 @@ Summary/Resumen: Problem, methods of investigation, general conclusions
 Introduction and objectives
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
 Development
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
 Results and conclusions
-\end_layout
-
-\begin_layout Section*
-Appendices (optional)
-\end_layout
-
-\begin_layout Section*
-Bibliography
 \end_layout
 
 \begin_layout Part*
@@ -409,11 +401,6 @@ http://leebyron.com/mesh/ - External processing library used for calculating
 
 \begin_layout Standard
 http://www.lyx.org/ - Document processor used for writing this thesis
-\end_layout
-
-\begin_layout Standard
-https://github.com/Flood1993/TFG_voronoi - Git repository containing everything
- about this project
 \end_layout
 
 \end_body

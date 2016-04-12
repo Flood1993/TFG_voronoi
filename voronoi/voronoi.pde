@@ -10,6 +10,7 @@ boolean debugging = false;
 float simulated_annealing[] = new float[]{10, 8, 5, 4, 2.5, 1, 0.5, 0.2, 0.1};
 int step_index = 0;
 boolean has_improved = true;
+StringBuilder sb = new StringBuilder();
 
 // Executed once
 void setup() {
@@ -41,24 +42,34 @@ void setup() {
 
 // Executed every frame
 void draw() {
-    background(100); // clear screen
+    background(backgroundColor); // clear screen
     gradient_method(simulated_annealing[step_index]);
 
     if (!has_improved && step_index + 1 < simulated_annealing.length) {
         step_index++;
     }
+    draw_part(partition, defaultBlack);
+    draw_part(fl_voronoi, defaultGreen);
+    drawBarycenters();
+    
+    
+    
+     
+    textSize(26);
+    text("Symmetric difference: " + symmetric_diff, 10, 30);
+    
+    if (!firstScreenSaved) {
+        saveFrame("start.png");
+        firstScreenSaved = true;
+    }
+    
     if (!has_improved && step_index + 1 == simulated_annealing.length) {
         System.out.println("Finished adjusting the partition...");
+        saveFrame("end.png");
         output.flush();
         output.close();
         exit();
     }
-
-    draw_part(partition);
-    draw_part(fl_voronoi);
-    drawBarycenters();
-    textSize(26);
-    text("Symmetric difference: " + symmetric_diff, 10, 30);
     
     if (debugging)
         delay(800);
@@ -221,7 +232,21 @@ void gradient_method(float step) {
             System.out.println("Best symmetric difference: " + best_sym_diff);
 
         if (has_improved) {
-            output.println(symmetric_diff);
+            sb.setLength(0);
+            for (int k = 0; k < barycenters.size(); k++) {
+                if (k != 0)
+                    sb.append(",");
+
+                sb.append(barycenters.get(i)[0]);
+                sb.append("@");
+                sb.append(barycenters.get(i)[1]);
+            }
+            sb.append(",");
+            sb.append(symmetric_diff);
+
+            String outputLine = sb.toString();
+
+            output.println(outputLine);
         }
 
         symmetric_diff = best_sym_diff;
