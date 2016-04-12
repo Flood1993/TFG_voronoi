@@ -56,7 +56,7 @@ float[][] array_barycenters(ArrayList<float []> points) {
 // where verticesOfPol1 would be
 //  [(1.6, 2.54), (7.26, 52.5461), ..., (2.4, 6.3)]
 void initializePartition(int lineNumber) {
-    reader = createReader("10_particiones.txt"); // handle the file
+    reader = createReader("10_partitions.txt"); // handle the file
 
     for (int i = 1; i <= lineNumber; i++) { // advance to desired line
         try {

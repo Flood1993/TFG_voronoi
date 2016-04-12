@@ -20,4 +20,4 @@ Oops, it doesn't look like a good approximation... Maybe we can do something abo
 
 ![alt text](https://github.com/Flood1993/TFG_voronoi/blob/master/images/end.png "After adjusting")
 
-But... Is it the best we can do?
+Yay! Approximating is fun!

@@ -147,12 +147,97 @@ Summary/Resumen: Problem, methods of investigation, general conclusions
 Introduction and objectives
 \end_layout
 
+\begin_layout Standard
+What is a partition.
+ Voronoi diagrams.
+\end_layout
+
+\begin_layout Standard
+Introduction to symmetric dyfference.
+ How we will calculate it (substracting area from the square).
+ Different methods to calculate it.
+\end_layout
+
+\begin_layout Standard
+Objectives: Minimize the total difference between a given partition and
+ the one we search in a reasonable execution time.
+\end_layout
+
+\begin_layout Standard
+We would like to be able to find the generating points of perfect Voronoi
+ diagrams (it is not guaranteed we will be able to).
+\end_layout
+
 \begin_layout Section*
 Development
 \end_layout
 
+\begin_layout Standard
+Why Processing.
+ Pros and cons of Java.
+\end_layout
+
+\begin_layout Standard
+First (naive) idea about the development.
+\end_layout
+
+\begin_layout Standard
+Line and polygon clipping.
+ Divide and conquer.
+ Robustness.
+\end_layout
+
+\begin_layout Standard
+Input data.
+\end_layout
+
+\begin_layout Standard
+Output data.
+\end_layout
+
+\begin_layout Standard
+Gradient method.
+\end_layout
+
+\begin_layout Standard
+Simmulated annealing.
+\end_layout
+
+\begin_layout Standard
+Getting rid of the 
+\begin_inset Quotes eld
+\end_inset
+
+repetition
+\begin_inset Quotes erd
+\end_inset
+
+ problem: randomizing point order in each state.
+\end_layout
+
 \begin_layout Section*
 Results and conclusions
+\end_layout
+
+\begin_layout Standard
+Comparing different configurations, their results as well as their execution
+ times.
+\end_layout
+
+\begin_layout Standard
+Different ways of comparing the results.
+\end_layout
+
+\begin_layout Standard
+Total minimum area.
+\end_layout
+
+\begin_layout Standard
+Most average area reduced per step.
+\end_layout
+
+\begin_layout Standard
+Conclusions.
 \end_layout
 
 \begin_layout Section*

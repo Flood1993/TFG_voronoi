@@ -100,6 +100,150 @@ Student Guillermo Alonso Núñez guillermo.alonso.nunez@alumnos.upm.es
 
 \begin_layout Part*
 INDEX
+\end_layout
+
+\begin_layout Section*
+Title
+\end_layout
+
+\begin_layout Subsection
+Title of the project: Adjusting plane partitions through Voronoi Diagrams
+\end_layout
+
+\begin_layout Subsection
+Name of the student
+\end_layout
+
+\begin_layout Subsection
+Name of the supervisor
+\end_layout
+
+\begin_layout Subsection
+Name of the university
+\end_layout
+
+\begin_layout Subsection
+Logo of the university
+\end_layout
+
+\begin_layout Subsection
+Image of the software?
+\end_layout
+
+\begin_layout Section*
+Index
+\end_layout
+
+\begin_layout Section*
+Summary
+\end_layout
+
+\begin_layout Standard
+Summary/Resumen: Problem, methods of investigation, general conclusions
+ (no more than 2 pages)
+\end_layout
+
+\begin_layout Section*
+Introduction and objectives
+\end_layout
+
+\begin_layout Standard
+What is a partition.
+ Voronoi diagrams.
+\end_layout
+
+\begin_layout Standard
+Introduction to symmetric dyfference.
+ How we will calculate it (substracting area from the square).
+ Different methods to calculate it.
+\end_layout
+
+\begin_layout Standard
+Objectives: Minimize the total difference between a given partition and
+ the one we search in a reasonable execution time.
+\end_layout
+
+\begin_layout Standard
+We would like to be able to find the generating points of perfect Voronoi
+ diagrams (it is not guaranteed we will be able to).
+\end_layout
+
+\begin_layout Section*
+Development
+\end_layout
+
+\begin_layout Standard
+Why Processing.
+ Pros and cons of Java.
+\end_layout
+
+\begin_layout Standard
+First (naive) idea about the development.
+\end_layout
+
+\begin_layout Standard
+Line and polygon clipping.
+ Divide and conquer.
+ Robustness.
+\end_layout
+
+\begin_layout Standard
+Input data.
+\end_layout
+
+\begin_layout Standard
+Output data.
+\end_layout
+
+\begin_layout Standard
+Gradient method.
+\end_layout
+
+\begin_layout Standard
+Simmulated annealing.
+\end_layout
+
+\begin_layout Standard
+Getting rid of the 
+\begin_inset Quotes eld
+\end_inset
+
+repetition
+\begin_inset Quotes erd
+\end_inset
+
+ problem: randomizing point order in each state.
+\end_layout
+
+\begin_layout Section*
+Results and conclusions
+\end_layout
+
+\begin_layout Standard
+Different ways of comparing the results.
+\end_layout
+
+\begin_layout Standard
+Total minimum area.
+\end_layout
+
+\begin_layout Standard
+Most average area reduced per step.
+\end_layout
+
+\begin_layout Standard
+Conclusions.
+\end_layout
+
+\begin_layout Section*
+Appendices (optional)
+\end_layout
+
+\begin_layout Section*
+Bibliography
+\end_layout
+
+\begin_layout Part*
 \begin_inset Newpage newpage
 \end_inset
 
@@ -345,6 +489,11 @@ http://leebyron.com/mesh/ - External processing library used for calculating
 
 \begin_layout Standard
 http://www.lyx.org/ - Document processor used for writing this thesis
+\end_layout
+
+\begin_layout Standard
+https://github.com/Flood1993/TFG_voronoi - Git repository containing everything
+ about this project
 \end_layout
 
 \end_body
