@@ -18,7 +18,9 @@ ArrayList<ArrayList<float []>> fl_voronoi;
 
 float symmetric_diff = -80000000000.0;
 float tmp_sym_diff = -80000000000.0;
-int rndm_seed = 0;
+int rndm_seed = 2;
 
 float t_s1[], t_s2[], t_l1[], t_l2[];
 float t_point[];
+
+PrintWriter output;

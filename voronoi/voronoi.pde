@@ -19,8 +19,10 @@ void setup() {
         System.out.println(err_incorr_size);
         exit();
     }
+
+    output = createWriter("output.csv"); 
     
-    randomSeed(2);
+    randomSeed(rndm_seed);
     
     initializePartition(lineNumber);
     initializeBarycenters();
@@ -41,11 +43,16 @@ void setup() {
 void draw() {
     background(100); // clear screen
     gradient_method(simulated_annealing[step_index]);
-    //System.out.println("Step: " + simulated_annealing[step_index]);
-    //delay(5);
 
-    if (!has_improved && step_index + 1 < simulated_annealing.length)
+    if (!has_improved && step_index + 1 < simulated_annealing.length) {
         step_index++;
+    }
+    if (!has_improved && step_index + 1 == simulated_annealing.length) {
+        System.out.println("Finished adjusting the partition...");
+        output.flush();
+        output.close();
+        exit();
+    }
 
     draw_part(partition);
     draw_part(fl_voronoi);
@@ -213,6 +220,10 @@ void gradient_method(float step) {
         if (debugging)
             System.out.println("Best symmetric difference: " + best_sym_diff);
 
+        if (has_improved) {
+            output.println(symmetric_diff);
+        }
+
         symmetric_diff = best_sym_diff;
         barycenters = best_solution;
         float_barycenters = array_barycenters(barycenters); // Convert barycenters to array (Voronoi input format)
@@ -303,7 +314,6 @@ ArrayList<ArrayList<float []>> positive_orientation(
     
     // For each polygon
     for (int i = 0; i < part.size(); i++) {
-        // Make sure orientation is correct
         if (area_polygon(part.get(i)) < 0) {
             ArrayList<float []> tmp = new ArrayList<float []>();
 
