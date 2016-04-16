@@ -80,7 +80,7 @@ Recomendaciones de formato y contenido de la memoria https://www.fi.upm.es/?pagi
 \end_layout
 
 \begin_layout Title
-ADJUSTING PLANE PARTITIONS THROUGH VORONOI DIAGRAMS
+FITTING PLANE PARTITIONS THROUGH VORONOI DIAGRAMS
 \end_layout
 
 \begin_layout Standard
@@ -89,6 +89,25 @@ Supervisor Manuel Abellanas mabellanas@fi.upm.es
 
 \begin_layout Standard
 Student Guillermo Alonso Núñez guillermo.alonso.nunez@alumnos.upm.es
+\end_layout
+
+\begin_layout Standard
+Universidad Politécnica de Madrid (UPM)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Guillermo/Documents/upmLogo.gif
+	scale 10
+	rotateOrigin rightBottom
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+<<<IMAGE OF THE SOFTWARE>>>
 \end_layout
 
 \begin_layout Standard
@@ -102,48 +121,11 @@ Student Guillermo Alonso Núñez guillermo.alonso.nunez@alumnos.upm.es
 INDEX
 \end_layout
 
-\begin_layout Section*
-Title
-\end_layout
-
-\begin_layout Subsection
-Title of the project: Adjusting plane partitions through Voronoi Diagrams
-\end_layout
-
-\begin_layout Subsection
-Name of the student
-\end_layout
-
-\begin_layout Subsection
-Name of the supervisor
-\end_layout
-
-\begin_layout Subsection
-Name of the university
-\end_layout
-
-\begin_layout Subsection
-Logo of the university
-\end_layout
-
-\begin_layout Subsection
-Image of the software?
-\end_layout
-
-\begin_layout Section*
-Index
-\end_layout
-
-\begin_layout Section*
+\begin_layout Section
 Summary
 \end_layout
 
-\begin_layout Standard
-Summary/Resumen: Problem, methods of investigation, general conclusions
- (no more than 2 pages)
-\end_layout
-
-\begin_layout Section*
+\begin_layout Section
 Introduction and objectives
 \end_layout
 
@@ -168,7 +150,7 @@ We would like to be able to find the generating points of perfect Voronoi
  diagrams (it is not guaranteed we will be able to).
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Development
 \end_layout
 
@@ -178,7 +160,7 @@ Why Processing.
 \end_layout
 
 \begin_layout Standard
-First (naive) idea about the development.
+--------First (naive) idea about the development.--------
 \end_layout
 
 \begin_layout Standard
@@ -215,7 +197,7 @@ repetition
  problem: randomizing point order in each state.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Results and conclusions
 \end_layout
 
@@ -240,11 +222,11 @@ Most average area reduced per step.
 Conclusions.
 \end_layout
 
-\begin_layout Section*
-Appendices (optional)
+\begin_layout Section
+Appendices
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Bibliography
 \end_layout
 
@@ -260,15 +242,43 @@ SUMMARY
 \end_layout
 
 \begin_layout Standard
-The inverse Voronoi diagram problem is about detecting whether a given plane
- partition is a Voronoi diagram and finding the initial points that would
+Voronoi diagrams have practical and theoretical applications to a large
+ number of fields, mainly in science, technology and visual art.
+ The aim of my project is to study the inverse Voronoi diagram problem and
+ design, compare and analyze different strategies for its solving.
+ The inverse Voronoi diagram problem consists on detecting whether a given
+ plane partition is a Voronoi diagram and finding the seed points that would
  generate such a partition.
  For a partition which does not come from a Voronoi diagram, it would be
- an interesting question to find the best fitting Voronoi diagram.
- That is, finding the diagram whose total sum for each polygons symmetric
- difference is minimized.
- The aim of this project is to develop a program to adjust plane partitions
- through the use of Voronoi diagrams.
+ interesting to find the best fitting Voronoi diagram.
+ At this point, we need a way to measure how good a candidate solution is.
+ We will be using the total symmetric difference between the two partitions.
+ 
+\end_layout
+
+\begin_layout Standard
+Note that despite the search space is bounded, it being continuous grants
+ an infinite number of solution candidates.
+ Therefore, we will try to solve the problem using different metaheuristic,
+ which makes it impossible to tell whether the obtained solution is optimum.
+\end_layout
+
+\begin_layout Standard
+The basic steps of all the strategies are:
+\end_layout
+
+\begin_layout Itemize
+For each input, calculate a set of seed points from which we will start.
+\end_layout
+
+\begin_layout Itemize
+Move each point slightly following some criteria and check if we improved
+ the current best solution.
+\end_layout
+
+\begin_layout Itemize
+Repeat last step until we cannot keep improving or we are satisfied with
+ the result.
 \end_layout
 
 \begin_layout Part*
@@ -276,139 +286,139 @@ RESUMEN
 \end_layout
 
 \begin_layout Standard
-El problema inverso del diagrama de Voronoi consiste en reconocer si una
- partición es un diagrama de Voronoi y calcular, en caso afirmativo, los
- generadores del diagrama.
- Para una partición que no sea un diagrama de Voronoi, cabe plantearse cuál
- es el diagrama de Voronoi que mejor se ajusta a la partición.
- Es decir, cuál es el diagrama para el que la suma de las diferencias simétricas
- entre sus regiones y las respectivas regiones de la partición se minimiza.
- En este proyecto se propone desarrollar una herramienta software para ajustar
- particiones planas mediante diagramas de Voronoi.
-\end_layout
-
-\begin_layout Part
-PROBLEM DATA
-\end_layout
-
-\begin_layout Section
-First version
+Los diagramas de Voronoi tienen aplicaciones tanto prácticas como teóricas
+ en muchos ámbitos, la mayoría relacionados con la ciencia y tecnología,
+ aunque también se aplica en otros como el arte visual.
+ El objetivo de mi proyecto es estudiar el problema inverso del diagrama
+ de Voronoi y diseñar, comparar y analizar diferentes estrategias para su
+ resolución.
+ Dicho problema consiste en detectar si una partición dada es o no un diagrama
+ de Voronoi, y calcular las semillas que lo generan en caso afirmativo.
+ Para particiones que no lo son, sería interesante encontrar el diagrama
+ de Voronoi que mejor se aproxima.
+ Para ello, necesitaremos alguna forma de evaluar como de buena es una solución.
+ Usaremos la diferencia simétrica entre las dos particiones para tal fin.
 \end_layout
 
 \begin_layout Standard
-The input data for the problem is a partition of the square unit.
- That is, a set of polygons whose union is the square unit and, for every
- two polygons, its intersection is at most a straight line.
- More precisely, each polygon is given as a set of ordered points with two
- coordinates given with a negative orientation (clock-wise).
- At first, we know we will be working only with convex polygons (that is,
- all internal angles are less or equal than 180 degrees).
-\end_layout
-
-\begin_layout Section
-Subtasks
+Nótese que pese a que el espacio de búsqueda es acotado, al ser continuo
+ hay infinitos candidatos que habría que probar, lo cual es inviable.
+ Por tanto, trataremos de resolver el problema mediante diferentes metaheurístic
+as, aunque en ningún caso podremos asegurar que la solución obtenida es
+ óptima.
 \end_layout
 
 \begin_layout Standard
-In order to solve the problem, we need to solve different subtasks in which
- the solution will rely on.
- Those are: 
+El esquema básico de todas las estrategias es el siguiente:
 \end_layout
 
 \begin_layout Itemize
-Calculating a set of starting seed points from which the solution will be
- approximated.
- 
+Para cada datos de entrada, calcular un conjunto de puntos semilla a partir
+ de los cuales comenzaremos la búsqueda.
 \end_layout
 
 \begin_layout Itemize
-Obtaining the Voronoi diagram from an arbitrary set of points.
- 
+Desplazamos los puntos ligeramente según algún criterio y comprobamos si
+ hemos conseguido mejorar nuestra solución, actualizando ésta en ese caso.
 \end_layout
 
 \begin_layout Itemize
-Adjusting the Voronoi diagram to the square unit.
- 
+Repetimos el paso anterior hasta que no podamos seguir mejorando o hasta
+ que la solución obtenida se considere lo suficientemente buena.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+INTRODUCTION
+\end_layout
+
+\begin_layout Standard
+There are some concepts the reader should be familiar with in order to follow
+ this document without problems.
+ Those are:
 \end_layout
 
 \begin_layout Itemize
-Calculating the symmetric difference between the Voronoi diagram and the
- given partition.
- 
+Partition of a set.
+ Partition of the square unit.
 \end_layout
 
 \begin_layout Itemize
-Choosing a criterion for searching the optimal solution.
+Voronoi diagrams.
 \end_layout
 
 \begin_layout Itemize
-Calculating a set of starting seed points from which the solution will be
- approximated.
+Symmetric difference.
+\end_layout
+
+\begin_layout Subsection*
+Partition of a set.
+ Partition of the square unit.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-For calculating the seed points, a simple method we can use is, knowing
- that all polygons are convex, simply calculate each seed point as the average
- of each coordinates for all points of that polygon.
-\end_layout
-
-\begin_layout Itemize
-Obtaining the Voronoi diagram from an arbitrary set of points.
-\end_layout
-
-\begin_layout Itemize
-For obtaining the Voronoi diagram of a given set of points, an external
- library is being used, Mesh - http://leebyron.com/mesh/ .
- That library is designed specifically for obtaining the Voronoi diagram
- in a non complex way for the programmer.
-\end_layout
-
-\begin_layout Itemize
-Adjusting the Voronoi diagram to the square unit.
+A partition of a set is a grouping of the set's elements into non-empty
+ subsets, in such a way that every element is included in one and only one
+ of the subsets.
 \end_layout
 
 \begin_layout Standard
-The first method I used for trimming the Voronoi diagram to the square unit
- was a bit naive.
- I tackled the problem directly instead of applying a “divide and conquer”
- algorithm, which resulted in an extra complexity in the logic behind it,
- which had an effect directly in the complexity of the code.
+In our case, we will be working with partitions of the square unit.
+ That is, a set of polygons such that the union is the square unit and the
+ intersection of two polygons is, at most, a segment.
+ Note that there might be points contained in more than one polygon.
+\end_layout
+
+\begin_layout Subsection
+Voronoi diagrams.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-TODO: EXPLAIN MY FIRST METHOD
+A Voronoi diagram is a partitioning of a plane into regions (called Voronoi
+ cells) based on distance to points (called seeds or generators) in a specific
+ subset of the plane.
+ In this project we will only be using the simplest case of Voronoi diagrams:
+ the seeds are given as a finite set of points in the Euclidian plane.
 \end_layout
 
 \begin_layout Standard
-Another strategy consists of taking advantage of the line clipping algorithm.
- Once we have that problem solved, we simply need to clip each polygon to
- the four segments that make up the square.
+The lines that appear in a Voronoi diagram are the points of the plane that
+ are equidistant to two or more of the nearest seeds.
+\end_layout
+
+\begin_layout Subsection*
+Symmetric difference.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-TODO: EXPLAIN THE LINE CLIPPING ALGORITHM
+For measuring how good a given solution is, we will rely on the symmetric
+ difference as an indicator.
+ For two given polygons A and B, the symmetric difference can be calculated
+ as follows:
 \end_layout
 
 \begin_layout Standard
-- Calculating the symmetric difference between the Voronoi diagram and the
- given partition.
-\end_layout
-
-\begin_layout Standard
-The symmetric difference of two polygons A and B can be defined as the area
- that belongs to either A or B, but not both.
- There are various ways in which the symmetric difference can be calculated.
-\end_layout
-
-\begin_layout Standard
-The first method I thought of took advantage of knowing that all polygons
- would be convex (at least for the first version).
- We will be calculating the symmetric difference as the area of the union
- minus the area of the intersection.
- 
 \begin_inset Formula 
 \[
-SD(A,B)=A(A\bigcup B)-2\cdot A(A\bigcap B)
+SD(A,B)=Area(A\bigcup B)-Area(A\bigcap B)
 \]
 
 \end_inset
@@ -417,68 +427,176 @@ SD(A,B)=A(A\bigcup B)-2\cdot A(A\bigcap B)
 \end_layout
 
 \begin_layout Standard
-For each pair of polygons (one from the given partition and its corresponding
- one from the Voronoi diagram), we first need to calculate all of their
- intersection points in some order.
- Then, we need to find a point contained inside both polygons, which will
- be used as an auxiliary point to calculate triangle areas.
+Applying this concept to two partitions, we can define the symmetric difference
+ of two partitions as the sum of all the symmetric differences for each
+ pair of related polygons.
 \end_layout
 
 \begin_layout Standard
-We know that between each two intersections, there are two different paths
- connecting them, one from the partition polygon border and another one
- from the Voronoi polygon border.
- Note that these paths could be the same for extreme cases, which need to
- be handled specifically.
+Another way of calculating it would be to substract from the area of the
+ unit square, the area of the intersections of every pair of related polygons.
 \end_layout
 
 \begin_layout Standard
-If from the arbitrary point we calculated previosly, we now obtain the areas
- of each path from them, it is clear that the bigger area belongs to the
- union and the smaller area belongs to the intersection.
- Then, we simply have to iterate through each consecutive pair of intersections
- and keep track of the total.
+We will be treating this value as a ratio with the total area of the unit
+ square, so a 0% value will mean the two partitions are exactly the same.
+\end_layout
+
+\begin_layout Part*
+OBJECTIVES
 \end_layout
 
 \begin_layout Standard
-Note that with this method we are not explicitly calculating the intersection
- nor the union.
+The objectives of this project are:
+\end_layout
+
+\begin_layout Itemize
+Fit a given partition of the square unit as much as we can through Voronoi
+ diagrams.
+ Therefore, the variable we want to minimize is the resulting symmetric
+ difference between the input and the solution given.
+\end_layout
+
+\begin_layout Itemize
+If the given partition is in fact a Voronoi diagram, we would like to arrive
+ to that conclusion.
+ Even though this looks trivial, it will be very difficult to get there
+ for non trivial input, since the number of local minimums that have to
+ be avoided to find the seeds increases in a different magnitude compared
+ to the number of polygons.
 \end_layout
 
 \begin_layout Standard
-The method (NOT) currently implemented, suggested by Manuel, calculates
- the symmetric difference by substracting from the square unit area, the
- area of all the intersection polygons.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+DEVELOPMENT
+\end_layout
+
+\begin_layout Subsection
+Why Processing.
+ Pros and cons of Java.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-- Choosing a criterion for searching the optimal solution.
+ga
+\end_layout
+
+\begin_layout Subsection*
+Line and polygon clipping.
+ Divide and conquer.
+ Robustness.
 \end_layout
 
 \begin_layout Standard
-First approximation: Gradient Method
+a
+\end_layout
+
+\begin_layout Subsection*
+Input data.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Simulated annealing
+The input data for the problem is a partition of the square unit.
+ That is, a set of polygons whose union is the square unit and, for every
+ two polygons, its intersection is at most a straight line.
+ More precisely, each polygon is given as a set of ordered 2D points.
+ At first, we know we will be working only with convex polygons (that is,
+ all internal angles are less or equal than 180 degrees).
+\end_layout
+
+\begin_layout Subsection*
+Output data.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-El pseudo-código del algoritmo es el siguiente: 1.
- Hallar un punto de cada región (elegimos el baricentro) 2.
- Hallar el diagrama de Voronoi para esos puntos 2.1.
- Hallar la intersección de ese diagrama con el cuadrado sobre el que estamos
- trabajando 3.
- Calcular la discrepancia entre el diagrama obtenido y la partición dato
- 4.
- Desplazamos los puntos calculados en (1) mínimamente y comparamos los resultado
-s contra los obtenidos 4.1 Si la discrepancia es menor, quiere decir que
- tenemos una solución mejor [1], por lo que la guardamos y seguimos probando
- 4.2 Si la discrepancia es mayor, la solución actual es peor, por lo que
- la descartamos
+The program generates various files after being executed.
+ The files will be located in the 
+\begin_inset Quotes eld
+\end_inset
+
+voronoi
+\begin_inset Quotes erd
+\end_inset
+
+ folder, and will be the following:
 \end_layout
 
-\begin_layout Part
+\begin_layout Itemize
+output.csv: CSV file in which each line represents each iteration of the
+ algorithm.
+ Each line contains information of where each seed point was at that stage
+ and the symmetric difference in that precise step.
+\end_layout
+
+\begin_layout Itemize
+before.png: Image that displays the first approximation of the Voronoi diagram.
+\end_layout
+
+\begin_layout Itemize
+after.png: Image that displays the final approximation of the Voronoi diagram.
+\end_layout
+
+\begin_layout Subsection*
+Gradient method.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a
+\end_layout
+
+\begin_layout Subsection*
+Simmulated annealing.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a
+\end_layout
+
+\begin_layout Subsubsection*
+Getting rid of the 
+\begin_inset Quotes eld
+\end_inset
+
+repetition
+\begin_inset Quotes erd
+\end_inset
+
+ problem: randomizing point order in each state.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
 Bibliografía
 \end_layout
 
