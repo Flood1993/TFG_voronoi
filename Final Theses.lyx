@@ -84,30 +84,58 @@ FITTING PLANE PARTITIONS THROUGH VORONOI DIAGRAMS
 \end_layout
 
 \begin_layout Standard
-Supervisor Manuel Abellanas mabellanas@fi.upm.es 
-\end_layout
-
-\begin_layout Standard
-Student Guillermo Alonso Núñez guillermo.alonso.nunez@alumnos.upm.es
-\end_layout
-
-\begin_layout Standard
-Universidad Politécnica de Madrid (UPM)
-\end_layout
-
-\begin_layout Standard
 \begin_inset Graphics
-	filename C:/Users/Guillermo/Documents/upmLogo.gif
-	scale 10
-	rotateOrigin rightBottom
+	filename voronoi/end.png
+	scale 70
+	BoundingBox 1bp 100bp 500bp 400bp
+	clip
 
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-<<<IMAGE OF THE SOFTWARE>>>
+\align right
+Supervisor Manuel Abellanas mabellanas@fi.upm.es 
+\end_layout
+
+\begin_layout Standard
+\align right
+Student Guillermo Alonso Núñez guillermo.alonso.nunez@alumnos.upm.es
+\end_layout
+
+\begin_layout Standard
+\align right
+Universidad Politécnica de Madrid (UPM)
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Graphics
+	filename C:/Users/Guillermo/Documents/upmLogo.gif
+	scale 7
+	rotateOrigin rightBottom
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

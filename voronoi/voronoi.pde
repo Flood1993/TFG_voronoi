@@ -4,6 +4,7 @@
 import megamu.mesh.*;
 
 final int scale = 500; // size parameters should have this value
+final float squareArea = scale*scale;
 
 boolean debugging = false;
 
@@ -319,6 +320,7 @@ float sym_diff(ArrayList<float []> pol1, ArrayList<float []> pol2) {
     return (area1 + area2 - 2*area_intersection);
 }
 
+// Returns the ratio between the symmetric difference and the 
 float total_sym_diff(ArrayList<ArrayList<float []>> x,
         ArrayList<ArrayList<float []>> y) {
     float res = 0;
@@ -328,7 +330,7 @@ float total_sym_diff(ArrayList<ArrayList<float []>> x,
         res += cur_area;
     }
 
-    return res;
+    return res/squareArea;
 }
 
 // Makes sure all polygons are positively oriented
