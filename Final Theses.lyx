@@ -139,7 +139,7 @@ Gradient method.
 \end_layout
 
 \begin_layout Standard
-Simmulated annealing.
+Simulated annealing.
 \end_layout
 
 \begin_layout Standard
@@ -390,13 +390,26 @@ Applying this concept to two partitions, we can define the symmetric difference
 \end_layout
 
 \begin_layout Standard
-Another way of calculating it would be to substract from the area of the
- unit square, the area of the intersections of every pair of related polygons.
+Taking advantage of the fact that we know all of our polygons are convex,
+ we can calculate it in a different way.
 \end_layout
 
 \begin_layout Standard
-We will be treating this value as a ratio with the total area of the unit
- square, so a 0% value will mean the two partitions are exactly the same.
+In order to avoid issues with scaling the programs window size, we will
+ be treating this value as a ratio with the total area of the unit square,
+ so a 0% value will mean the two partitions are exactly the same.
+\end_layout
+
+\begin_layout Subsection*
+Generalized inverse Voronoi problem.
+\end_layout
+
+\begin_layout Standard
+caf
+\end_layout
+
+\begin_layout Subsection*
+Voronoi diagrams in the nature.
 \end_layout
 
 \begin_layout Part*
@@ -421,6 +434,11 @@ If the given partition is in fact a Voronoi diagram, we would like to arrive
  for non trivial input, since the number of local minimums that have to
  be avoided to find the seeds increases in a different magnitude compared
  to the number of polygons.
+\end_layout
+
+\begin_layout Itemize
+We want to compare different strategies and be able to tell how well they
+ fit a partition in different scenarios.
 \end_layout
 
 \begin_layout Standard
@@ -523,7 +541,15 @@ a
 \end_layout
 
 \begin_layout Subsection*
-Simmulated annealing.
+Improved gradient method: implementing steps
+\end_layout
+
+\begin_layout Standard
+One step closer to the simulated annealing.
+\end_layout
+
+\begin_layout Subsection*
+Simulated annealing.
 \begin_inset Newline newline
 \end_inset
 
@@ -531,7 +557,8 @@ Simmulated annealing.
 \end_layout
 
 \begin_layout Standard
-a
+Explan the simulated annealing technique.
+ http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing
 \end_layout
 
 \begin_layout Subsubsection*
@@ -574,6 +601,10 @@ http://www.lyx.org/ - Document processor used for writing this thesis
 \begin_layout Standard
 https://github.com/Flood1993/TFG_voronoi - Git repository containing everything
  about this project
+\end_layout
+
+\begin_layout Standard
+http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing - Simulated annealing
 \end_layout
 
 \end_body

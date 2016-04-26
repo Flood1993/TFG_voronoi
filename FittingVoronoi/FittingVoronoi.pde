@@ -3,7 +3,7 @@
 
 import megamu.mesh.*;
 
-final int scale = 500; // size parameters should have this value
+final int scale = 500; // size(...) parameters should have this value
 final float squareArea = scale*scale;
 
 boolean debugging = false;
@@ -45,9 +45,10 @@ void setup() {
 void draw() {
     background(backgroundColor); // clear screen
 
-    gradientMethod(simulatedAnnealing[stepIndex]);
+    if (!finished)
+        gradientMethod(simulatedAnnealing[stepIndex]);
 
-    if (!hasImproved && stepIndex + 1 < simulatedAnnealing.length) {
+    if (!hasImproved && stepIndex < simulatedAnnealing.length) {
         stepIndex++;
     }
     drawPart(partition, defaultBlack);
@@ -62,12 +63,13 @@ void draw() {
         firstScreenSaved = true;
     }
     
-    if (!hasImproved && stepIndex + 1 == simulatedAnnealing.length) {
-        System.out.println("Finished adjusting the partition...");
+    if (!finished && !hasImproved && stepIndex == simulatedAnnealing.length) {
+        System.out.println("Finished adjusting the partition..." + symmetricDiff);
         saveFrame("Output-End.png");
         output.flush();
         output.close();
-        exit();
+        finished = true;
+        //exit();
     }
     
     if (debugging)
@@ -305,27 +307,19 @@ ArrayList<float []> clipPolygons(ArrayList<float []> pol1,
     return res;
 }
 
-// Returns the symmetric difference of two polygons
 float symDiff(ArrayList<float []> pol1, ArrayList<float []> pol2) {
     ArrayList<float []> intersection = clipPolygons(pol1, pol2);
-
-    float area1 = areaPolygon(pol1);
-    float area2 = areaPolygon(pol2);
     float areaIntersection = areaPolygon(intersection);
 
-    float res = area1 + area2 - 2*areaIntersection;
-
-    return (area1 + area2 - 2*areaIntersection);
+    return areaIntersection;
 }
 
-// Returns the ratio between the symmetric difference and the 
 float totalSymDiff(ArrayList<ArrayList<float []>> x,
         ArrayList<ArrayList<float []>> y) {
-    float res = 0;
+    float res = squareArea;
 
     for (int i = 0; i < x.size(); i++) {
-        float curArea = symDiff(x.get(i), y.get(i));
-        res += curArea;
+        res -= symDiff(x.get(i), y.get(i));
     }
 
     return res/squareArea;

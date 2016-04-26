@@ -31,6 +31,7 @@ color backgroundColor = color(215, 215, 215);
 color defaultGreen = color(55,126,68);
 
 boolean firstScreenSaved = false;
+boolean finished = false;
 
 // Error strings
 String excLoadingData = "Exception when loading data...";
