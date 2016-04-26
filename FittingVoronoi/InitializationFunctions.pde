@@ -19,7 +19,7 @@ void initializeBarycenters() {
 }
 
 // Converts Voronoi structure to our format, so we can calculate on it
-ArrayList<ArrayList<float []>> store_voronoi(Voronoi vor) {
+ArrayList<ArrayList<float []>> storeVoronoi(Voronoi vor) {
     ArrayList<ArrayList<float []>> res = new ArrayList<ArrayList<float []>>();
     ArrayList<float []> tmp;
     MPolygon[] myRegions = vor.getRegions();
@@ -37,7 +37,7 @@ ArrayList<ArrayList<float []>> store_voronoi(Voronoi vor) {
     return res;
 }
 
-float[][] array_barycenters(ArrayList<float []> points) {
+float[][] arrayBarycenters(ArrayList<float []> points) {
     float res[][] = new float[points.size()][2];
 
     for (int i = 0; i < points.size(); i++) {
@@ -63,12 +63,12 @@ void initializePartition(int lineNumber) {
             line = reader.readLine();
         } catch (IOException e) {
             line = null;
-            System.out.println(exc_loading_data); // error
+            System.out.println(excLoadingData); // error
         }
     }
 
     if (line == null)
-        System.out.println(err_loading_part + lineNumber); // error
+        System.out.println(errLoadingPart + lineNumber); // error
 
                              // line contains raw polygon list from file
     line = line.replace(" ", "");  // delete blank spaces

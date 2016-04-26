@@ -9,22 +9,22 @@ void drawBarycenters() {
     clearDrawingSettings();
 }
 
-void draw_part(ArrayList<ArrayList<float []>> partition, color col) {
+void drawPart(ArrayList<ArrayList<float []>> partition, color col) {
     stroke(col);
 
     for (int i = 0; i < partition.size(); i++)
-        draw_pol(partition.get(i), col);
+        drawPol(partition.get(i), col);
 
     clearDrawingSettings();
 }
 
-void draw_pol(ArrayList<float []> pol, color col) {
+void drawPol(ArrayList<float []> pol, color col) {
     stroke(col);
   
     for (int i = 0; i < pol.size(); i++) {
-      int next_i = (i == pol.size() - 1) ? 0 : i + 1;
+      int iNext = (i == pol.size() - 1) ? 0 : i + 1;
       
-      line(pol.get(i)[0], pol.get(i)[1], pol.get(next_i)[0], pol.get(next_i)[1]);
+      line(pol.get(i)[0], pol.get(i)[1], pol.get(iNext)[0], pol.get(iNext)[1]);
     }
 
     clearDrawingSettings();
