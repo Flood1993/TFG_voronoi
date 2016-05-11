@@ -216,7 +216,7 @@ Voronoi diagrams have practical and theoretical applications to a large
 \begin_layout Standard
 Note that despite the search space is bounded, it being continuous grants
  an infinite number of solution candidates.
- Therefore, we will try to solve the problem using different metaheuristic,
+ Therefore, we will try to solve the problem using different metaheuristics,
  which makes it impossible to tell whether the obtained solution is optimum.
 \end_layout
 
@@ -330,6 +330,23 @@ A partition of a set is a grouping of the set's elements into non-empty
 \end_layout
 
 \begin_layout Standard
+For example, if we consider the set X = {1, 2, 3, 4, 5}, three different
+ partitions could be:
+\end_layout
+
+\begin_layout Itemize
+{1, 3}, {2, 4}, {5}
+\end_layout
+
+\begin_layout Itemize
+{1, 2, 3}, {4, 5}
+\end_layout
+
+\begin_layout Itemize
+{1}, {2}, {3}, {4}, {5}
+\end_layout
+
+\begin_layout Standard
 In our case, we will be working with partitions of the square unit.
  That is, a set of polygons such that the union is the square unit and the
  intersection of two polygons is, at most, a segment.
@@ -390,8 +407,11 @@ Applying this concept to two partitions, we can define the symmetric difference
 \end_layout
 
 \begin_layout Standard
-Taking advantage of the fact that we know all of our polygons are convex,
- we can calculate it in a different way.
+Since in this project we will only be interested in working with convex
+ polygons, we can use that to our advantage and calculate the symmetric
+ difference in a different way: we will substract from the square unit area,
+ the areas of all the intersections of each pair of related polygons.
+ This will be explained more in detail later, in the development chapter.
 \end_layout
 
 \begin_layout Standard
@@ -401,15 +421,68 @@ In order to avoid issues with scaling the programs window size, we will
 \end_layout
 
 \begin_layout Subsection*
+Inverse Voronoi problem.
+\end_layout
+
+\begin_layout Standard
+As mentioned earlier, the inverse Voronoi diagram problem consists on detecting
+ whether a given plane partition is a Voronoi diagram and finding the seed
+ points that would generate such a partition.
+ From the mathematical point of view, it is interesting that, for partitions
+ that do come from a Voronoi diagram, the problem can be solved in O(n)
+ time, n being the number of seeds of such a diagram.
+\end_layout
+
+\begin_layout Proof
+We know the partition comes from a Voronoi diagram.
+ TODO: Proof...
+\end_layout
+
+\begin_layout Proof
+But what happens when the partition does not come from a Voronoi diagram?
+ Even if it did, due to computers inaccuracy when representing floating-point
+ numbers, the input data we have will not perfectly be the one that would
+ be generated from a Voronoi diagram, but rather an approximation of it.
+ Thus, we want to explore different methods of fitting an arbitrary partition,
+ whether it comes from a Voronoi diagram.
+\end_layout
+
+\begin_layout Subsection*
 Generalized inverse Voronoi problem.
 \end_layout
 
 \begin_layout Standard
-caf
+Another problem related to the ones exposed, but beyond of the scope of
+ this project, is the generalized inverse Voronoi problem.
+ This problem consists of, given a plane partition, calculate a Voronoi
+ diagram such that the given partition is contained on it.
+ That is, add the necessary seeds so you get a partition which contains
+ the one given.
 \end_layout
 
 \begin_layout Subsection*
 Voronoi diagrams in the nature.
+\end_layout
+
+\begin_layout Standard
+TODO: Contar lo de los japoneses y los peces del libro de Manuel.
+\end_layout
+
+\begin_layout Standard
+If one has the chance to go for a walk in Madrid, he/she might find itself
+ in front of the 
+\begin_inset Quotes eld
+\end_inset
+
+Teatros del Canal
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If that person is familiar with Voronoi diagrams, something will catch
+ his eye: some parts of the decoration of that building resemble those diagrams!
+ Further in this project, we will adjust them and see how well they fit
+ as a Voronoi diagram.
 \end_layout
 
 \begin_layout Part*
@@ -425,6 +498,7 @@ Fit a given partition of the square unit as much as we can through Voronoi
  diagrams.
  Therefore, the variable we want to minimize is the resulting symmetric
  difference between the input and the solution given.
+ Different techniques will be used, compared and discussed.
 \end_layout
 
 \begin_layout Itemize
@@ -432,13 +506,8 @@ If the given partition is in fact a Voronoi diagram, we would like to arrive
  to that conclusion.
  Even though this looks trivial, it will be very difficult to get there
  for non trivial input, since the number of local minimums that have to
- be avoided to find the seeds increases in a different magnitude compared
- to the number of polygons.
-\end_layout
-
-\begin_layout Itemize
-We want to compare different strategies and be able to tell how well they
- fit a partition in different scenarios.
+ be avoided to find the seeds increases in a higher magnitude compared to
+ the number of polygons.
 \end_layout
 
 \begin_layout Standard
@@ -462,7 +531,31 @@ Why Processing.
 \end_layout
 
 \begin_layout Standard
-ga
+Despite Java not being the most efficent language out there for crunching
+ raw numbers, I felt like I had to go with Processing for the development
+ for a number of reasons:
+\end_layout
+
+\begin_layout Itemize
+First of all, I had already used it in the past for a different project,
+ and one of the biggest advantages of it is the ease to display information
+ in the screen.
+\end_layout
+
+\begin_layout Itemize
+The aim of this project is not to design an algorithm that can finish execution
+ in the least amount of time, but rather, study and compare different techniques
+ and their results.
+\end_layout
+
+\begin_layout Itemize
+It is extremely portable across the different operative systems.
+\end_layout
+
+\begin_layout Itemize
+Java's data structures come in handy for our problem.
+ ArrayList's are used constantly in the code to contain information about
+ the partitions and polygons.
 \end_layout
 
 \begin_layout Subsection*
@@ -472,7 +565,38 @@ Line and polygon clipping.
 \end_layout
 
 \begin_layout Standard
-a
+There are two main situations in the problem in which we have to calculate
+ the intersection of two polygons: when clipping a polygon to the square
+ unit and when clipping two polygons.
+\end_layout
+
+\begin_layout Standard
+The first one is needed because, theoretically, there will always be some
+ Voronoi region whose area will be infinite.
+ We are getting rid of that issue forcing all of our regions to be contained
+ within the square unit.
+ In order to do so, we must treat our Voronoi diagram in order to clip all
+ regions into it.
+\end_layout
+
+\begin_layout Standard
+The second one is useful when we want to calculate the area of the intersection
+ of two polygons, for calculating the symmetric difference.
+ An easy way to do it is calculate the actual intersection, and then, get
+ the area of that polygon.
+\end_layout
+
+\begin_layout Standard
+There is a simple, common operation in both tasks, to which these two problems
+ can be reduced to: clip a polygon with a single line.
+ If we have a solid function that can do this seemengly easy task, then
+ we can rely on it to calculate any intersection of convex polygons, repeating
+ the process for all lines of one of the polygons against the other.
+\end_layout
+
+\begin_layout Standard
+Some naive approaches were implemented before realizing this fact, but they
+ were buggy and so discarded.
 \end_layout
 
 \begin_layout Subsection*
@@ -490,6 +614,12 @@ The input data for the problem is a partition of the square unit.
  More precisely, each polygon is given as a set of ordered 2D points.
  At first, we know we will be working only with convex polygons (that is,
  all internal angles are less or equal than 180 degrees).
+ The input data will be read from a *.txt file in which each line will contain
+ a whole partition.
+\end_layout
+
+\begin_layout Standard
+More in detail, this is the structure of the input data files:
 \end_layout
 
 \begin_layout Subsection*
@@ -537,7 +667,23 @@ Gradient method.
 \end_layout
 
 \begin_layout Standard
-a
+The gradient method is a simple heuristic used in optimization problems
+ where the search space is not treatable.
+ It consists on, at any given state, compare neighbour solutions against
+ the current one.
+ If they are better, take the best as the new current solution and repeat.
+ If the minimum or maximum we are looking for is bounded, there will be
+ a point at which we will not be able to continue improving.
+ That will be our solution.
+\end_layout
+
+\begin_layout Standard
+For example, consider you want to find the maximum value of a function.
+ You start at a random point with a corresponding value.
+ You will have to move to the left if the value at some distance to the
+ left is higher, or to the right if the value at some distance to the right
+ is higher.
+ The problem with this is that we can easily get stuck in a local maximum.
 \end_layout
 
 \begin_layout Subsection*
@@ -545,7 +691,12 @@ Improved gradient method: implementing steps
 \end_layout
 
 \begin_layout Standard
-One step closer to the simulated annealing.
+One step closer to the simulated annealing, but still very similar to the
+ gradient method.
+ It consists on iterating different gradient methods, but varying the step
+ size we are taking on each.
+ This way, we will adjust our solution as much as possible, but this will
+ not get us out of the local maximum.
 \end_layout
 
 \begin_layout Subsection*
@@ -557,8 +708,16 @@ Simulated annealing.
 \end_layout
 
 \begin_layout Standard
-Explan the simulated annealing technique.
- http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing
+Simulated annealing copies a phenomenon in nature--the annealing of solids--to
+ optimize a complex system.
+ Annealing refers to heating a solid and then cooling it slowly.
+ Atoms then assume a nearly globally minimum energy state.
+ In 1953 Metropolis created an algorithm to simulate the annealing process.
+ The algorithm simulates a small random displacement of an atom that results
+ in a change in energy.
+ If the change in energy is negative, the energy state of the new configuration
+ is lower and the new configuration is accepted.
+ TODO: explain more and better.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -605,6 +764,11 @@ https://github.com/Flood1993/TFG_voronoi - Git repository containing everything
 
 \begin_layout Standard
 http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing - Simulated annealing
+\end_layout
+
+\begin_layout Standard
+http://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
+ - Inaccuracy of computers when dealing with floating-point numbers
 \end_layout
 
 \end_body
