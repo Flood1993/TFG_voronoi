@@ -17,12 +17,12 @@ StringBuilder sb = new StringBuilder();
 
 // Executed once
 void setup() {
-    size(500, 500); // set these values to the same of scale!
+    size(800, 600); // set these values to the same of scale!
 
-    if (height != scale || width != scale) { // check size
+    /*if (height != scale || width != scale) { // check size
         System.out.println(errIncorrSize);
         exit();
-    }
+    }*/
 
     output = createWriter("Output.csv"); 
     
@@ -37,6 +37,23 @@ void setup() {
     flVoronoi = positiveOrientation(flVoronoi, barycenters);
     flVoronoi = clipPartitionToSquare(flVoronoi);
     symmetricDiff = totalSymDiff(partition, flVoronoi);
+    symDiffAtStart = symmetricDiff;
+    
+    fill(150, 160, 160);
+    rect(drawingOffset, drawingOffset, scale, scale);
+    fill(backgroundColor);
+    
+    drawPart(partition, defaultBlack);
+    drawPart(flVoronoi, defaultGreen);
+    drawBarycenters();
+    
+    drawTextGUI();
+    
+    
+    if (!firstScreenSaved) {
+        saveFrame("Output-Start.png");
+        firstScreenSaved = true;
+    }
     
     if (debugging)
         System.out.println("Sym diff setup: " + symmetricDiff);
@@ -44,8 +61,12 @@ void setup() {
 }
 
 // Executed every frame
-void draw() {
+void draw() { 
     background(backgroundColor); // clear screen
+
+    fill(150, 160, 160);
+    rect(drawingOffset, drawingOffset, scale, scale);
+    fill(backgroundColor);
 
     if (!finished)
         gradientMethod(simulatedAnnealing[stepIndex]*scale, true);
@@ -57,22 +78,17 @@ void draw() {
     drawPart(flVoronoi, defaultGreen);
     drawBarycenters();
     
-    textSize(26);
-    text("Symmetric difference: " + symmetricDiff, 10, 30);
+    drawTextGUI();
     
-    if (!firstScreenSaved) {
-        saveFrame("Output-Start.png");
-        firstScreenSaved = true;
-    }
     
     if (!finished && !hasImproved && stepIndex == simulatedAnnealing.length) {
-        System.out.println("Finished adjusting the partition..." + symmetricDiff);
+        finished = true;
         saveFrame("Output-End.png");
         output.flush();
         output.close();
-        finished = true;
         //exit();
     }
+    
     
     if (debugging)
         delay(800);
@@ -135,6 +151,7 @@ ArrayList<float []> clipLine(ArrayList<float []> pol, float lineStart[],
 }
 
 void gradientMethod(float step, boolean useSimulatedAnnealing) {
+    stepCount++;
     // TODO: randomize barycenter order
     hasImproved = false;
 
@@ -238,13 +255,12 @@ void gradientMethod(float step, boolean useSimulatedAnnealing) {
             bestSymDiff = diff;
         }
 
-
-
         if (debugging)
             System.out.println("Best symmetric difference: " + bestSymDiff);
 
         if (hasImproved) {
-            sb.setLength(0);
+            sb.setLength(0); // clear sb
+
             for (int k = 0; k < barycenters.size(); k++) {
                 if (k != 0)
                     sb.append(",");
