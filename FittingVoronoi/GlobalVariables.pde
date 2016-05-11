@@ -1,4 +1,4 @@
-int lineNumber = 8; // Line of the partition file which we want to load
+int lineNumber = 10; // Line of the partition file which we want to load [1-
 
 // Variables that will be used for reading the partition from a file
 BufferedReader reader;

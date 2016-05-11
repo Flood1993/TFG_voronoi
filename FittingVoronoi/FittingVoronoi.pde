@@ -8,7 +8,9 @@ final float squareArea = scale*scale;
 
 boolean debugging = false;
 
-float simulatedAnnealing[] = new float[]{10, 8, 5, 4, 2.5, 1, 0.5, 0.2, 0.1};
+// Values relative to the square unit
+float simulatedAnnealing[] = new float[]{0.05, 0.03, 0.01, 0.005, 0.001};
+// As of now, these values are hard-coded (they don't care about resolution)
 int stepIndex = 0;
 boolean hasImproved = true;
 StringBuilder sb = new StringBuilder();
@@ -46,7 +48,7 @@ void draw() {
     background(backgroundColor); // clear screen
 
     if (!finished)
-        gradientMethod(simulatedAnnealing[stepIndex]);
+        gradientMethod(simulatedAnnealing[stepIndex]*scale, true);
 
     if (!hasImproved && stepIndex < simulatedAnnealing.length) {
         stepIndex++;
@@ -132,7 +134,7 @@ ArrayList<float []> clipLine(ArrayList<float []> pol, float lineStart[],
     return res;
 }
 
-void gradientMethod(float step) {
+void gradientMethod(float step, boolean useSimulatedAnnealing) {
     // TODO: randomize barycenter order
     hasImproved = false;
 
@@ -150,11 +152,17 @@ void gradientMethod(float step) {
 
     for (int j = 0; j < accessOrder.length; j++) { // for each point
         int i = accessOrder[j];
+
+        float randomNumber = random(0, 1);
+
         // TODO: Need some refactoring
         ArrayList<float []> bestSolution = barycenters;
         flVoronoi = positiveOrientation(flVoronoi, barycenters);
         float bestSymDiff = totalSymDiff(partition, flVoronoi);
         
+        float simAnnValue = 0;
+
+
 
 
 
@@ -172,14 +180,12 @@ void gradientMethod(float step) {
         if (debugging)
             System.out.println("Diff 1: " + diff);
 
-        if (diff < bestSymDiff) {
+        simAnnValue = exp((symmetricDiff - diff)/step);
+        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
             hasImproved = true;
             bestSolution = clonedBarycenters;
             bestSymDiff = diff;
         }
-
-
-
 
         clonedBarycenters = cloneArraylist(barycenters);
         clonedBarycenters.get(i)[0] = clonedBarycenters.get(i)[0] - step;
@@ -191,7 +197,8 @@ void gradientMethod(float step) {
         diff = totalSymDiff(partition, tmpNewStuff);
         if (debugging)
             System.out.println("Diff 2: " + diff);
-        if (diff < bestSymDiff) {
+        simAnnValue = exp((symmetricDiff - diff)/step);
+        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
             hasImproved = true;
             bestSolution = clonedBarycenters;
             bestSymDiff = diff;
@@ -207,7 +214,8 @@ void gradientMethod(float step) {
         diff = totalSymDiff(partition, tmpNewStuff);
         if (debugging)
             System.out.println("Diff 3: " + diff);
-        if (diff < bestSymDiff) {
+        simAnnValue = exp((symmetricDiff - diff)/step);
+        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
             hasImproved = true;
             bestSolution = clonedBarycenters;
             bestSymDiff = diff;
@@ -223,11 +231,14 @@ void gradientMethod(float step) {
         diff = totalSymDiff(partition, tmpNewStuff);
         if (debugging)
             System.out.println("Diff 4: " + diff);
-        if (diff < bestSymDiff) {
+        simAnnValue = exp((symmetricDiff - diff)/step);
+        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
             hasImproved = true;
             bestSolution = clonedBarycenters;
             bestSymDiff = diff;
         }
+
+
 
         if (debugging)
             System.out.println("Best symmetric difference: " + bestSymDiff);
