@@ -18,6 +18,8 @@ StringBuilder sb = new StringBuilder();
 // Executed once
 void setup() {
     size(800, 600); // set these values to the same of scale!
+    
+    background(backgroundColor); // clear screen
 
     /*if (height != scale || width != scale) { // check size
         System.out.println(errIncorrSize);
