@@ -422,6 +422,10 @@ In order to avoid issues with scaling the programs window size, we will
 
 \begin_layout Subsection*
 Inverse Voronoi problem.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -449,6 +453,10 @@ But what happens when the partition does not come from a Voronoi diagram?
 
 \begin_layout Subsection*
 Generalized inverse Voronoi problem.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -461,7 +469,11 @@ Another problem related to the ones exposed, but beyond of the scope of
 \end_layout
 
 \begin_layout Subsection*
-Voronoi diagrams in the nature.
+Voronoi diagrams in real life.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -498,7 +510,8 @@ Fit a given partition of the square unit as much as we can through Voronoi
  diagrams.
  Therefore, the variable we want to minimize is the resulting symmetric
  difference between the input and the solution given.
- Different techniques will be used, compared and discussed.
+ We want to implement different techniques and compare their results in
+ a set of test cases.
 \end_layout
 
 \begin_layout Itemize
@@ -558,10 +571,33 @@ Java's data structures come in handy for our problem.
  the partitions and polygons.
 \end_layout
 
+\begin_layout Itemize
+The number of regions we are going to be treating in our research will be
+ 200 maximum, a reasonable number for any modern programming language.
+\end_layout
+
+\begin_layout Subsection*
+Calculating the Voronoi diagram from a set of seed points.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Even though I am using an already implemented library for calculating the
+ Voronoi diagrams, here I will explain the most common methods for calculating
+ a Voronoi diagram.
+\end_layout
+
 \begin_layout Subsection*
 Line and polygon clipping.
  Divide and conquer.
  Robustness.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -576,7 +612,7 @@ The first one is needed because, theoretically, there will always be some
  We are getting rid of that issue forcing all of our regions to be contained
  within the square unit.
  In order to do so, we must treat our Voronoi diagram in order to clip all
- regions into it.
+ regions into a bounded area, in our case, the square unit.
 \end_layout
 
 \begin_layout Standard
@@ -592,11 +628,6 @@ There is a simple, common operation in both tasks, to which these two problems
  If we have a solid function that can do this seemengly easy task, then
  we can rely on it to calculate any intersection of convex polygons, repeating
  the process for all lines of one of the polygons against the other.
-\end_layout
-
-\begin_layout Standard
-Some naive approaches were implemented before realizing this fact, but they
- were buggy and so discarded.
 \end_layout
 
 \begin_layout Subsection*
@@ -688,6 +719,10 @@ For example, consider you want to find the maximum value of a function.
 
 \begin_layout Subsection*
 Improved gradient method: implementing steps
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
