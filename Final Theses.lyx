@@ -420,6 +420,26 @@ In order to avoid issues with scaling the programs window size, we will
  so a 0% value will mean the two partitions are exactly the same.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/SymDiffOfTwoConvexPolygons.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/SymDiffOfTwoPartitions.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Inverse Voronoi problem.
 \begin_inset Newline newline
@@ -495,6 +515,26 @@ Teatros del Canal
  his eye: some parts of the decoration of that building resemble those diagrams!
  Further in this project, we will adjust them and see how well they fit
  as a Voronoi diagram.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/TeatrosDelCanalOriginal.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/TeatrosDelCanalParticion.png
+	scale 45
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part*
@@ -591,9 +631,8 @@ Even though I am using an already implemented library for calculating the
 \end_layout
 
 \begin_layout Subsection*
-Line and polygon clipping.
- Divide and conquer.
- Robustness.
+Line clipping.
+ Polygon clipping.
 \begin_inset Newline newline
 \end_inset
 
@@ -601,23 +640,23 @@ Line and polygon clipping.
 \end_layout
 
 \begin_layout Standard
-There are two main situations in the problem in which we have to calculate
- the intersection of two polygons: when clipping a polygon to the square
- unit and when clipping two polygons.
+There are two situations in the problem in which we have to calculate the
+ intersection of two polygons: when clipping a polygon to the square unit
+ and when clipping two polygons.
 \end_layout
 
 \begin_layout Standard
 The first one is needed because, theoretically, there will always be some
  Voronoi region whose area will be infinite.
- We are getting rid of that issue forcing all of our regions to be contained
- within the square unit.
- In order to do so, we must treat our Voronoi diagram in order to clip all
- regions into a bounded area, in our case, the square unit.
+ In order to get rid of that issue, we must treat our Voronoi diagram in
+ order to clip all regions into a bounded area, in our case, the square
+ unit.
 \end_layout
 
 \begin_layout Standard
 The second one is useful when we want to calculate the area of the intersection
- of two polygons, for calculating the symmetric difference.
+ of two polygons for calculating the symmetric difference.
+ This is doable since we will be working with convex polygons.
  An easy way to do it is calculate the actual intersection, and then, get
  the area of that polygon.
 \end_layout
@@ -625,9 +664,152 @@ The second one is useful when we want to calculate the area of the intersection
 \begin_layout Standard
 There is a simple, common operation in both tasks, to which these two problems
  can be reduced to: clip a polygon with a single line.
- If we have a solid function that can do this seemengly easy task, then
- we can rely on it to calculate any intersection of convex polygons, repeating
- the process for all lines of one of the polygons against the other.
+ If we have a solid function that can do this task, then we can rely on
+ it to calculate any intersection of convex polygons (note that the square
+ unit is a convex polygon too), repeating the process for all lines of one
+ of the polygons against the other.
+\end_layout
+
+\begin_layout Standard
+The algorithm works as follows:
+\end_layout
+
+\begin_layout Standard
+Suppose we want to clip the polygon ABCDEFG with the blue line.
+ Note that this polygon is not convex, but for explanation purposes, we
+ will apply the algorithm to it.
+ Also note that the line has a direction, given by the blue arrow.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping0.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first step of the clipping algorithm is to set a starting vertex.
+ We will set A as our starting point.
+ We must check in which side of the blue line it lies.
+ We can do this using the cross product of two points of the line and our
+ point.
+ Since in the implementation we will be working with positively oriented
+ polygons, we are interested only in points which lie on the left of the
+ line.
+ The point A is lying on the left, so we add it to the solution and continue.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The next step is to select the next point and see whether it lies in the
+ same side of the blue line.
+ Since B also lies on the same side than A, we add it to the solution too
+ and keep going.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Same for C, still on the left.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping3.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When we check D, we see that it is lying on the right side of the line.
+ Then, we know that this point will be clipped by the line.
+ Therefore, we need to find point P, which is the intersection of CD with
+ the blue line.
+ We will be adding this point to the solution.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping4.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping5.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping6.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping7.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping8.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ThesisImages/LineClipping9.png
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*

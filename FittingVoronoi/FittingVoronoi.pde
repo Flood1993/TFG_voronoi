@@ -26,7 +26,7 @@ void setup() {
         exit();
     }*/
 
-    output = createWriter("Output.csv"); 
+    output = createWriter("Output.csv");
     
     randomSeed(rndmSeed);
     
