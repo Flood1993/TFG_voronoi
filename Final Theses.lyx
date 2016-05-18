@@ -3,6 +3,10 @@
 \begin_document
 \begin_header
 \textclass amsart
+\begin_preamble
+\usepackage{chngcntr}
+\counterwithin*{section}{part}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
@@ -29,6 +33,7 @@ figs-within-sections
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -57,7 +62,7 @@ figs-within-sections
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 1
+\secnumdepth 5
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
@@ -78,112 +83,27 @@ figs-within-sections
 INDEX
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
 Summary
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
 Introduction and objectives
 \end_layout
 
 \begin_layout Standard
-What is a partition.
- Voronoi diagrams.
-\end_layout
-
-\begin_layout Standard
-Introduction to symmetric dyfference.
- How we will calculate it (substracting area from the square).
- Different methods to calculate it.
-\end_layout
-
-\begin_layout Standard
-Objectives: Minimize the total difference between a given partition and
- the one we search in a reasonable execution time.
-\end_layout
-
-\begin_layout Standard
-We would like to be able to find the generating points of perfect Voronoi
- diagrams (it is not guaranteed we will be able to).
-\end_layout
-
-\begin_layout Section
 Development
 \end_layout
 
 \begin_layout Standard
-Why Processing.
- Pros and cons of Java.
-\end_layout
-
-\begin_layout Standard
---------First (naive) idea about the development.--------
-\end_layout
-
-\begin_layout Standard
-Line and polygon clipping.
- Divide and conquer.
- Robustness.
-\end_layout
-
-\begin_layout Standard
-Input data.
-\end_layout
-
-\begin_layout Standard
-Output data.
-\end_layout
-
-\begin_layout Standard
-Gradient method.
-\end_layout
-
-\begin_layout Standard
-Simulated annealing.
-\end_layout
-
-\begin_layout Standard
-Getting rid of the 
-\begin_inset Quotes eld
-\end_inset
-
-repetition
-\begin_inset Quotes erd
-\end_inset
-
- problem: randomizing point order in each state.
-\end_layout
-
-\begin_layout Section
 Results and conclusions
 \end_layout
 
 \begin_layout Standard
-Comparing different configurations, their results as well as their execution
- times.
-\end_layout
-
-\begin_layout Standard
-Different ways of comparing the results.
-\end_layout
-
-\begin_layout Standard
-Total minimum area.
-\end_layout
-
-\begin_layout Standard
-Most average area reduced per step.
-\end_layout
-
-\begin_layout Standard
-Conclusions.
-\end_layout
-
-\begin_layout Section
 Appendices
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
 Bibliography
 \end_layout
 
@@ -194,7 +114,7 @@ Bibliography
 
 \end_layout
 
-\begin_layout Part*
+\begin_layout Part
 SUMMARY
 \end_layout
 
@@ -209,7 +129,8 @@ Voronoi diagrams have practical and theoretical applications to a large
  For a partition which does not come from a Voronoi diagram, it would be
  interesting to find the best fitting Voronoi diagram.
  At this point, we need a way to measure how good a candidate solution is.
- We will be using the total symmetric difference between the two partitions.
+ We will be using the total symmetric difference between the two partitions
+ for that.
  
 \end_layout
 
@@ -291,7 +212,7 @@ Repetimos el paso anterior hasta que no podamos seguir mejorando o hasta
 
 \end_layout
 
-\begin_layout Part*
+\begin_layout Part
 INTRODUCTION
 \end_layout
 
@@ -303,7 +224,7 @@ There are some concepts the reader should be familiar with in order to follow
 
 \begin_layout Itemize
 Partition of a set.
- Partition of the square unit.
+ Partition of the unit square.
 \end_layout
 
 \begin_layout Itemize
@@ -314,13 +235,9 @@ Voronoi diagrams.
 Symmetric difference.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Section
 Partition of a set.
- Partition of the square unit.
-\begin_inset Newline newline
-\end_inset
-
-
+ Partition of the unit square
 \end_layout
 
 \begin_layout Standard
@@ -347,18 +264,14 @@ For example, if we consider the set X = {1, 2, 3, 4, 5}, three different
 \end_layout
 
 \begin_layout Standard
-In our case, we will be working with partitions of the square unit.
- That is, a set of polygons such that the union is the square unit and the
+In our case, we will be working with partitions of the unit square.
+ That is, a set of polygons such that the union is the unit square and the
  intersection of two polygons is, at most, a segment.
  Note that there might be points contained in more than one polygon.
 \end_layout
 
-\begin_layout Subsection
-Voronoi diagrams.
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Section
+Voronoi diagrams
 \end_layout
 
 \begin_layout Standard
@@ -367,6 +280,49 @@ A Voronoi diagram is a partitioning of a plane into regions (called Voronoi
  subset of the plane.
  In this project we will only be using the simplest case of Voronoi diagrams:
  the seeds are given as a finite set of points in the Euclidian plane.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ThesisImages/voronoiDiagram.jpg
+	scale 200
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Visual representation of a Voronoi diagram inside the unit square.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -374,12 +330,8 @@ The lines that appear in a Voronoi diagram are the points of the plane that
  are equidistant to two or more of the nearest seeds.
 \end_layout
 
-\begin_layout Subsection*
-Symmetric difference.
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Section
+Symmetric difference
 \end_layout
 
 \begin_layout Standard
@@ -407,20 +359,14 @@ Applying this concept to two partitions, we can define the symmetric difference
 \end_layout
 
 \begin_layout Standard
-Since in this project we will only be interested in working with convex
- polygons, we can use that to our advantage and calculate the symmetric
- difference in a different way: we will substract from the square unit area,
- the areas of all the intersections of each pair of related polygons.
- This will be explained more in detail later, in the development chapter.
-\end_layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
-\begin_layout Standard
-In order to avoid issues with scaling the programs window size, we will
- be treating this value as a ratio with the total area of the unit square,
- so a 0% value will mean the two partitions are exactly the same.
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/SymDiffOfTwoConvexPolygons.png
 	scale 50
@@ -430,7 +376,46 @@ In order to avoid issues with scaling the programs window size, we will
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+In blue, we can see a representation of the symmetric difference of two
+ polygons.
+ The highlighted area is the one that belongs to the symmetric difference.
+ As we can see, it is the area that belongs to either polygon, but not both.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+Since in this project we will only be interested in working with convex
+ polygons, we can use that to our advantage and calculate the symmetric
+ difference in a different way: we will substract from the unit square area,
+ the areas of all the intersections of each pair of related polygons.
+ This will be explained more in detail later, in the development chapter.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/SymDiffOfTwoPartitions.png
 	scale 40
@@ -440,12 +425,38 @@ In order to avoid issues with scaling the programs window size, we will
 
 \end_layout
 
-\begin_layout Subsection*
-Inverse Voronoi problem.
-\begin_inset Newline newline
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The new method would start with whole square painted in blue.
+ We then subtract all the intersections of each pair of polygons.
+ Graphically, the symmetric difference would be the total blue area of the
+ picture in proportion to the area of the whole square.
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order to avoid issues with scaling, we will be treating the symmetric
+ difference as a ratio with the total area of the unit square, so a 0% value
+ will mean the two partitions are exactly the same.
+\end_layout
+
+\begin_layout Section
+Inverse Voronoi problem
 \end_layout
 
 \begin_layout Standard
@@ -471,12 +482,8 @@ But what happens when the partition does not come from a Voronoi diagram?
  whether it comes from a Voronoi diagram.
 \end_layout
 
-\begin_layout Subsection*
-Generalized inverse Voronoi problem.
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Section
+Generalized inverse Voronoi problem
 \end_layout
 
 \begin_layout Standard
@@ -485,19 +492,15 @@ Another problem related to the ones exposed, but beyond of the scope of
  This problem consists of, given a plane partition, calculate a Voronoi
  diagram such that the given partition is contained on it.
  That is, add the necessary seeds so you get a partition which contains
- the one given.
+ the given one.
 \end_layout
 
-\begin_layout Subsection*
-Voronoi diagrams in real life.
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Section
+Voronoi diagrams in real life
 \end_layout
 
 \begin_layout Standard
-TODO: Contar lo de los japoneses y los peces del libro de Manuel.
+TODO: Talk about the mouthbreeder fish example of the book.
 \end_layout
 
 \begin_layout Standard
@@ -511,13 +514,20 @@ Teatros del Canal
 \end_inset
 
 .
- If that person is familiar with Voronoi diagrams, something will catch
- his eye: some parts of the decoration of that building resemble those diagrams!
+ If he is familiar with Voronoi diagrams, something will catch his eye:
+ some parts of the decoration of that building resemble those diagrams!
  Further in this project, we will adjust them and see how well they fit
  as a Voronoi diagram.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/TeatrosDelCanalOriginal.png
 	scale 35
@@ -527,10 +537,72 @@ Teatros del Canal
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Teatros del Canal
+\begin_inset Quotes erd
+\end_inset
+
+ facade.
+ As it can be seen, it looks very similar to a Voronoi diagram.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/TeatrosDelCanalParticion.png
 	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Teatros del Canal
+\begin_inset Quotes erd
+\end_inset
+
+ facade transcription.
+ We will later use this to see and compare the results of the different
+ fitting methods.
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -546,7 +618,7 @@ The objectives of this project are:
 \end_layout
 
 \begin_layout Itemize
-Fit a given partition of the square unit as much as we can through Voronoi
+Fit a given partition of the unit square as much as we can through Voronoi
  diagrams.
  Therefore, the variable we want to minimize is the resulting symmetric
  difference between the input and the solution given.
@@ -570,17 +642,13 @@ If the given partition is in fact a Voronoi diagram, we would like to arrive
 
 \end_layout
 
-\begin_layout Part*
+\begin_layout Part
 DEVELOPMENT
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Why Processing.
- Pros and cons of Java.
-\begin_inset Newline newline
-\end_inset
-
-
+ Pros and cons of Java
 \end_layout
 
 \begin_layout Standard
@@ -616,32 +684,28 @@ The number of regions we are going to be treating in our research will be
  200 maximum, a reasonable number for any modern programming language.
 \end_layout
 
-\begin_layout Subsection*
-Calculating the Voronoi diagram from a set of seed points.
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Section
+Calculating the Voronoi diagram from a set of seed points
 \end_layout
 
 \begin_layout Standard
-Even though I am using an already implemented library for calculating the
- Voronoi diagrams, here I will explain the most common methods for calculating
- a Voronoi diagram.
+Even though I am using an external library for calculating the Voronoi diagrams,
+ here I will briefly explain the most common methods for calculating a Voronoi
+ diagram.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Standard
+//TODO
+\end_layout
+
+\begin_layout Section
 Line clipping.
- Polygon clipping.
-\begin_inset Newline newline
-\end_inset
-
-
+ Polygon clipping
 \end_layout
 
 \begin_layout Standard
 There are two situations in the problem in which we have to calculate the
- intersection of two polygons: when clipping a polygon to the square unit
+ intersection of two polygons: when clipping a polygon to the unit square
  and when clipping two polygons.
 \end_layout
 
@@ -649,8 +713,7 @@ There are two situations in the problem in which we have to calculate the
 The first one is needed because, theoretically, there will always be some
  Voronoi region whose area will be infinite.
  In order to get rid of that issue, we must treat our Voronoi diagram in
- order to clip all regions into a bounded area, in our case, the square
- unit.
+ order to clip all regions into a bounded area, in our case, the unit square.
 \end_layout
 
 \begin_layout Standard
@@ -665,9 +728,9 @@ The second one is useful when we want to calculate the area of the intersection
 There is a simple, common operation in both tasks, to which these two problems
  can be reduced to: clip a polygon with a single line.
  If we have a solid function that can do this task, then we can rely on
- it to calculate any intersection of convex polygons (note that the square
- unit is a convex polygon too), repeating the process for all lines of one
- of the polygons against the other.
+ it to calculate any intersection of convex polygons (note that the unit
+ square is a convex polygon too), repeating the process for all lines of
+ one of the polygons against the other.
 \end_layout
 
 \begin_layout Standard
@@ -682,9 +745,36 @@ Suppose we want to clip the polygon ABCDEFG with the blue line.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping0.png
 	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Starting point.
+ We will clip the polygon with the given line (in blue).
+ Starting point will be A.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -704,9 +794,37 @@ The first step of the clipping algorithm is to set a starting vertex.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping1.png
 	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Since point B lies on the left of the line, add it to the result.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -721,6 +839,13 @@ The next step is to select the next point and see whether it lies in the
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping2.png
 	scale 60
@@ -730,14 +855,58 @@ The next step is to select the next point and see whether it lies in the
 
 \end_layout
 
-\begin_layout Standard
-Same for C, still on the left.
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Since C is still on the left of the line, we add it to the final result
+ too.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping3.png
 	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The next point, D, does not lie on the left of the blue line.
+ Since last one did, it means an intersection point P has to exist.
+ Add P to the final result.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -753,6 +922,13 @@ When we check D, we see that it is lying on the right side of the line.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping4.png
 	scale 60
@@ -762,7 +938,37 @@ When we check D, we see that it is lying on the right side of the line.
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Current point D lies on the right of the line.
+ Since E lies on the left, it means another intersection Q must exist.
+ Add Q to the final result.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping5.png
 	scale 60
@@ -772,10 +978,18 @@ When we check D, we see that it is lying on the right side of the line.
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Graphics
-	filename ThesisImages/LineClipping6.png
-	scale 60
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Point E lies on the left.
+ Add it to the solution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -783,16 +997,15 @@ When we check D, we see that it is lying on the right side of the line.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename ThesisImages/LineClipping7.png
-	scale 60
+\align left
+We keep repeating the same process until wee arrive to the starting point.
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping8.png
 	scale 60
@@ -802,7 +1015,39 @@ When we check D, we see that it is lying on the right side of the line.
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+On the left again.
+ Add G to the result.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\align left
+When we arrive at the starting point, we have finished clipping the polygon
+ with the line.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ThesisImages/LineClipping9.png
 	scale 60
@@ -812,17 +1057,40 @@ When we check D, we see that it is lying on the right side of the line.
 
 \end_layout
 
-\begin_layout Subsection*
-Input data.
-\begin_inset Newline newline
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+We arrived to A, our starting point.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-The input data for the problem is a partition of the square unit.
- That is, a set of polygons whose union is the square unit and, for every
+For iterating a polygon A with another polygon B, given that both of them
+ are correctly oriented, we can do it clipping A with all lines formed by
+ B.
+\end_layout
+
+\begin_layout Section
+Input data
+\end_layout
+
+\begin_layout Standard
+The input data for the problem is a partition of the unit square.
+ That is, a set of polygons whose union is the unit square and, for every
  two polygons, its intersection is at most a straight line.
  More precisely, each polygon is given as a set of ordered 2D points.
  At first, we know we will be working only with convex polygons (that is,
@@ -835,12 +1103,8 @@ The input data for the problem is a partition of the square unit.
 More in detail, this is the structure of the input data files:
 \end_layout
 
-\begin_layout Subsection*
-Output data.
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Section
+Output data
 \end_layout
 
 \begin_layout Standard
@@ -871,12 +1135,47 @@ before.png: Image that displays the first approximation of the Voronoi diagram.
 after.png: Image that displays the final approximation of the Voronoi diagram.
 \end_layout
 
-\begin_layout Subsection*
-Gradient method.
-\begin_inset Newline newline
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ThesisImages/end.png
+	scale 42
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Output image generated by the program.
+ It shows the final result, as well as some other information of the process.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Gradient method
 \end_layout
 
 \begin_layout Standard
@@ -899,29 +1198,110 @@ For example, consider you want to find the maximum value of a function.
  The problem with this is that we can easily get stuck in a local maximum.
 \end_layout
 
-\begin_layout Subsection*
-Improved gradient method: implementing steps
-\begin_inset Newline newline
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ThesisImages/simmulatedannealing.jpg
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The starting point will be the left arrow.
+ As we can see, this method would indicate us to go right in order to get
+ to a better solution.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-One step closer to the simulated annealing, but still very similar to the
- gradient method.
- It consists on iterating different gradient methods, but varying the step
- size we are taking on each.
- This way, we will adjust our solution as much as possible, but this will
- not get us out of the local maximum.
-\end_layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
-\begin_layout Subsection*
-Simulated annealing.
-\begin_inset Newline newline
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ThesisImages/simmulated_annealing_end.jpg
+	scale 55
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ending point using a simple gradient method.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, when reaching this point, it would check for its neighbours and
+ see that whatever we do, we would get a worse solution.
+ Therefore, the peak pointed by the red arrow would be our solution.
+\end_layout
+
+\begin_layout Section
+Improved gradient method: implementing steps
+\end_layout
+
+\begin_layout Standard
+One step closer to the simulated annealing, but still very similar to the
+ gradient method is the gradient method with variable step.
+ It consists on iterating different gradient methods, but varying the step
+ size we are taking on each.
+ We start with a high value for the step, and when we cannot improve anymore
+ for that step, we reduce it to other value.
+ This way, we will adjust our solution more than with using the gradient
+ method.
+ We will also be able to get further away from the initial solution.
+ However, lots of solutions are lost and this method is greatly dependent
+ on the step values chosen.
+\end_layout
+
+\begin_layout Section
+Simulated annealing
 \end_layout
 
 \begin_layout Standard
@@ -929,12 +1309,7 @@ Simulated annealing copies a phenomenon in nature--the annealing of solids--to
  optimize a complex system.
  Annealing refers to heating a solid and then cooling it slowly.
  Atoms then assume a nearly globally minimum energy state.
- In 1953 Metropolis created an algorithm to simulate the annealing process.
- The algorithm simulates a small random displacement of an atom that results
- in a change in energy.
- If the change in energy is negative, the energy state of the new configuration
- is lower and the new configuration is accepted.
- TODO: explain more and better.
+ //TODO: Explain more and better.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -956,34 +1331,39 @@ repetition
 
 \end_layout
 
-\begin_layout Part*
+\begin_layout Part
 Bibliografía
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+Spatial tessellations: Concepts and Applications of Voronoi Diagrams (Second
+ Edition) - Atsuyuki Okabe, Barry Boots, Kokichi Sugihara, Sung Nok Chiu
+\end_layout
+
+\begin_layout Itemize
 https://processing.org – Open source programming language and IDE in which
  the whole project is coded 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 http://leebyron.com/mesh/ - External processing library used for calculating
  the Voronoi diagrams
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 http://www.lyx.org/ - Document processor used for writing this thesis
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 https://github.com/Flood1993/TFG_voronoi - Git repository containing everything
  about this project
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing - Simulated annealing
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 http://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
  - Inaccuracy of computers when dealing with floating-point numbers
 \end_layout
