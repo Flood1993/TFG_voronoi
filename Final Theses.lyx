@@ -653,7 +653,7 @@ Why Processing.
 
 \begin_layout Standard
 Despite Java not being the most efficent language out there for crunching
- raw numbers, I felt like I had to go with Processing for the development
+ raw numbers, I decided to develop my program in that programming language
  for a number of reasons:
 \end_layout
 
@@ -1182,8 +1182,8 @@ Gradient method
 The gradient method is a simple heuristic used in optimization problems
  where the search space is not treatable.
  It consists on, at any given state, compare neighbour solutions against
- the current one.
- If they are better, take the best as the new current solution and repeat.
+ the current best one.
+ If they are better, mark it as the new best solution and repeat.
  If the minimum or maximum we are looking for is bounded, there will be
  a point at which we will not be able to continue improving.
  That will be our solution.
@@ -1290,7 +1290,7 @@ Improved gradient method: implementing steps
 One step closer to the simulated annealing, but still very similar to the
  gradient method is the gradient method with variable step.
  It consists on iterating different gradient methods, but varying the step
- size we are taking on each.
+ size we are taking on each one.
  We start with a high value for the step, and when we cannot improve anymore
  for that step, we reduce it to other value.
  This way, we will adjust our solution more than with using the gradient
@@ -1312,7 +1312,7 @@ Simulated annealing copies a phenomenon in nature--the annealing of solids--to
  //TODO: Explain more and better.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Getting rid of the 
 \begin_inset Quotes eld
 \end_inset
@@ -1321,7 +1321,14 @@ repetition
 \begin_inset Quotes erd
 \end_inset
 
- problem: randomizing point order in each state.
+ problem: randomizing point order in each state
+\end_layout
+
+\begin_layout Standard
+Given the nature of our problem, it is easy to see that the order in which
+ we will move our points will play a huge role in the final result.
+ In order to avoid the cyclic effect, what we want to do is move them in
+ a pseudo-random mannner every iteration.
 \end_layout
 
 \begin_layout Standard
