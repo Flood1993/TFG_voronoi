@@ -8,9 +8,6 @@ final float squareArea = scale*scale;
 
 boolean debugging = false;
 
-// Values relative to the square unit
-float simulatedAnnealing[] = new float[]{0.05, 0.04, 0.01, 0.005, 0.001};
-// As of now, these values are hard-coded (they don't care about resolution)
 int stepIndex = 0;
 boolean hasImproved = true;
 StringBuilder sb = new StringBuilder();
@@ -71,7 +68,7 @@ void draw() {
     fill(backgroundColor);
 
     if (!finished)
-        gradientMethod(simulatedAnnealing[stepIndex]*scale, true);
+        gradientMethod(simulatedAnnealing[stepIndex]*scale, useSimmulatedAnnealing);
 
     if (!hasImproved && stepIndex < simulatedAnnealing.length) {
         stepIndex++;
