@@ -84,27 +84,97 @@ INDEX
 \end_layout
 
 \begin_layout Standard
-Summary
+-Resumen/Summary
 \end_layout
 
 \begin_layout Standard
-Introduction and objectives
+-Introduction and objectives
 \end_layout
 
 \begin_layout Standard
-Development
+Partition of a set.
+ Partition of the unit square.
 \end_layout
 
 \begin_layout Standard
-Results and conclusions
+Voronoi diagrams.
 \end_layout
 
 \begin_layout Standard
-Appendices
+Problem description.
 \end_layout
 
 \begin_layout Standard
-Bibliography
+Symmetric difference.
+\end_layout
+
+\begin_layout Standard
+Inverse Voronoi problem.
+\end_layout
+
+\begin_layout Standard
+Generalized Inverse Voronoi problem.
+\end_layout
+
+\begin_layout Standard
+Voronoi diagrams in real life.
+\end_layout
+
+\begin_layout Standard
+Objectives.
+\end_layout
+
+\begin_layout Standard
+-Development
+\end_layout
+
+\begin_layout Standard
+Why processing: Pros and cons of Java.
+\end_layout
+
+\begin_layout Standard
+Line clipping.
+ Polygon clipping.
+\end_layout
+
+\begin_layout Standard
+Input data.
+\end_layout
+
+\begin_layout Standard
+Output data.
+\end_layout
+
+\begin_layout Standard
+Gradient method.
+\end_layout
+
+\begin_layout Standard
+Improved gradient method: implementing steps.
+\end_layout
+
+\begin_layout Standard
+Simulated annealing.
+\end_layout
+
+\begin_layout Standard
+-Results and conclusions
+\end_layout
+
+\begin_layout Standard
+-Using the application
+\end_layout
+
+\begin_layout Standard
+-Appendices
+\end_layout
+
+\begin_layout Standard
+-Code
+\end_layout
+
+\begin_layout Standard
+-Bibliography
 \end_layout
 
 \begin_layout Part*
@@ -403,7 +473,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename ThesisImages/UnitSquareTesellation.png
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -434,7 +504,7 @@ Tesellation of the unit square.
 
 \begin_layout Standard
 Figure 0.2 shows a tesellation of the unit square displaying each subset
- A, B, C in blue, black and salmon, respectively.
+ A, B, C in blue, black and red, respectively.
 \end_layout
 
 \begin_layout Section*
@@ -522,10 +592,11 @@ At this point, we can already state the problem we will be working on.
 \end_layout
 
 \begin_layout Problem*
-Given a tesellation of the unit square which comes from a Voronoi diagram,
- try to recover the seed that generated such a tesellation.
- Given any tesellation of the unit square, find the Voronoi diagram that
+Given any tesellation of the unit square, find the Voronoi diagram that
  best fits it.
+ Furthermore, if the tesellation of the unit square comes from a Voronoi
+ diagram, we would like to arrive to that conclusion and find the seeds.
+ 
 \end_layout
 
 \begin_layout Problem*
@@ -1695,8 +1766,12 @@ Then we just have to keep substituting values until we get the following
 \noun off
 \color none
 Tes=[[(0,0),(1,0),(0.25,0.25),(0,0.5)],[(0.25,0.25),(1,0),(0.75,0.5)],[(0,0.5),(0.25,0.25)
-,(0.5,0.75),(0,1)],[(0.25,0.25),(0.5,0.75),(1,1),(0.75,0.5)],[(0.75,0.5),(1,1),(1,0)],[(0.5
-,0.75),(0,1),(1,1)]]
+,(0.5,0.75),
+\begin_inset Newline newline
+\end_inset
+
+(0,1)],[(0.25,0.25),(0.5,0.75),(1,1),(0.75,0.5)],[(0.75,0.5),(1,1),(1,0)],[(0.5,0.75),(0,1
+),(1,1)]]
 \end_layout
 
 \begin_layout Standard
