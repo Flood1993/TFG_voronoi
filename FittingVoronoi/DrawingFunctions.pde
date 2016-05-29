@@ -1,3 +1,6 @@
+// Author: Guillermo Alonso Nunez
+// e-mail: guialonun@gmail.com
+
 float drawingOffset = 50;
 
 // Draws the Barycenters of the polygons of the given partition

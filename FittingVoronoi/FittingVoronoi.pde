@@ -1,5 +1,5 @@
 // Author: Guillermo Alonso Nunez
-// e-mail: guillermo.alonso.nunez@alumnos.upm.es
+// e-mail: guialonun@gmail.com
 
 import megamu.mesh.*;
 
