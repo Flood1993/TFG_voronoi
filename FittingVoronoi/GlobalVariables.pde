@@ -47,3 +47,8 @@ String errLoadingPart = "Error when loading partition...\n" +
                           
 // Other strings
 String initSuccessful = "Data initialization successful";
+
+float setA[] = new float[]{0.05, 0.04, 0.01, 0.005, 0.001};
+float setB[] = new float[]{0.05, 0.03, 0.01};
+float setC[] = new float[]{0.1, 0.01, 0.005};
+float setD[] = new float[]{0.2, 0.08, 0.03, 0.01, 0.005};
