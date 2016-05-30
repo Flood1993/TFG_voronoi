@@ -84,97 +84,499 @@ INDEX
 \end_layout
 
 \begin_layout Standard
--Resumen/Summary
+\begin_inset Tabular
+<lyxtabular version="3" rows="24" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resumen
 \end_layout
 
-\begin_layout Standard
--Introduction and objectives
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
 \end_layout
 
-\begin_layout Standard
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Introduction and objectives
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Partition of a set.
- Partition of the unit square.
+ Partition of the unit square
 \end_layout
 
-\begin_layout Standard
-Voronoi diagrams.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
 \end_layout
 
-\begin_layout Standard
-Problem description.
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Voronoi diagrams
 \end_layout
 
-\begin_layout Standard
-Symmetric difference.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
 \end_layout
 
-\begin_layout Standard
-Inverse Voronoi problem.
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Problem description
 \end_layout
 
-\begin_layout Standard
-Generalized Inverse Voronoi problem.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
 \end_layout
 
-\begin_layout Standard
-Voronoi diagrams in real life.
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symmetric difference
 \end_layout
 
-\begin_layout Standard
-Objectives.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
 \end_layout
 
-\begin_layout Standard
--Development
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inverse Voronoi problem
 \end_layout
 
-\begin_layout Standard
-Why processing: Pros and cons of Java.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
 \end_layout
 
-\begin_layout Standard
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Generalized inverse Voronoi problem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Voronoi diagrams in real life
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objectives
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Development
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Why Processing.
+ Pros and cons of Java.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 Line clipping.
- Polygon clipping.
+ Polygon clipping
 \end_layout
 
-\begin_layout Standard
-Input data.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
 \end_layout
 
-\begin_layout Standard
-Output data.
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input data
 \end_layout
 
-\begin_layout Standard
-Gradient method.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
 \end_layout
 
-\begin_layout Standard
-Improved gradient method: implementing steps.
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output data
 \end_layout
 
-\begin_layout Standard
-Simulated annealing.
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21
 \end_layout
 
-\begin_layout Standard
--Results and conclusions
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gradient method
 \end_layout
 
-\begin_layout Standard
--Using the application
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22
 \end_layout
 
-\begin_layout Standard
--Appendices
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Improved gradient method: implementing steps
 \end_layout
 
-\begin_layout Standard
--Code
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
 \end_layout
 
-\begin_layout Standard
--Bibliography
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simulated annealing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Results and conclusions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Application user guide
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Appendices
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Code
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bibliography
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+29
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part*
@@ -191,7 +593,7 @@ RESUMEN
 \begin_layout Standard
 Los diagramas de Voronoi tienen aplicaciones tanto prácticas como teóricas
  en muchos ámbitos, la mayoría relacionados con la ciencia y tecnología,
- aunque también se aplica en otros como el arte visual.
+ aunque también se aplican en otros como el arte visual.
  El objetivo de mi proyecto es estudiar el problema inverso del diagrama
  de Voronoi y diseñar, comparar y analizar diferentes estrategias para su
  resolución.
@@ -583,6 +985,13 @@ The lines that appear in a Voronoi diagram are the points of the plane that
  are equidistant to two or more of the nearest seeds.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Problem description
 \end_layout
@@ -841,22 +1250,205 @@ As mentioned earlier, the inverse Voronoi diagram problem consists on detecting
  whether a given plane partition is a Voronoi diagram and finding the seed
  points that would generate such a partition.
  From the mathematical point of view, it is interesting that, for partitions
- that do come from a Voronoi diagram, the problem can be solved in O(n)
- time, n being the number of seeds of such a diagram.
+ that do come from a perfect Voronoi diagram, the problem can be solved
+ in O(n) time, n being the number of seeds of such a diagram.
 \end_layout
 
-\begin_layout Proof
-We know the partition comes from a Voronoi diagram.
- TODO: Proof...
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ThesisImages/InverseVoronoi1.png
+	scale 60
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Proof
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Region extracted from a Voronoi diagram.
+ In blue, A, B and C are the seeds.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To prove it, we will start by knowing the tesellation comes from a perfect
+ Voronoi diagram.
+ For making the demonstration shorter, we will assume some point P of the
+ diagram from which three edges come out has been found, even though the
+ general demonstration follows the same logic.
+ By definition, the distance from a pair of seeds to the edge they generate
+ is always the same, as can be seen in Figure 0.6.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ThesisImages/InverseVoronoi2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Angles formed by P, an edge and the lines that connect P with the corresponding
+ two seeds of that edge.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, we know that the angles formed by P, an edge, and the lines that
+ connect P with the corresponding two seeds of that edge must be the same,
+ as can be seen in Figure 0.7.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ThesisImages/InverseVoronoi3.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Angles between each pair of seeds.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, let d, e and f the angles between each pair of edges coming out
+ from P, as seen in Figure 0.8.
+ This values can be easily obtained knowing the points of the Voronoi diagram.
+ With all these information, the unknown location of the seeds A, B and
+ C can be obtained by solving the following system of linear equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+d+e+f=2\pi\\
+a+b=e\\
+b+c=f\\
+a+c=d
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ThesisImages/InverseVoronoi4.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Seeds A and B have been located applying the explained method twice.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When we know the values for the angles a, b and c, we repeat the same process
+ on a any vertex connected with P.
+ As it can be seen in Figure 0.9, after knowing the angles for a neighbour
+ vertex, the exact position of seeds A and B is known.
+ From there, we can calculate any other seed by just mirroring the known
+ seeds with the surrounding edges.
+\end_layout
+
+\begin_layout Standard
 But what happens when the partition does not come from a Voronoi diagram?
  Even if it did, due to computers inaccuracy when representing floating-point
  numbers, the input data we have will not perfectly be the one that would
  be generated from a Voronoi diagram, but rather an approximation of it.
- Thus, we want to explore different methods of fitting an arbitrary partition,
- whether it comes from a Voronoi diagram.
+ Thus, we want to explore different methods of fitting an arbitrary tesellation,
+ whether it comes from a Voronoi diagram or not.
 \end_layout
 
 \begin_layout Section*
@@ -864,12 +1456,48 @@ Generalized inverse Voronoi problem
 \end_layout
 
 \begin_layout Standard
-Another problem related to the ones exposed, but beyond of the scope of
- this project, is the generalized inverse Voronoi problem.
- This problem consists of, given a plane partition, calculate a Voronoi
- diagram such that the given partition is contained on it.
- That is, add the necessary seeds so you get a partition which contains
- the given one.
+Another problem related to the ones exposed, but beyond the scope of this
+ project, is the generalized inverse Voronoi problem.
+ This problem consists of, given a plane tesellation, calculate a set of
+ seeds such that the Voronoi diagram obtained from those seeds contains
+ the original tesellation as a subset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ThesisImages/GeneralizedInverseProblem.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Representation of the generalized inverse Voronoi problem.
+ Thick edges represent the original input tesellation.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1098,20 +1726,6 @@ Java's data structures come in handy for our problem.
 \begin_layout Itemize
 The number of regions we are going to be treating in our research will be
  200 maximum, a reasonable number for any modern programming language.
-\end_layout
-
-\begin_layout Section*
-Calculating the Voronoi diagram from a set of seed points
-\end_layout
-
-\begin_layout Standard
-Even though I am using an external library for calculating the Voronoi diagrams,
- here I will briefly explain the most common methods for calculating a Voronoi
- diagram.
-\end_layout
-
-\begin_layout Standard
-//TODO
 \end_layout
 
 \begin_layout Section*
@@ -1855,8 +2469,8 @@ Gradient method
 \end_layout
 
 \begin_layout Standard
-The gradient method is a simple heuristic used in optimization problems
- where the search space is not treatable.
+The gradient method (also known as the hill climbing algorithm) is a simple
+ heuristic used in optimization problems.
  It consists on, at any given state, compare neighbour solutions against
  the current best one.
  If they are better, mark it as the new best solution and repeat.
@@ -1905,13 +2519,16 @@ The starting point will be the left arrow.
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+As it can be seen in Figure 0.24, for finding the maximum of that function,
+ after comparing two points close to the red arrow, the gradient method
+ tells us that we have to move to the right, since the value found there
+ is higher than the current one and the one on the left.
 \end_layout
 
 \begin_layout Standard
@@ -1956,6 +2573,9 @@ Ending point using a simple gradient method.
 However, when reaching this point, it would check for its neighbours and
  see that whatever we do, we would get a worse solution.
  Therefore, the peak pointed by the red arrow would be our solution.
+ In this example, the value obtained is fairly close to the global maximum,
+ but in more complex problems, we might get stuck even at our starting solution.
+ We need some way to avoid (or at least try to) local maximum values.
 \end_layout
 
 \begin_layout Section*
@@ -1963,12 +2583,12 @@ Improved gradient method: implementing steps
 \end_layout
 
 \begin_layout Standard
-One step closer to the simulated annealing, but still very similar to the
- gradient method is the gradient method with variable step.
+One little improvement we can apply to the gradient method is the gradient
+ method with variable step.
  It consists on iterating different gradient methods, but varying the step
  size we are taking on each one.
  We start with a high value for the step, and when we cannot improve anymore
- for that step, we reduce it to other value.
+ for that step, we reduce it to some other value.
  This way, we will adjust our solution more than with using the gradient
  method.
  We will also be able to get further away from the initial solution.
@@ -1981,11 +2601,34 @@ Simulated annealing
 \end_layout
 
 \begin_layout Standard
-Simulated annealing copies a phenomenon in nature--the annealing of solids--to
- optimize a complex system.
- Annealing refers to heating a solid and then cooling it slowly.
- Atoms then assume a nearly globally minimum energy state.
- //TODO: Explain more and better.
+Simulated annealing copies a phenomenon in nature (the annealing of solids)
+ to optimize a complex system.
+ Annealing involves heating and cooling a material to alter its physical
+ properties due to the changes in its internal structure.
+ As the metal cools its new structure becomes fixed, consequently causing
+ the metal to retain its newly obtained properties.
+\end_layout
+
+\begin_layout Standard
+For applying this algorithm, we keep a temperature variable to stimulate
+ the heating process.
+ We initially set it high and then allow it to slowly cool as the algorithm
+ runs.
+ While this temperature variable is high, the algorithm will be allowed,
+ with more frequency, to accept solutions that are worse than our current
+ solution.
+ This gives the algorithm the ability to jump out of any local optimums
+ it finds itself in early on in execution.
+ As the temperature is reduced so is the chance of accepting worse solutions,
+ therefore allowing the algorithm to gradually focus in on a area of the
+ search space in which hopefully, a close to optimum solution can be found.
+\end_layout
+
+\begin_layout Standard
+More precisely, the temperature variable will be the symmetric difference
+ at a given point.
+ If it is too high, we will be more likely to accept a worse solution than
+ the current one.
 \end_layout
 
 \begin_layout Subsection
@@ -3865,6 +4508,19 @@ Bibliografía
 \begin_layout Itemize
 Spatial tessellations: Concepts and Applications of Voronoi Diagrams (Second
  Edition) - Atsuyuki Okabe, Barry Boots, Kokichi Sugihara, Sung Nok Chiu
+\end_layout
+
+\begin_layout Itemize
+Greg Aloupis, Hebert Pérez-Rosés, Guillermo Pineda-Villavicenco, Perouz
+ Taslakian, Dannier Trinchet-Almaguer, 2013, 
+\begin_inset Quotes eld
+\end_inset
+
+Fitting Voronoi Diagrams to Planar Tesselations
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
