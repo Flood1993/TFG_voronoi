@@ -85,7 +85,7 @@ INDEX
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="24" columns="2">
+<lyxtabular version="3" rows="30" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top" width="0pt">
@@ -94,7 +94,7 @@ INDEX
 \begin_inset Text
 
 \begin_layout Plain Layout
-Resumen
+
 \end_layout
 
 \end_inset
@@ -103,6 +103,88 @@ Resumen
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resumen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
 2
 \end_layout
 
@@ -124,6 +206,26 @@ Summary
 
 \begin_layout Plain Layout
 4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -154,7 +256,19 @@ Introduction and objectives
 \begin_inset Text
 
 \begin_layout Plain Layout
-Partition of a set.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Partition of a set.
  Partition of the unit square
 \end_layout
 
@@ -175,7 +289,19 @@ Partition of a set.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Voronoi diagrams
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Voronoi diagrams
 \end_layout
 
 \end_inset
@@ -195,7 +321,19 @@ Voronoi diagrams
 \begin_inset Text
 
 \begin_layout Plain Layout
-Problem description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Problem description
 \end_layout
 
 \end_inset
@@ -215,7 +353,19 @@ Problem description
 \begin_inset Text
 
 \begin_layout Plain Layout
-Symmetric difference
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Symmetric difference
 \end_layout
 
 \end_inset
@@ -224,7 +374,7 @@ Symmetric difference
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+8
 \end_layout
 
 \end_inset
@@ -235,7 +385,19 @@ Symmetric difference
 \begin_inset Text
 
 \begin_layout Plain Layout
-Inverse Voronoi problem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Inverse Voronoi problem
 \end_layout
 
 \end_inset
@@ -244,7 +406,7 @@ Inverse Voronoi problem
 \begin_inset Text
 
 \begin_layout Plain Layout
-9
+10
 \end_layout
 
 \end_inset
@@ -255,27 +417,19 @@ Inverse Voronoi problem
 \begin_inset Text
 
 \begin_layout Plain Layout
-Generalized inverse Voronoi problem
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
 \end_layout
 
 \end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-11
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Voronoi diagrams in real life
+ Generalized inverse Voronoi problem
 \end_layout
 
 \end_inset
@@ -295,7 +449,19 @@ Voronoi diagrams in real life
 \begin_inset Text
 
 \begin_layout Plain Layout
-Objectives
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Voronoi diagrams in real life
 \end_layout
 
 \end_inset
@@ -304,7 +470,59 @@ Objectives
 \begin_inset Text
 
 \begin_layout Plain Layout
-14
+13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Objectives
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -324,7 +542,7 @@ Development
 \begin_inset Text
 
 \begin_layout Plain Layout
-15
+16
 \end_layout
 
 \end_inset
@@ -335,7 +553,19 @@ Development
 \begin_inset Text
 
 \begin_layout Plain Layout
-Why Processing.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Why Processing.
  Pros and cons of Java.
 \end_layout
 
@@ -345,7 +575,7 @@ Why Processing.
 \begin_inset Text
 
 \begin_layout Plain Layout
-15
+16
 \end_layout
 
 \end_inset
@@ -356,7 +586,19 @@ Why Processing.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Line clipping.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Line clipping.
  Polygon clipping
 \end_layout
 
@@ -366,7 +608,7 @@ Line clipping.
 \begin_inset Text
 
 \begin_layout Plain Layout
-15
+16
 \end_layout
 
 \end_inset
@@ -377,27 +619,19 @@ Line clipping.
 \begin_inset Text
 
 \begin_layout Plain Layout
-Input data
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
 \end_layout
 
 \end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-19
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Output data
+ Input data
 \end_layout
 
 \end_inset
@@ -417,7 +651,19 @@ Output data
 \begin_inset Text
 
 \begin_layout Plain Layout
-Gradient method
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Output data
 \end_layout
 
 \end_inset
@@ -426,7 +672,7 @@ Gradient method
 \begin_inset Text
 
 \begin_layout Plain Layout
-22
+23
 \end_layout
 
 \end_inset
@@ -437,7 +683,19 @@ Gradient method
 \begin_inset Text
 
 \begin_layout Plain Layout
-Improved gradient method: implementing steps
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Gradient method
 \end_layout
 
 \end_inset
@@ -457,7 +715,19 @@ Improved gradient method: implementing steps
 \begin_inset Text
 
 \begin_layout Plain Layout
-Simulated annealing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Improved gradient method: implementing steps
 \end_layout
 
 \end_inset
@@ -466,7 +736,59 @@ Simulated annealing
 \begin_inset Text
 
 \begin_layout Plain Layout
-24
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Simulated annealing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -486,7 +808,7 @@ Results and conclusions
 \begin_inset Text
 
 \begin_layout Plain Layout
-25
+28
 \end_layout
 
 \end_inset
@@ -566,7 +888,7 @@ Bibliography
 \begin_inset Text
 
 \begin_layout Plain Layout
-29
+
 \end_layout
 
 \end_inset
@@ -593,24 +915,26 @@ RESUMEN
 \begin_layout Standard
 Los diagramas de Voronoi tienen aplicaciones tanto prácticas como teóricas
  en muchos ámbitos, la mayoría relacionados con la ciencia y tecnología,
- aunque también se aplican en otros como el arte visual.
+ aunque también se aplican en otros campos como el arte visual.
  El objetivo de mi proyecto es estudiar el problema inverso del diagrama
  de Voronoi y diseñar, comparar y analizar diferentes estrategias para su
  resolución.
  Dicho problema consiste en detectar si una partición dada es o no un diagrama
- de Voronoi, y calcular las semillas que lo generan en caso afirmativo.
+ de Voronoi, y en caso afirmativo, calcular las semillas que lo generan.
  Para particiones que no lo son, sería interesante encontrar el diagrama
  de Voronoi que mejor se aproxima.
- Para ello, necesitaremos alguna forma de evaluar como de buena es una solución.
- Usaremos la diferencia simétrica entre las dos particiones para tal fin.
+ Para ello, necesitaremos algún método para poder conocer la calidad de
+ una solución y poder comparar varias soluciones.
+ Usaremos la diferencia simétrica para tal fin.
 \end_layout
 
 \begin_layout Standard
-Nótese que pese a que el espacio de búsqueda es acotado, al ser continuo
- hay infinitos candidatos que habría que probar, lo cual es inviable.
+Nótese que el número de soluciones candidatas es infinito dado que se trata
+ de un espacio de búsqueda continuo.
+ Tratar todas ellas y elegir la mejor es por tanto inviable.
  Por tanto, trataremos de resolver el problema mediante diferentes metaheurístic
-as, aunque en ningún caso podremos asegurar que la solución obtenida es
- óptima.
+as, es decir, trataremos de buscar una solución lo suficientemente buena,
+ no la mejor.
 \end_layout
 
 \begin_layout Standard
@@ -633,32 +957,8 @@ Repetimos el paso anterior hasta que no podamos seguir mejorando o hasta
 \end_layout
 
 \begin_layout Standard
-El ajuste de una partición del plano mediante diagramas de Voronoi también
- es útil para resolver problemas de optimización a la hora de colocar objetos
- con restricciones espaciales.
- Un ejemplo es el problema de colocar colegios atendiendo a los diferentes
- distritos.
- La Figura 0.1(a) muestra los diferentes distritos de institutos en Tsukuba
- (los círculos muestran la ubicación de los institutos).
- En Japón, los estudiantes de un distrito deben ir al instituto asignado
- a ese distrito.
- Como resultado, en algunas áreas los estudiantes tienen que ir a un instituto
- que no es el más cercano.
- Si asumimos que los estudiantes pueden llegar al instituto siguiendo el
- camino Euclidiano en la Figura 0.1, las zonas en las que los estudiantes
- no pueden ir al instituto más cercano aparecen sombreadas en la Figura
- 0.1(a), donde los polígonos se corresponden con el diagrama de Voronoi generado
- por la posición de los institutos.
- El problema consiste en reubicar los colegios de forma que el número de
- estudiantes que no pueden ir al colegio más cercano es mínima.
- La Figura 0.1(b) muestra una colocación óptima local obtenida por Suzuki
- e Iri (1986a).
- La proporción de área de estudiantes que no pueden ir al instituto más
- cercano se reduce de un 20% a un 10%.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -695,6 +995,32 @@ School districts in Tsukuba: (a) school districts and the present sites
 \end_layout
 
 \begin_layout Standard
+El ajuste de una partición del plano mediante diagramas de Voronoi también
+ es útil para resolver problemas de optimización a la hora de colocar objetos
+ con restricciones espaciales.
+ Un ejemplo es el problema de colocar colegios atendiendo a los diferentes
+ distritos.
+ La Figura 0.1(a) muestra los diferentes distritos de institutos en Tsukuba
+ (los círculos muestran la ubicación de los institutos).
+ En Japón, los estudiantes de un distrito deben ir al instituto asignado
+ a ese distrito.
+ Como resultado, en algunas áreas los estudiantes tienen que ir a un instituto
+ que no es el más cercano.
+ Si asumimos que los estudiantes pueden llegar al instituto siguiendo el
+ camino Euclidiano en la Figura 0.1, las zonas en las que los estudiantes
+ no pueden ir al instituto más cercano aparecen sombreadas en la Figura
+ 0.1(a), donde los polígonos se corresponden con el diagrama de Voronoi generado
+ por la posición de los institutos.
+ 
+\end_layout
+
+\begin_layout Standard
+El problema consiste en reubicar los colegios de forma que el número de
+ estudiantes que no pueden ir al colegio más cercano es mínima.
+ La Figura 0.1(b) muestra una colocación óptima local obtenida por Suzuki
+ e Iri (1986a).
+ La proporción de área de estudiantes que no pueden ir al instituto más
+ cercano se reduce de un 20% a un 10%.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -762,8 +1088,12 @@ The method of fitting a Voronoi diagram to a given tesellation is also useful
  area in which students cannot go to their nearest schools is given by the
  hatched region in Figure 0.1(a), where the polygons are the Voronoi diagram
  generated by the school sites.
- The locational optimization problem is to relocate the schools so that
- the number of students who cannot go to their nearest schools is minimized.
+ 
+\end_layout
+
+\begin_layout Standard
+The locational optimization problem is to relocate the schools so that the
+ number of students who cannot go to their nearest schools is minimized.
  Figure 0.1(b) shows the locally optimal locations obtained by Suzuki and
  Iri (1986a).
  The area in which students cannot go to their nearest schools reduces from
@@ -782,8 +1112,8 @@ INTRODUCTION
 \end_layout
 
 \begin_layout Standard
-There are some concepts the reader should be familiar with in order to follow
- this document without problems.
+Before we start, there are some concepts the reader should be familiar with
+ in order to follow this document without problems.
  Those are:
 \end_layout
 
@@ -817,53 +1147,52 @@ For example, if we consider the set X = {1, 2, 3, 4, 5}, three different
 \end_layout
 
 \begin_layout Itemize
-{1, 3}, {2, 4}, {5}
+P1 = {1, 3}, {2, 4}, {5}
 \end_layout
 
 \begin_layout Itemize
-{1, 2, 3}, {4, 5}
+P2 = {1, 2, 3}, {4, 5}
 \end_layout
 
 \begin_layout Itemize
-{1}, {2}, {3}, {4}, {5}
+P3 = {1}, {2}, {3}, {4}, {5}
 \end_layout
 
 \begin_layout Standard
-In our case, we will be working with tesellations of the unit square.
+However, the following would not be considered partitions of X:
+\end_layout
+
+\begin_layout Itemize
+A = {1}, {1, 2, 3, 4, 5} - Not a partition because the element 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ belongs to more than one subset.
+\end_layout
+
+\begin_layout Itemize
+B = {1, 2}, {4, 5} - Not a partition because the element 
+\begin_inset Quotes eld
+\end_inset
+
+3
+\begin_inset Quotes erd
+\end_inset
+
+ is not contained in any subset.
+\end_layout
+
+\begin_layout Standard
+In this document, instead of sets, we will be working with tesellations
+ of the unit square.
  That is, a set of polygons such that the union is the unit square and the
  intersection of two polygons is, at most, a segment.
  Note that there might be points contained in more than one polygon.
  
-\end_layout
-
-\begin_layout Standard
-Mathematecally, and in order to treat our tesellations as a true partition
- of the plane, we define the following sets:
-\end_layout
-
-\begin_layout Standard
-A = Interior points of every polygon in the tesellation.
-\end_layout
-
-\begin_layout Standard
-B = Points belonging to the line segments which devide each region, except
- both end points.
-\end_layout
-
-\begin_layout Standard
-C = End points of the line segments which devide each region.
-\end_layout
-
-\begin_layout Standard
-Then, our tesellation T can be expressed as:
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Formula $T=A\cup B\cup C$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -905,6 +1234,43 @@ Tesellation of the unit square.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mathematecally, and in order to treat our tesellations as a true partition
+ of the plane, we define the following sets:
+\end_layout
+
+\begin_layout Itemize
+A = Interior points of every polygon in the tesellation.
+\end_layout
+
+\begin_layout Itemize
+B = Points belonging to the line segments which devide each region, except
+ both end points.
+\end_layout
+
+\begin_layout Itemize
+C = End points of the line segments which devide each region.
+\end_layout
+
+\begin_layout Standard
+Then, our tesellation T can be expressed as:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $T=A\cup B\cup C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Figure 0.2 shows a tesellation of the unit square displaying each subset
  A, B, C in blue, black and red, respectively.
 \end_layout
@@ -918,27 +1284,6 @@ A Voronoi diagram is a tesellation of the plane into regions (called Voronoi
  cells) based on distance to points (called seeds or generators) in a specific
  subset of the plane.
  
-\end_layout
-
-\begin_layout Standard
-In this project we will only be using the simplest case of Voronoi diagrams:
- the seeds are given as a finite set of points in the Euclidian plane.
-\end_layout
-
-\begin_layout Standard
-Therefore, each region 
-\begin_inset Formula $A_{n}$
-\end_inset
-
- can be described as a locus defined by the points 
-\begin_inset Formula $P_{k}$
-\end_inset
-
- which are closer to some seed 
-\begin_inset Formula $S_{n}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -964,6 +1309,7 @@ status open
 
 \begin_layout Plain Layout
 Visual representation of a Voronoi diagram inside the unit square.
+ The black squares represent the seeds that generate the diagram.
 \end_layout
 
 \end_inset
@@ -978,6 +1324,27 @@ Visual representation of a Voronoi diagram inside the unit square.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In this project we will only be using the simplest case of Voronoi diagrams:
+ the seeds are given as a finite set of points in the Euclidian plane.
+\end_layout
+
+\begin_layout Standard
+Therefore, each region 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ can be described as a locus defined by the points 
+\begin_inset Formula $P_{k}$
+\end_inset
+
+ which are closer to some seed 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -997,25 +1364,34 @@ Problem description
 \end_layout
 
 \begin_layout Standard
-At this point, we can already state the problem we will be working on.
+At this point, we can already state the problem we will try to solve.
 \end_layout
 
 \begin_layout Problem*
-Given any tesellation of the unit square, find the Voronoi diagram that
- best fits it.
- Furthermore, if the tesellation of the unit square comes from a Voronoi
- diagram, we would like to arrive to that conclusion and find the seeds.
- 
+Given a tesellation of the unit square consisting of convex polygons, find
+ the Voronoi diagram that best fits it.
+ Furthermore, if the given tesellation comes from a Voronoi diagram, we
+ would like to arrive to that conclusion and obtain the seeds.
 \end_layout
 
 \begin_layout Problem*
 More about how to determine how well a Voronoi diagram fits a tesellation
- can be read in the next section.
+ can be read in the 
+\begin_inset Quotes eld
+\end_inset
+
+Symmetric difference
+\begin_inset Quotes erd
+\end_inset
+
+ section.
 \end_layout
 
 \begin_layout Problem*
-In order to solve this problem, we will use a heuristic approach.
- The general outline of the solving process is the following:
+In order to solve this problem, we will use and compare different heuristic
+ approaches.
+ The general outline of the solving process of all the different approaches
+ is the following:
 \end_layout
 
 \begin_layout Enumerate
@@ -1042,12 +1418,13 @@ which will be our first approximation.
 
 .
  As a consequence, every region of the tesellation will be related to a
- unique region of the Voronoi diagram.
+ unique region of the Voronoi diagram, which means we will stablish a bijection
+ between the given tesellation and our solutions regions.
 \end_layout
 
 \begin_layout Enumerate
 Apply different heuristic techniques to the current best solution, which
- generally involves moving the seeds slightly and checking if the new Voronoi
+ generally involves slightly moving the seeds and checking if the new Voronoi
  diagrams V
 \begin_inset script subscript
 
@@ -1090,7 +1467,14 @@ k
 
 \end_inset
 
-, which will be the best obtained Voronoi diagram througout the whole process.
+, which will be the last obtained Voronoi diagram.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1236,9 +1620,28 @@ The new method would start with whole square painted in blue.
 \end_layout
 
 \begin_layout Standard
-In order to avoid issues with scaling, we will be treating the symmetric
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{NOTE:}
+\end_layout
+
+\end_inset
+
+ In order to avoid issues with scaling, we will be treating the symmetric
  difference as a ratio with the total area of the unit square, so a 0% value
  will mean the two partitions are exactly the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1500,6 +1903,13 @@ Representation of the generalized inverse Voronoi problem.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Voronoi diagrams in real life
 \end_layout
@@ -1654,6 +2064,13 @@ Figure 6.3 illustrates an actual application carried by Suzuki and Iri (1986b)
  known for being highly predatory and extremely territorial.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part*
 OBJECTIVES
 \end_layout
@@ -1696,9 +2113,8 @@ Why Processing: Pros and cons of Java
 \end_layout
 
 \begin_layout Standard
-Despite Java not being the most efficent language out there for crunching
- raw numbers, I decided to develop my program in that programming language
- for a number of reasons:
+Despite not being the most efficent language for crunching raw numbers,
+ I decided to develop my program in Java due to the following reasons:
 \end_layout
 
 \begin_layout Itemize
@@ -2114,6 +2530,13 @@ For iterating a polygon A with another polygon B, given that both of them
  B.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Input data
 \end_layout
@@ -2393,6 +2816,13 @@ Then, we will have to place it in some file and provide the program the
  file name and the line of that partition.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Output data
 \end_layout
@@ -2459,6 +2889,13 @@ Output image generated by the program.
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2573,7 +3010,11 @@ Ending point using a simple gradient method.
 However, when reaching this point, it would check for its neighbours and
  see that whatever we do, we would get a worse solution.
  Therefore, the peak pointed by the red arrow would be our solution.
- In this example, the value obtained is fairly close to the global maximum,
+ 
+\end_layout
+
+\begin_layout Standard
+In this example, the value obtained is fairly close to the global maximum,
  but in more complex problems, we might get stuck even at our starting solution.
  We need some way to avoid (or at least try to) local maximum values.
 \end_layout
@@ -2589,11 +3030,22 @@ One little improvement we can apply to the gradient method is the gradient
  size we are taking on each one.
  We start with a high value for the step, and when we cannot improve anymore
  for that step, we reduce it to some other value.
- This way, we will adjust our solution more than with using the gradient
+ 
+\end_layout
+
+\begin_layout Standard
+This way, we will adjust our solution more than with using the gradient
  method.
  We will also be able to get further away from the initial solution.
  However, lots of solutions are lost and this method is greatly dependent
  on the step values chosen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -2607,11 +3059,12 @@ Simulated annealing copies a phenomenon in nature (the annealing of solids)
  properties due to the changes in its internal structure.
  As the metal cools its new structure becomes fixed, consequently causing
  the metal to retain its newly obtained properties.
+ 
 \end_layout
 
 \begin_layout Standard
-For applying this algorithm, we keep a temperature variable to stimulate
- the heating process.
+In simulated annealing we keep a temperature variable to simulate this heating
+ process..
  We initially set it high and then allow it to slowly cool as the algorithm
  runs.
  While this temperature variable is high, the algorithm will be allowed,
@@ -2625,13 +3078,216 @@ For applying this algorithm, we keep a temperature variable to stimulate
 \end_layout
 
 \begin_layout Standard
-More precisely, the temperature variable will be the symmetric difference
- at a given point.
- If it is too high, we will be more likely to accept a worse solution than
- the current one.
+Although the gradient method (specially with steps) can be surprisingly
+ effective at finding a good solution, it also has a tendency to get stuck
+ in local optimums.
+ The simulated annealing algorithm is excellent at avoiding this problem
+ and is much better on average at finding an approximate global optimum.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+At any given point during the process, a neighbour solution will be calculated.
+ The logic to whether accept it as the next solution or not is the following:
+\end_layout
+
+\begin_layout Itemize
+If the neighbour solution is better than the current one, we accept it unconditi
+onally as the new solution.
+\end_layout
+
+\begin_layout Itemize
+If it is worse, we need to consider the following factors:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+How much worse the neighbour solution is.
+\end_layout
+
+\begin_layout Itemize
+What is the temperature at that particular state of the algorithm.
+ When the temperature is higher (near the start of the algorithm) the chances
+ of accepting a worse solution will be high.
+ When the temperature is low, so will be the chances.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The implementation of this is very simple.
+ On each step, if the neighbour solution is worse, we calculate the following
+ value, which is called the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Acceptance Function}
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p=e^{(s-n)/T}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{e}
+\end_layout
+
+\end_inset
+
+ is Euler's number (2.71828 approximately)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{s}
+\end_layout
+
+\end_inset
+
+ is the current best solution value
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{n}
+\end_layout
+
+\end_inset
+
+ is the neighbour solution value
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{T}
+\end_layout
+
+\end_inset
+
+ is the temperature.
+ Every problem will have to start with a temperature relative to it, so
+ some research should be done in order to find an acceptable value for this
+ variable.
+\end_layout
+
+\begin_layout Standard
+Then, we generate a random value in the range of (0, 1) and check if p is
+ greater than that value.
+ If it is, mark the neighbour solution as the current one, and keep searching
+ from there.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The pseudo-code of the simulated annealing algorithm would look like this:
+\end_layout
+
+\begin_layout Itemize
+Generate a initial solution S.
+ Mark this as the best solution B.
+ Mark it as the current solution C.
+\end_layout
+
+\begin_layout Itemize
+Get a neighbour solution N from the current solution.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If the N is better than the current solution: Mark it as the current solution.
+ If it is better than the best solution, mark the best to the current solution.
+\end_layout
+
+\begin_layout Itemize
+If N is worse, but we accepted it according to the acceptance probability,
+ mark it as the current solution.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Reduce the temperature T.
+\end_layout
+
+\begin_layout Itemize
+Repeat until steps until a certain stop condition is met.
+\end_layout
+
+\begin_layout Standard
+The stop condition will generally be a number of X steps to check at maximum.
+\end_layout
+
+\begin_layout Subsection*
 Getting rid of the 
 \begin_inset Quotes eld
 \end_inset
@@ -2646,8 +3302,9 @@ repetition
 \begin_layout Standard
 Given the nature of our problem, it is easy to see that the order in which
  we will move our points will play a huge role in the final result.
- In order to avoid the cyclic effect, what we want to do is move them in
- a pseudo-random mannner every iteration.
+ In order to avoid this cyclic effect, what do is move them in a pseudo-random
+ mannner every iteration.
+ This is done simply by reordering the indexes of the array each iteration.
 \end_layout
 
 \begin_layout Standard
