@@ -18,11 +18,11 @@ figs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
+\font_roman times
 \font_sans default
 \font_typewriter default
 \font_math auto
-\font_default_family default
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -34,11 +34,11 @@ figs-within-sections
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -62,13 +62,17 @@ figs-within-sections
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 5
-\tocdepth 1
+\leftmargin 3cm
+\topmargin 3.5cm
+\rightmargin 3cm
+\bottommargin 3.5cm
+\secnumdepth -2
+\tocdepth -2
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -1037,12 +1041,12 @@ Voronoi diagrams have practical and theoretical applications to a large
  The aim of my project is to study the inverse Voronoi diagram problem and
  design, compare and analyze different strategies for its solving.
  The inverse Voronoi diagram problem consists on detecting whether a given
- plane partition is a Voronoi diagram and finding the seed points that would
- generate such a partition.
- For a partition which does not come from a Voronoi diagram, it would be
- interesting to find the best fitting Voronoi diagram.
+ plane tessellation is a Voronoi diagram and finding the seed points that
+ would generate such a tessellation.
+ For a tessellation which does not come from a Voronoi diagram, it would
+ be interesting to find the best fitting Voronoi diagram.
  At this point, we need a way to measure how good a candidate solution is.
- We will be using the total symmetric difference between the two partitions
+ We will be using the total symmetric difference between the two tessellations
  for that.
  
 \end_layout
@@ -1118,8 +1122,8 @@ Before we start, there are some concepts the reader should be familiar with
 \end_layout
 
 \begin_layout Itemize
-Partition of a set.
- Partition of the unit square.
+Tessellation of a set.
+ Tessellation of the unit square.
 \end_layout
 
 \begin_layout Itemize
@@ -1187,8 +1191,8 @@ B = {1, 2}, {4, 5} - Not a partition because the element
 \end_layout
 
 \begin_layout Standard
-In this document, instead of sets, we will be working with tesellations
- of the unit square.
+In this document, instead of sets, we will be working with partitions of
+ the unit square.
  That is, a set of polygons such that the union is the unit square and the
  intersection of two polygons is, at most, a segment.
  Note that there might be points contained in more than one polygon.
@@ -1241,7 +1245,7 @@ Tesellation of the unit square.
 \end_layout
 
 \begin_layout Standard
-Mathematecally, and in order to treat our tesellations as a true partition
+Mathematecally, and in order to treat our tesellations as a true tessellation
  of the plane, we define the following sets:
 \end_layout
 
@@ -1259,7 +1263,7 @@ C = End points of the line segments which devide each region.
 \end_layout
 
 \begin_layout Standard
-Then, our tesellation T can be expressed as:
+Then, our partition T can be expressed as:
 \end_layout
 
 \begin_layout Standard
@@ -1271,8 +1275,8 @@ Then, our tesellation T can be expressed as:
 \end_layout
 
 \begin_layout Standard
-Figure 0.2 shows a tesellation of the unit square displaying each subset
- A, B, C in blue, black and red, respectively.
+Figure 0.2 shows a partition of the unit square displaying each subset A,
+ B, C in blue, black and red, respectively.
 \end_layout
 
 \begin_layout Section*
@@ -1565,7 +1569,7 @@ In blue, we can see a representation of the symmetric difference of two
 \end_layout
 
 \begin_layout Standard
-Applying the concept to two partitions, we could calculate the symmetric
+Applying the concept to two tessellations, we could calculate the symmetric
  difference as the sum of all the symmetric differences of each pair of
  related polygons divided by two (since we would be counting all twice).
 \end_layout
@@ -1634,7 +1638,7 @@ textbf{NOTE:}
 
  In order to avoid issues with scaling, we will be treating the symmetric
  difference as a ratio with the total area of the unit square, so a 0% value
- will mean the two partitions are exactly the same.
+ will mean the two tessellations are exactly the same.
 \end_layout
 
 \begin_layout Standard
@@ -1650,9 +1654,9 @@ Inverse Voronoi problem
 
 \begin_layout Standard
 As mentioned earlier, the inverse Voronoi diagram problem consists on detecting
- whether a given plane partition is a Voronoi diagram and finding the seed
- points that would generate such a partition.
- From the mathematical point of view, it is interesting that, for partitions
+ whether a given plane tessellation is a Voronoi diagram and finding the
+ seed points that would generate such a tessellation.
+ From the mathematical point of view, it is interesting that, for tessellations
  that do come from a perfect Voronoi diagram, the problem can be solved
  in O(n) time, n being the number of seeds of such a diagram.
 \end_layout
@@ -1846,7 +1850,7 @@ When we know the values for the angles a, b and c, we repeat the same process
 \end_layout
 
 \begin_layout Standard
-But what happens when the partition does not come from a Voronoi diagram?
+But what happens when the tessellation does not come from a Voronoi diagram?
  Even if it did, due to computers inaccuracy when representing floating-point
  numbers, the input data we have will not perfectly be the one that would
  be generated from a Voronoi diagram, but rather an approximation of it.
@@ -2080,7 +2084,7 @@ The objectives of this project are:
 \end_layout
 
 \begin_layout Itemize
-Fit a given partition of the unit square as much as we can through Voronoi
+Fit a given tessellation of the unit square as much as we can through Voronoi
  diagrams.
  Therefore, the variable we want to minimize is the resulting symmetric
  difference between the input and the solution given.
@@ -2089,8 +2093,8 @@ Fit a given partition of the unit square as much as we can through Voronoi
 \end_layout
 
 \begin_layout Itemize
-If the given partition is in fact a Voronoi diagram, we would like to arrive
- to that conclusion.
+If the given tessellation is in fact a Voronoi diagram, we would like to
+ arrive to that conclusion.
  Even though this looks trivial, it will be very difficult to get there
  for non trivial input, since the number of local minimums that have to
  be avoided to find the seeds increases in a higher magnitude compared to
@@ -2136,7 +2140,7 @@ It is extremely portable across the different operative systems.
 \begin_layout Itemize
 Java's data structures come in handy for our problem.
  ArrayList's are used constantly in the code to contain information about
- the partitions and polygons.
+ the tessellations and polygons.
 \end_layout
 
 \begin_layout Itemize
@@ -2542,14 +2546,14 @@ Input data
 \end_layout
 
 \begin_layout Standard
-The input data for the problem is a partition of the unit square.
+The input data for the problem is a tessellation of the unit square.
  That is, a set of polygons whose union is the unit square and, for every
  two polygons, its intersection is at most a straight line.
  More precisely, each polygon is given as a set of ordered 2D points.
  At first, we know we will be working only with convex polygons (that is,
  all internal angles are less or equal than 180 degrees).
  The input data will be read from a *.txt file in which each line will contain
- a whole partition.
+ a whole tessellation.
 \end_layout
 
 \begin_layout Standard
@@ -2601,7 +2605,7 @@ A polygon is a list of ordered points, following a positive or negative
 \end_layout
 
 \begin_layout Standard
-A partition is a list of polygons.
+A tessellation is a list of polygons.
 \end_layout
 
 \begin_layout Standard
@@ -2813,7 +2817,7 @@ Tes=[[(0,0),(1,0),(0.25,0.25),(0,0.5)],[(0.25,0.25),(1,0),(0.75,0.5)],[(0,0.5),(
 
 \begin_layout Standard
 Then, we will have to place it in some file and provide the program the
- file name and the line of that partition.
+ file name and the line of that tessellation.
 \end_layout
 
 \begin_layout Standard
@@ -3344,7 +3348,7 @@ The following sets have been used during the study of the different methods.
 \end_layout
 
 \begin_layout Section*
-Partition example 8
+Tessellation example 8
 \end_layout
 
 \begin_layout Standard
@@ -4162,7 +4166,7 @@ Set C
 
 \begin_layout Plain Layout
 Results obtained for lineNumber = 8.
- This partition is made up of 30 polygons.
+ This tessellation is made up of 30 polygons.
 \end_layout
 
 \end_inset
@@ -4250,7 +4254,7 @@ Result of the worst tested configuration for lineNumber = 8.
 \end_layout
 
 \begin_layout Section*
-Partition example 1
+Tessellation example 1
 \end_layout
 
 \begin_layout Standard
@@ -5068,7 +5072,7 @@ Set C
 
 \begin_layout Plain Layout
 Results obtained for lineNumber = 1.
- This partition is made up of 20 polygons.
+ This tessellation is made up of 20 polygons.
 \end_layout
 
 \end_inset
@@ -5152,6 +5156,282 @@ Result of the worst tested configuration for lineNumber = 1.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Code
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{FittingVoronoi.pde}:
+\end_layout
+
+\end_inset
+
+ Source file which contains most of the geometry related functions.
+ It also contains the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{setup()}
+\end_layout
+
+\end_inset
+
+ method (which is called once at the start of the application, for initializing
+ purposes) and the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{draw()}
+\end_layout
+
+\end_inset
+
+ method (which is called every frame), responsible for executing the logic
+ of the program.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "FittingVoronoi/FittingVoronoi.pde"
+lstparams "language=Java,numbers=left,breaklines=true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{UserConfiguration.pde}:
+\end_layout
+
+\end_inset
+
+ This is the file the final user is intended to modify in order to use the
+ application.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "FittingVoronoi/UserConfiguration.pde"
+lstparams "language=Java,numbers=left,breaklines=true"
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{GlobalVariables.pde}:
+\end_layout
+
+\end_inset
+
+ File containing the definition of the most important global variables used
+ by the program.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "FittingVoronoi/GlobalVariables.pde"
+lstparams "language=Java,numbers=left,breaklines=true"
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{InitializationFunctions.pde}:
+\end_layout
+
+\end_inset
+
+ File containing the functions used for initializing different parts of
+ the program, such as calculating the initial seeds or reading the tessellation
+ from the file.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "FittingVoronoi/InitializationFunctions.pde"
+lstparams "language=Java,numbers=left,breaklines=true"
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{DrawingFunctions.pde}:
+\end_layout
+
+\end_inset
+
+ File containing the functions used for drawing the current state to the
+ screen.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "FittingVoronoi/DrawingFunctions.pde"
+lstparams "language=Java,numbers=left,breaklines=true"
+
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
