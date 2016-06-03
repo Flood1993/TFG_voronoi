@@ -3,7 +3,7 @@
 
 float drawingOffset = 50;
 
-// Draws the Barycenters of the polygons of the given partition
+// Draws the Barycenters of the polygons of the given tessellation
 void drawBarycenters() {
     stroke(0,70,70); // draw in dark green
     strokeWeight(3);
@@ -14,11 +14,11 @@ void drawBarycenters() {
     clearDrawingSettings();
 }
 
-void drawPart(ArrayList<ArrayList<float []>> partition, color col) {
+void drawPart(ArrayList<ArrayList<float []>> tessellation, color col) {
     stroke(col);
 
-    for (int i = 0; i < partition.size(); i++)
-        drawPol(partition.get(i), col);
+    for (int i = 0; i < tessellation.size(); i++)
+        drawPol(tessellation.get(i), col);
 
     clearDrawingSettings();
 }

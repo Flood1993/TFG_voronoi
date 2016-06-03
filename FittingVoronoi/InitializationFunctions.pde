@@ -6,17 +6,17 @@ void initializeBarycenters() {
     barycenters = new ArrayList<float []>();
     float sumX, sumY;
 
-    for (int i = 0; i < partition.size(); i++) { // for each polygon
+    for (int i = 0; i < tessellation.size(); i++) { // for each polygon
         sumX = 0;
         sumY = 0;
-        for (int j = 0; j < partition.get(i).size(); j++) {
-            sumX += partition.get(i).get(j)[0];
-            sumY += partition.get(i).get(j)[1];
+        for (int j = 0; j < tessellation.get(i).size(); j++) {
+            sumX += tessellation.get(i).get(j)[0];
+            sumY += tessellation.get(i).get(j)[1];
         }
         barycenters.add(new float[]
                             {
-                                sumX/partition.get(i).size(),
-                                sumY/partition.get(i).size()
+                                sumX/tessellation.get(i).size(),
+                                sumY/tessellation.get(i).size()
                             });
     }
 }
@@ -50,7 +50,7 @@ float[][] arrayBarycenters(ArrayList<float []> points) {
     return res;
 }
 
-// Loads information from an external file, storing it in "partition"
+// Loads information from an external file, storing it in "tessellation"
 //
 // Information from file to be read is considered to be as follows:
 //   P1=[verticesOfPol1, verticesOfPol2, ..., verticesOfPolN]
@@ -58,7 +58,7 @@ float[][] arrayBarycenters(ArrayList<float []> points) {
 //
 // where verticesOfPol1 would be
 //  [(1.6, 2.54), (7.26, 52.5461), ..., (2.4, 6.3)]
-void initializePartition(int lineNumber) {
+void initializeTessellation(int lineNumber) {
     reader = createReader(fileToReadFrom); // handle the file
 
     for (int i = 1; i <= lineNumber; i++) { // advance to desired line
@@ -80,7 +80,7 @@ void initializePartition(int lineNumber) {
 
     polygons = line.split("\\["); //The first 2 elements will be trash
 
-    partition = new ArrayList<ArrayList<float []>>();
+    tessellation = new ArrayList<ArrayList<float []>>();
     ArrayList<float []> tmp = new ArrayList<float []>();
 
     for (int i = 2; i < polygons.length; i++) {  // first 2 are trash
@@ -97,6 +97,6 @@ void initializePartition(int lineNumber) {
                         });
         }
 
-        partition.add(tmp);
+        tessellation.add(tmp);
     }
 }

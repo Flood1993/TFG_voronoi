@@ -1,13 +1,13 @@
 // Author: Guillermo Alonso Nunez
 // e-mail: guialonun@gmail.com
 
-// Variables that will be used for reading the partition from a file
+// Variables that will be used for reading the tessellation from a file
 BufferedReader reader;
 String line;
 String polygons[];
 
-// "partition" will contain information about the given partition.
-ArrayList<ArrayList<float []>> partition;
+// "tessellation" will contain information about the given tessellation.
+ArrayList<ArrayList<float []>> tessellation;
 ArrayList<float []> barycenters;
 float floatBarycenters[][]; // [polygon][x or y coordinate]
 
@@ -50,8 +50,8 @@ boolean finished = false;
 String excLoadingData = "Exception when loading data...";
 String errIncorrSize  = "Size of window is not set accordingly... The drawings will not fill in the screen!\n" + 
                           "Please change the values in setup -> size(, ) to the one in -final int scale- and try again!";
-String errLoadingPart = "Error when loading partition...\n" + 
-                          "Please make sure variable lineNumber has a correct value and your partition file contains one partition per line.\n" +
+String errLoadingPart = "Error when loading tessellation...\n" + 
+                          "Please make sure variable lineNumber has a correct value and your tessellation file contains one tessellation per line.\n" +
                           "Current value of lineNumber: ";
                           
 // Other strings

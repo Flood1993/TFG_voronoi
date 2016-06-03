@@ -22,22 +22,22 @@ void setup() {
     
     randomSeed(rndmSeed);
     
-    initializePartition(lineNumber);
+    initializeTessellation(lineNumber);
     initializeBarycenters();
-    partition = positiveOrientation(partition, barycenters);
+    tessellation = positiveOrientation(tessellation, barycenters);
     floatBarycenters = arrayBarycenters(barycenters); // Convert barycenters to array (Voronoi input format)
     myVoronoi = new Voronoi(floatBarycenters);
     flVoronoi = storeVoronoi(myVoronoi); // Store to array list from the voronoi format
     flVoronoi = positiveOrientation(flVoronoi, barycenters);
-    flVoronoi = clipPartitionToSquare(flVoronoi);
-    symmetricDiff = totalSymDiff(partition, flVoronoi);
+    flVoronoi = clipTessellationToSquare(flVoronoi);
+    symmetricDiff = totalSymDiff(tessellation, flVoronoi);
     symDiffAtStart = symmetricDiff;
     
     fill(150, 160, 160);
     rect(drawingOffset, drawingOffset, scale, scale);
     fill(backgroundColor);
     
-    drawPart(partition, defaultBlack);
+    drawPart(tessellation, defaultBlack);
     drawPart(flVoronoi, defaultGreen);
     drawBarycenters();
     
@@ -68,7 +68,7 @@ void draw() {
     if (!hasImproved && stepIndex < simulatedAnnealing.length) {
         stepIndex++;
     }
-    drawPart(partition, defaultBlack);
+    drawPart(tessellation, defaultBlack);
     drawPart(flVoronoi, defaultGreen);
     drawBarycenters();
     
@@ -168,7 +168,7 @@ void gradientMethod(float step, boolean useSimulatedAnnealing) {
         // TODO: Need some refactoring
         bestSolution = barycenters;
         flVoronoi = positiveOrientation(flVoronoi, barycenters);
-        bestSymDiff = totalSymDiff(partition, flVoronoi);
+        bestSymDiff = totalSymDiff(tessellation, flVoronoi);
         
         simAnnValue = 0;
 
@@ -205,7 +205,7 @@ void gradientMethod(float step, boolean useSimulatedAnnealing) {
         myVoronoi = new Voronoi(floatBarycenters);
         flVoronoi = storeVoronoi(myVoronoi);
         flVoronoi = positiveOrientation(flVoronoi, barycenters);
-        flVoronoi = clipPartitionToSquare(flVoronoi);
+        flVoronoi = clipTessellationToSquare(flVoronoi);
     }
 }
 
@@ -237,8 +237,8 @@ void checkNeighbour(int dir, int i, float step, float randomNumber, boolean useS
     tmpVor = new Voronoi(newBarycenters);
     tmpNewStuff = storeVoronoi(tmpVor);
     tmpNewStuff = positiveOrientation(tmpNewStuff, clonedBarycenters);
-    tmpNewStuff = clipPartitionToSquare(tmpNewStuff);
-    diff = totalSymDiff(partition, tmpNewStuff);
+    tmpNewStuff = clipTessellationToSquare(tmpNewStuff);
+    diff = totalSymDiff(tessellation, tmpNewStuff);
     if (debugging)
         System.out.println("Diff 1: " + diff);
 
@@ -251,12 +251,12 @@ void checkNeighbour(int dir, int i, float step, float randomNumber, boolean useS
 
 }
 
-// Clips a whole partition to the square
-ArrayList<ArrayList<float []>> clipPartitionToSquare(ArrayList<ArrayList<float []>> partition) {
+// Clips a whole tessellation to the square
+ArrayList<ArrayList<float []>> clipTessellationToSquare(ArrayList<ArrayList<float []>> tessellation) {
     ArrayList<ArrayList<float []>> res = new ArrayList<ArrayList<float []>>();
 
-    for (int i = 0; i < partition.size(); i++) {
-        ArrayList<float []> tmp = clipToSquare(partition.get(i));
+    for (int i = 0; i < tessellation.size(); i++) {
+        ArrayList<float []> tmp = clipToSquare(tessellation.get(i));
 
         res.add(tmp);
     }
