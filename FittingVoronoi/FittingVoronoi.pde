@@ -18,11 +18,6 @@ void setup() {
     
     background(backgroundColor); // clear screen
 
-    /*if (height != scale || width != scale) { // check size
-        System.out.println(errIncorrSize);
-        exit();
-    }*/
-
     output = createWriter("Output.csv");
     
     randomSeed(rndmSeed);
@@ -68,7 +63,7 @@ void draw() {
     fill(backgroundColor);
 
     if (!finished)
-        gradientMethod(simulatedAnnealing[stepIndex]*scale, useSimmulatedAnnealing);
+        gradientMethod(simulatedAnnealing[stepIndex]*scale, useSimulatedAnnealing);
 
     if (!hasImproved && stepIndex < simulatedAnnealing.length) {
         stepIndex++;
@@ -117,8 +112,7 @@ float areaPolygon(ArrayList<float []> pol) {
 }
 
 // Clips a polygon with a given line
-ArrayList<float []> clipLine(ArrayList<float []> pol, float lineStart[],
-        float lineEnd[]) {
+ArrayList<float []> clipLine(ArrayList<float []> pol, float lineStart[], float lineEnd[]) {
     ArrayList<float []> res = new ArrayList<float []>();
 
     for (int i = 0; i < pol.size(); i++) {
@@ -172,87 +166,16 @@ void gradientMethod(float step, boolean useSimulatedAnnealing) {
         float randomNumber = random(0, 1);
 
         // TODO: Need some refactoring
-        ArrayList<float []> bestSolution = barycenters;
+        bestSolution = barycenters;
         flVoronoi = positiveOrientation(flVoronoi, barycenters);
-        float bestSymDiff = totalSymDiff(partition, flVoronoi);
+        bestSymDiff = totalSymDiff(partition, flVoronoi);
         
-        float simAnnValue = 0;
+        simAnnValue = 0;
 
-
-
-
-
-
-        ArrayList<float []> clonedBarycenters = cloneArraylist(barycenters);
-        clonedBarycenters.get(i)[0] = clonedBarycenters.get(i)[0] + step;
-        float [][] newBarycenters = arrayBarycenters(clonedBarycenters);
-        tmpVor = new Voronoi(newBarycenters);
-        ArrayList<ArrayList<float []>> tmpNewStuff = storeVoronoi(tmpVor);
-        tmpNewStuff = positiveOrientation(tmpNewStuff, clonedBarycenters);
-        tmpNewStuff = clipPartitionToSquare(tmpNewStuff);
-
-        float diff = totalSymDiff(partition, tmpNewStuff);
-
-        if (debugging)
-            System.out.println("Diff 1: " + diff);
-
-        simAnnValue = exp((symmetricDiff - diff)/step);
-        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
-            hasImproved = true;
-            bestSolution = clonedBarycenters;
-            bestSymDiff = diff;
-        }
-
-        clonedBarycenters = cloneArraylist(barycenters);
-        clonedBarycenters.get(i)[0] = clonedBarycenters.get(i)[0] - step;
-        newBarycenters = arrayBarycenters(clonedBarycenters);
-        tmpVor = new Voronoi(newBarycenters);
-        tmpNewStuff = storeVoronoi(tmpVor);
-        tmpNewStuff = positiveOrientation(tmpNewStuff, clonedBarycenters);
-        tmpNewStuff = clipPartitionToSquare(tmpNewStuff);
-        diff = totalSymDiff(partition, tmpNewStuff);
-        if (debugging)
-            System.out.println("Diff 2: " + diff);
-        simAnnValue = exp((symmetricDiff - diff)/step);
-        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
-            hasImproved = true;
-            bestSolution = clonedBarycenters;
-            bestSymDiff = diff;
-        }
-
-        clonedBarycenters = cloneArraylist(barycenters);
-        clonedBarycenters.get(i)[1] = clonedBarycenters.get(i)[1] + step;
-        newBarycenters = arrayBarycenters(clonedBarycenters);
-        tmpVor = new Voronoi(newBarycenters);
-        tmpNewStuff = storeVoronoi(tmpVor);
-        tmpNewStuff = positiveOrientation(tmpNewStuff, clonedBarycenters);
-        tmpNewStuff = clipPartitionToSquare(tmpNewStuff);
-        diff = totalSymDiff(partition, tmpNewStuff);
-        if (debugging)
-            System.out.println("Diff 3: " + diff);
-        simAnnValue = exp((symmetricDiff - diff)/step);
-        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
-            hasImproved = true;
-            bestSolution = clonedBarycenters;
-            bestSymDiff = diff;
-        }
-
-        clonedBarycenters = cloneArraylist(barycenters);
-        clonedBarycenters.get(i)[1] = clonedBarycenters.get(i)[1] - step;
-        newBarycenters = arrayBarycenters(clonedBarycenters);
-        tmpVor = new Voronoi(newBarycenters);
-        tmpNewStuff = storeVoronoi(tmpVor);
-        tmpNewStuff = positiveOrientation(tmpNewStuff, clonedBarycenters);
-        tmpNewStuff = clipPartitionToSquare(tmpNewStuff);
-        diff = totalSymDiff(partition, tmpNewStuff);
-        if (debugging)
-            System.out.println("Diff 4: " + diff);
-        simAnnValue = exp((symmetricDiff - diff)/step);
-        if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
-            hasImproved = true;
-            bestSolution = clonedBarycenters;
-            bestSymDiff = diff;
-        }
+        checkNeighbour(0, i, step, randomNumber, useSimulatedAnnealing);
+        checkNeighbour(1, i, step, randomNumber, useSimulatedAnnealing);
+        checkNeighbour(2, i, step, randomNumber, useSimulatedAnnealing);
+        checkNeighbour(3, i, step, randomNumber, useSimulatedAnnealing);
 
         if (debugging)
             System.out.println("Best symmetric difference: " + bestSymDiff);
@@ -286,9 +209,50 @@ void gradientMethod(float step, boolean useSimulatedAnnealing) {
     }
 }
 
+// dir:
+//  0 - Increase x
+//  1 - Decrease x
+//  2 - Increase y
+//  3 - Decrease y
+void checkNeighbour(int dir, int i, float step, float randomNumber, boolean useSimulatedAnnealing) {
+    clonedBarycenters = cloneArraylist(barycenters);
+    switch (dir) {
+        case 0:
+            clonedBarycenters.get(i)[0] = clonedBarycenters.get(i)[0] + step;
+            break;
+        case 1:
+            clonedBarycenters.get(i)[0] = clonedBarycenters.get(i)[0] - step;
+            break;
+        case 2:
+            clonedBarycenters.get(i)[1] = clonedBarycenters.get(i)[1] + step;
+            break;
+        case 3:
+            clonedBarycenters.get(i)[1] = clonedBarycenters.get(i)[1] - step;
+            break;
+        default:
+            System.out.println("Error checking neighbour. Bad call.");
+    }
+    
+    newBarycenters = arrayBarycenters(clonedBarycenters);
+    tmpVor = new Voronoi(newBarycenters);
+    tmpNewStuff = storeVoronoi(tmpVor);
+    tmpNewStuff = positiveOrientation(tmpNewStuff, clonedBarycenters);
+    tmpNewStuff = clipPartitionToSquare(tmpNewStuff);
+    diff = totalSymDiff(partition, tmpNewStuff);
+    if (debugging)
+        System.out.println("Diff 1: " + diff);
+
+    simAnnValue = exp((symmetricDiff - diff)/step);
+    if ((diff < bestSymDiff) || (useSimulatedAnnealing && simAnnValue < randomNumber)) {
+        hasImproved = true;
+        bestSolution = clonedBarycenters;
+        bestSymDiff = diff;
+    }
+
+}
+
 // Clips a whole partition to the square
-ArrayList<ArrayList<float []>> clipPartitionToSquare(
-        ArrayList<ArrayList<float []>> partition) {
+ArrayList<ArrayList<float []>> clipPartitionToSquare(ArrayList<ArrayList<float []>> partition) {
     ArrayList<ArrayList<float []>> res = new ArrayList<ArrayList<float []>>();
 
     for (int i = 0; i < partition.size(); i++) {
@@ -317,8 +281,7 @@ ArrayList<float []> clipToSquare(ArrayList<float []> pol) {
 }
 
 // Returns a new polygon which is the intersection of two
-ArrayList<float []> clipPolygons(ArrayList<float []> pol1,
-        ArrayList<float []> pol2) {
+ArrayList<float []> clipPolygons(ArrayList<float []> pol1, ArrayList<float []> pol2) {
     ArrayList<float []> res = new ArrayList<float []>();
 
     for (int i = 0; i < pol2.size(); i++) {
@@ -352,9 +315,7 @@ float totalSymDiff(ArrayList<ArrayList<float []>> x,
 }
 
 // Makes sure all polygons are positively oriented
-ArrayList<ArrayList<float []>> positiveOrientation(
-        ArrayList<ArrayList<float []>> part, ArrayList<float []> barycenters) {
-    
+ArrayList<ArrayList<float []>> positiveOrientation(ArrayList<ArrayList<float []>> part, ArrayList<float []> barycenters) {
     ArrayList<ArrayList<float []>> res = new ArrayList<ArrayList<float []>>();
     
     // For each polygon

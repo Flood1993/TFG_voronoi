@@ -7,7 +7,7 @@ String fileToReadFrom = "10_partitions.txt";
 int lineNumber = 8;
 
 // Whether we want to apply the simmulated annealing technique or not.
-boolean useSimmulatedAnnealing = false;
+boolean useSimulatedAnnealing = false;
 // Values we want to use for searching for neighbour solutions. Expressed as a ratio of the square unit side.
 
 float setA[] = new float[]{0.05, 0.04, 0.01, 0.005, 0.001};

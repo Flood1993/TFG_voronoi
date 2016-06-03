@@ -21,6 +21,15 @@ float symDiffAtStart = -80000000000.0;
 float symmetricDiff = -80000000000.0;
 float tmpSymDiff = -80000000000.0;
 
+// Variables used at the gradient method
+ArrayList<float []> clonedBarycenters;
+float [][] newBarycenters;
+ArrayList<ArrayList<float []>> tmpNewStuff;
+float diff;
+ArrayList<float []> bestSolution;
+float bestSymDiff;
+float simAnnValue;
+
 int rndmSeed = 2;
 
 int stepCount = 0;
