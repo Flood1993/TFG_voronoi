@@ -50,8 +50,6 @@ void drawTextGUI() {
     text("· SD currently: " + String.format("%.5f", symmetricDiff), xCoord, 50);
     text("· Step count: " + stepCount, xCoord, 70);
     text("· Total regions: " + barycenters.size(), xCoord, 90);
-    text("· Adjustment per step: " + String.format("%.5f", symmetricDiff/stepCount), xCoord, 110);
-    text("· Total adjustment: " + String.format("%.5f", symDiffAtStart - symmetricDiff), xCoord, 130);
 
     if (finished)
         text("--- FINISHED EXECUTION ---", xCoord, 150);
