@@ -88,7 +88,7 @@ INDEX
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="30" columns="2">
+<lyxtabular version="3" rows="38" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top" width="0pt">
@@ -157,7 +157,7 @@ INDEX
 \begin_inset Text
 
 \begin_layout Plain Layout
-Resumen
+RESUMEN
 \end_layout
 
 \end_inset
@@ -188,7 +188,7 @@ qquad
 
 \end_inset
 
-2
+3
 \end_layout
 
 \end_inset
@@ -199,47 +199,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-Summary
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Introduction and objectives
+SUMMARY
 \end_layout
 
 \end_inset
@@ -249,6 +209,46 @@ Introduction and objectives
 
 \begin_layout Plain Layout
 5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+INTRODUCTION
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
 \end_layout
 
 \end_inset
@@ -281,7 +281,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-5
+6
 \end_layout
 
 \end_inset
@@ -313,7 +313,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-6
+8
 \end_layout
 
 \end_inset
@@ -345,7 +345,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-7
+9
 \end_layout
 
 \end_inset
@@ -377,7 +377,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+10
 \end_layout
 
 \end_inset
@@ -409,7 +409,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-10
+12
 \end_layout
 
 \end_inset
@@ -441,7 +441,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-12
+15
 \end_layout
 
 \end_inset
@@ -473,7 +473,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-13
+16
 \end_layout
 
 \end_inset
@@ -505,7 +505,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-15
+18
 \end_layout
 
 \end_inset
@@ -536,7 +536,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-Development
+DEVELOPMENT
 \end_layout
 
 \end_inset
@@ -545,7 +545,7 @@ Development
 \begin_inset Text
 
 \begin_layout Plain Layout
-16
+19
 \end_layout
 
 \end_inset
@@ -569,7 +569,7 @@ qquad
 \end_inset
 
  Why Processing.
- Pros and cons of Java.
+ Pros and cons of Java
 \end_layout
 
 \end_inset
@@ -578,7 +578,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-16
+19
 \end_layout
 
 \end_inset
@@ -611,7 +611,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-16
+19
 \end_layout
 
 \end_inset
@@ -643,7 +643,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-21
+24
 \end_layout
 
 \end_inset
@@ -675,7 +675,39 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-23
+26
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Heuristics and general considerations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+27
 \end_layout
 
 \end_inset
@@ -707,7 +739,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-24
+28
 \end_layout
 
 \end_inset
@@ -739,7 +771,585 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-25
+29
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Simulated annealing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RESULTS AND OBSERVATIONS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+43
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Tessellation example 10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+51
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Teatros del Canal
+\begin_inset Quotes erd
+\end_inset
+
+ facade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+53
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="36" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ General observations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad 
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+55
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+USER GUIDE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+56
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ Installing Processing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+56
 \end_layout
 
 \end_inset
@@ -762,7 +1372,7 @@ qquad
 
 \end_inset
 
- Simulated annealing
+ Downloading the application
 \end_layout
 
 \end_inset
@@ -771,7 +1381,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-26
+56
 \end_layout
 
 \end_inset
@@ -802,7 +1412,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-Results and conclusions
+CODE
 \end_layout
 
 \end_inset
@@ -811,7 +1421,227 @@ Results and conclusions
 \begin_inset Text
 
 \begin_layout Plain Layout
-28
+58
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ FittingVoronoi.pde
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+58
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ UserConfiguration.pde
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ GlobalVariables.pde
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ InitializationFunctions.pde
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+73
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ DrawingFunctions.pde
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+BIBLIOGRAPHY
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -822,7 +1652,227 @@ Results and conclusions
 \begin_inset Text
 
 \begin_layout Plain Layout
-Application user guide
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -842,7 +1892,7 @@ Application user guide
 \begin_inset Text
 
 \begin_layout Plain Layout
-Appendices
+
 \end_layout
 
 \end_inset
@@ -862,7 +1912,7 @@ Appendices
 \begin_inset Text
 
 \begin_layout Plain Layout
-Code
+
 \end_layout
 
 \end_inset
@@ -882,7 +1932,127 @@ Code
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bibliography
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -934,7 +2104,7 @@ Los diagramas de Voronoi tienen aplicaciones tanto prácticas como teóricas
 \begin_layout Standard
 Nótese que el número de soluciones candidatas es infinito dado que se trata
  de un espacio de búsqueda continuo.
- Tratar todas ellas y elegir la mejor es por tanto inviable.
+ Probar todas ellas y elegir la mejor es por tanto inviable.
  Por tanto, trataremos de resolver el problema mediante diferentes metaheurístic
 as, es decir, trataremos de buscar una solución lo suficientemente buena,
  no la mejor.
@@ -980,11 +2150,12 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-School districts in Tsukuba: (a) school districts and the present sites
- of schools (filled circles), the students in the shaded regions cannot
- go to their nearest schools; (b) school sites (filled squares) that minimize
- the area in which students cannot go to their nearest schools.
- (Source: Suzuki and Iri, 1986a, Figure 14.)
+Distritos escolares en Tsukuba: (a) distritos escolares y ubicación actual
+ de los colegios (círculos rellenos).
+ Los estudiantes de las zonas sombreadas no pueden ir al colegios más cercano;
+ (b) ubicación de los colegios (cuadrados rellenos) que minimizaría el área
+ correspondiente a los estudiantes que no pueden ir al colegio más cercano.
+ (Fuente: Suzuki and Iri, 1986a, Figure 14.)
 \end_layout
 
 \end_inset
@@ -998,22 +2169,22 @@ School districts in Tsukuba: (a) school districts and the present sites
 \end_layout
 
 \begin_layout Standard
-El ajuste de una partición del plano mediante diagramas de Voronoi también
- es útil para resolver problemas de optimización a la hora de colocar objetos
- con restricciones espaciales.
+El ajuste de una partición del plano mediante diagramas de Voronoi es útil
+ para resolver problemas de optimización a la hora de colocar objetos con
+ restricciones espaciales.
  Un ejemplo es el problema de colocar colegios atendiendo a los diferentes
- distritos.
- La Figura 0.1(a) muestra los diferentes distritos de institutos en Tsukuba
- (los círculos muestran la ubicación de los institutos).
- En Japón, los estudiantes de un distrito deben ir al instituto asignado
- a ese distrito.
- Como resultado, en algunas áreas los estudiantes tienen que ir a un instituto
+ distritos escolares.
+ La Figura 0.1(a) muestra los diferentes distritos escolares en Tsukuba (los
+ círculos muestran la ubicación de los institutos).
+ En Japón, los estudiantes de un distrito deben ir al colegio asignado a
+ ese distrito.
+ Como resultado, en algunas áreas los estudiantes tienen que ir a un colegio
  que no es el más cercano.
- Si asumimos que los estudiantes pueden llegar al instituto siguiendo el
- camino Euclidiano en la Figura 0.1, las zonas en las que los estudiantes
- no pueden ir al instituto más cercano aparecen sombreadas en la Figura
- 0.1(a), donde los polígonos se corresponden con el diagrama de Voronoi generado
- por la posición de los institutos.
+ Si asumimos que los estudiantes pueden llegar al colegio siguiendo el camino
+ Euclidiano en la Figura 0.1, las zonas en las que los estudiantes no pueden
+ ir al colegio más cercano aparecen sombreadas en la Figura 0.1(a), donde
+ los polígonos se corresponden con el diagrama de Voronoi generado por la
+ posición de los institutos.
  
 \end_layout
 
@@ -1038,7 +2209,7 @@ SUMMARY
 Voronoi diagrams have practical and theoretical applications to a large
  number of fields, mainly in science, technology and visual art.
  The aim of my project is to study the inverse Voronoi diagram problem and
- design, compare and analyze different strategies for its solving.
+ design, compare and analyze different strategies for its resolution.
  The inverse Voronoi diagram problem consists on detecting whether a given
  plane tessellation is a Voronoi diagram and finding the seed points that
  would generate such a tessellation.
@@ -1121,12 +2292,12 @@ Before we start, there are some concepts the reader should be familiar with
 \end_layout
 
 \begin_layout Itemize
-Tessellation of a set.
- Tessellation of the unit square.
+Partition of a set.
+ Partition of the unit square.
 \end_layout
 
 \begin_layout Itemize
-Voronoi diagrams.
+Voronoi diagram.
 \end_layout
 
 \begin_layout Itemize
@@ -1190,7 +2361,7 @@ B = {1, 2}, {4, 5} - Not a partition because the element
 \end_layout
 
 \begin_layout Standard
-In this document, instead of sets, we will be working with partitions of
+In this project, instead of sets, we will be working with tesellations of
  the unit square.
  That is, a set of polygons such that the union is the unit square and the
  intersection of two polygons is, at most, a segment.
@@ -1244,7 +2415,7 @@ Tesellation of the unit square.
 \end_layout
 
 \begin_layout Standard
-Mathematecally, and in order to treat our tesellations as a true tessellation
+Mathematically, and in order to treat our tesellations as a true partition
  of the plane, we define the following sets:
 \end_layout
 
@@ -1274,8 +2445,15 @@ Then, our partition T can be expressed as:
 \end_layout
 
 \begin_layout Standard
-Figure 0.2 shows a partition of the unit square displaying each subset A,
+Figure 1.1 shows a partition of the unit square displaying each subset A,
  B, C in blue, black and red, respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1283,7 +2461,7 @@ Voronoi diagrams
 \end_layout
 
 \begin_layout Standard
-A Voronoi diagram is a tesellation of the plane into regions (called Voronoi
+A Voronoi diagram is a partition of the plane into regions (called Voronoi
  cells) based on distance to points (called seeds or generators) in a specific
  subset of the plane.
  
@@ -1339,7 +2517,7 @@ Therefore, each region
 \begin_inset Formula $A_{n}$
 \end_inset
 
- can be described as a locus defined by the points 
+ can be described as the locus defined by the points 
 \begin_inset Formula $P_{k}$
 \end_inset
 
@@ -1427,8 +2605,8 @@ which will be our first approximation.
 
 \begin_layout Enumerate
 Apply different heuristic techniques to the current best solution, which
- generally involves slightly moving the seeds and checking if the new Voronoi
- diagrams V
+ generally involves slightly moving the seeds and checking if the new obtained
+ Voronoi diagrams V
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -1591,7 +2769,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ThesisImages/SymDiffOfTwoPartitions.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -1604,8 +2782,8 @@ status open
 \begin_layout Plain Layout
 The new method would start with whole square painted in blue.
  We then subtract all the intersections of each pair of polygons.
- Graphically, the symmetric difference would be the total blue area of the
- picture in proportion to the area of the whole square.
+ Graphically, the symmetric difference would be the total remaining blue
+ area of the picture.
 \end_layout
 
 \end_inset
@@ -1699,13 +2877,13 @@ Region extracted from a Voronoi diagram.
 \end_layout
 
 \begin_layout Standard
-To prove it, we will start by knowing the tesellation comes from a perfect
- Voronoi diagram.
+To prove it, we will start by assuming the tesellation comes from a perfect
+ Voronoi diagram (all coordinates have infinite precision).
  For making the demonstration shorter, we will assume some point P of the
  diagram from which three edges come out has been found, even though the
  general demonstration follows the same logic.
  By definition, the distance from a pair of seeds to the edge they generate
- is always the same, as can be seen in Figure 0.6.
+ is always the same, as can be seen in Figure 5.1.
  
 \end_layout
 
@@ -1744,9 +2922,9 @@ Angles formed by P, an edge and the lines that connect P with the corresponding
 \end_layout
 
 \begin_layout Standard
-Therefore, we know that the angles formed by P, an edge, and the lines that
- connect P with the corresponding two seeds of that edge must be the same,
- as can be seen in Figure 0.7.
+Therefore, we know that the angles a, b and c formed by P, an edge, and
+ the lines that connect P with the corresponding two seeds of that edge
+ must be the same, as can be seen in Figure 5.2.
 \end_layout
 
 \begin_layout Standard
@@ -1783,14 +2961,19 @@ Angles between each pair of seeds.
 \end_layout
 
 \begin_layout Standard
-Finally, let d, e and f the angles between each pair of edges coming out
- from P, as seen in Figure 0.8.
+\begin_inset Newpage newpage
+\end_inset
+
+Finally, let d, e and f be the angles between each pair of edges coming
+ out from P, as seen in Figure 0.8.
  This values can be easily obtained knowing the points of the Voronoi diagram.
- With all these information, the unknown location of the seeds A, B and
- C can be obtained by solving the following system of linear equations:
+ With all these information we know the seeds A, B and C will have to lay
+ on the lines with angles a, b and c to the corresponding edges.
+ We can obtain the variables solving the following system of linear equations:
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Formula $\begin{cases}
 d+e+f=2\pi\\
 a+b=e\\
@@ -1842,8 +3025,8 @@ Seeds A and B have been located applying the explained method twice.
 \begin_layout Standard
 When we know the values for the angles a, b and c, we repeat the same process
  on a any vertex connected with P.
- As it can be seen in Figure 0.9, after knowing the angles for a neighbour
- vertex, the exact position of seeds A and B is known.
+ As it can be seen in Figure 0.9, after knowing the angles for a neighbor
+ vertex, the exact position of seeds A and B is obtained.
  From there, we can calculate any other seed by just mirroring the known
  seeds with the surrounding edges.
 \end_layout
@@ -1853,8 +3036,20 @@ But what happens when the tessellation does not come from a Voronoi diagram?
  Even if it did, due to computers inaccuracy when representing floating-point
  numbers, the input data we have will not perfectly be the one that would
  be generated from a Voronoi diagram, but rather an approximation of it.
- Thus, we want to explore different methods of fitting an arbitrary tesellation,
- whether it comes from a Voronoi diagram or not.
+ If we applied this method, the location of the first seed would be off
+ to its real value by certain offset 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ When calculating the rest of the seeds, on each iteration, that little
+ offset would be multiplied by a certain constant, making it more inaccurate
+ as the number of calculated seeds increases.
+\end_layout
+
+\begin_layout Standard
+Therefore, we want to explore different methods for fitting an arbitrary
+ tesellation, whether it comes from a Voronoi diagram or not.
 \end_layout
 
 \begin_layout Standard
@@ -1871,7 +3066,7 @@ Generalized inverse Voronoi problem
 \begin_layout Standard
 Another problem related to the ones exposed, but beyond the scope of this
  project, is the generalized inverse Voronoi problem.
- This problem consists of, given a plane tesellation, calculate a set of
+ This problem consists on, given a plane tesellation, calculate a set of
  seeds such that the Voronoi diagram obtained from those seeds contains
  the original tesellation as a subset.
 \end_layout
@@ -1915,9 +3110,9 @@ Representation of the generalized inverse Voronoi problem.
 
 \begin_layout Standard
 Figure 6.1 shows how this problem would look like.
- The given input would be the tessellation obtained from the thick edges.
+ The given input would be the tessellation represented by the thick edges.
  Then, as we can see, considering the dots as the seed placement, the obtained
- Voronoi diagram would be the thick lines plus the thin lines.
+ Voronoi diagram would be the union of the thick lines and the thin lines.
  As we can see, the original input is contained in the final Voronoi diagram.
  
 \begin_inset Newpage newpage
@@ -1931,8 +3126,8 @@ Voronoi diagrams in real life
 \end_layout
 
 \begin_layout Standard
-If one has the chance to go for a walk in Madrid, he/she might find itself
- in front of the 
+If one is familiar with Voronoi diagrams and has the chance to go for a
+ walk in Madrid, they might find themselves in front of the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1941,9 +3136,8 @@ Teatros del Canal
 \end_inset
 
 .
- If he/she is familiar with Voronoi diagrams, something will catch his/her
- eye: some parts of the decoration of that building resemble those diagrams!
- In the 
+ Something will attract their attention: some parts of the decoration of
+ the building resemble those diagrams! In the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1951,7 +3145,7 @@ Results and Observations
 \begin_inset Quotes erd
 \end_inset
 
- part, we will adjust them and see how well they fit as a Voronoi diagram.
+ part, we will adjust them and discuss how well they fit as a Voronoi diagram.
 \end_layout
 
 \begin_layout Standard
@@ -1983,7 +3177,15 @@ Teatros del Canal
 \end_inset
 
  facade.
- It resembles a Voronoi diagram.
+ It 
+\begin_inset Quotes eld
+\end_inset
+
+clearly
+\begin_inset Quotes erd
+\end_inset
+
+ resembles a Voronoi diagram.
 \end_layout
 
 \end_inset
@@ -2001,7 +3203,7 @@ Teatros del Canal
 \end_layout
 
 \begin_layout Standard
-In order to be able to work with that tessellation, we will need to extract
+In order to be able to work with that tessellation, we will need to convert
  it into our format.
  This will also be explained later, in the 
 \begin_inset Quotes eld
@@ -2043,7 +3245,7 @@ Teatros del Canal
 \end_inset
 
  facade transcription.
- We will later use this to see and compare the results of the different
+ We will use this later to see and compare the results of the different
  fitting methods.
 \end_layout
 
@@ -2059,7 +3261,10 @@ Teatros del Canal
 
 \begin_layout Standard
 Voronoi diagrams have also been observed in nature.
- 
+ The mouthbreeder fish is a fish known for being highly predatory and extremely
+ territorial.
+ A research by Suzuki and Iri in 1986 showed that when located in a fishtank,
+ the areas guarded by each fish fitted almost perfectly into a Voronoi diagram.
 \end_layout
 
 \begin_layout Standard
@@ -2101,12 +3306,6 @@ Fitting a Voronoi diagram to the territories of mouthbreeder fish.
 \end_layout
 
 \begin_layout Standard
-Figure 6.3 illustrates an actual application carried by Suzuki and Iri (1986b)
- who fit a Voronoi diagram to the territories of mouthbreeder fish, a fish
- known for being highly predatory and extremely territorial.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -2122,8 +3321,8 @@ The objectives of this project are:
 \end_layout
 
 \begin_layout Itemize
-Fit a given tessellation of the unit square as much as we can through Voronoi
- diagrams.
+Fit a given tessellation of the unit square as best as possible through
+ Voronoi diagrams.
  Therefore, the variable we want to minimize is the resulting symmetric
  difference between the input and the solution given.
  We want to implement different techniques and compare their results in
@@ -2133,6 +3332,7 @@ Fit a given tessellation of the unit square as much as we can through Voronoi
 \begin_layout Itemize
 If the given tessellation is in fact a Voronoi diagram, we would like to
  arrive to that conclusion.
+ That is, end with a symmetric difference close to 0.0.
  Even though this looks trivial, it will be very difficult to get there
  for non trivial input, since the number of local minimums that have to
  be avoided to find the seeds increases in a higher magnitude compared to
@@ -2155,20 +3355,27 @@ Why Processing: Pros and cons of Java
 \end_layout
 
 \begin_layout Standard
-Despite not being the most efficent language for crunching raw numbers,
- I decided to develop my program in Java due to the following reasons:
+For developing the final application, I opted to go with Processing.
+ Processing is an open source programming language and integrated development
+ environment (IDE).
+ The language builds on the Java programming language, but uses a simplified
+ syntax and graphics programming model.
+ Despite not being the most efficent language for crunching raw numbers,
+ I decided to develop my program in Processing (Java) due to the following
+ reasons:
 \end_layout
 
 \begin_layout Itemize
-First of all, I had already used it in the past for a different project,
- and one of the biggest advantages of it is the ease to display information
- in the screen.
+First of all, I had already used it in the past for a different project.
+ One of the biggest advantages of Processing is the ease to display information
+ in the screen through a GUI.
 \end_layout
 
 \begin_layout Itemize
 The aim of this project is not to design an algorithm that can finish execution
  in the least amount of time, but rather, study and compare different techniques
  and their results.
+ Therefore, we are not interested purely in execution times.
 \end_layout
 
 \begin_layout Itemize
@@ -2182,8 +3389,9 @@ Java's data structures come in handy for our problem.
 \end_layout
 
 \begin_layout Itemize
-The number of regions we are going to be treating in our research will be
- 200 maximum, a reasonable number for any modern programming language.
+The number of regions we are going to be dealing with in our research will
+ not be very high, in order to dedicate more time to analyzing the results
+ than to optimizing the code.
 \end_layout
 
 \begin_layout Section
@@ -2192,9 +3400,9 @@ Line clipping.
 \end_layout
 
 \begin_layout Standard
-There are two situations in the problem in which we have to calculate the
- intersection of two polygons: when clipping a polygon to the unit square
- and when clipping two polygons.
+For solving the inverse Voronoi diagram problem, there are two situations
+ in which we have to find the intersection of two polygons: when clipping
+ a polygon to the unit square and when clipping two polygons.
 \end_layout
 
 \begin_layout Standard
@@ -2206,8 +3414,9 @@ The first one is needed because, theoretically, there will always be some
 
 \begin_layout Standard
 The second one is useful when we want to calculate the area of the intersection
- of two polygons for calculating the symmetric difference.
- This is doable since we will be working with convex polygons.
+ of two polygons for calculating the symmetric difference as explained earlier.
+ However, note that this is doable since we will be working exclusively
+ with convex polygons.
  An easy way to do it is calculate the actual intersection, and then, get
  the area of that polygon.
 \end_layout
@@ -2227,8 +3436,9 @@ The algorithm works as follows:
 
 \begin_layout Standard
 Suppose we want to clip the polygon ABCDEFG with the blue line.
- Note that this polygon is not convex, but for explanation purposes, we
- will apply the algorithm to it.
+ Note that this polygon is not convex, since the angle in DEF is greater
+ than 180º, but for explanation purposes, we will apply the algorithm to
+ it.
  Also note that the line has a direction, given by the blue arrow.
 \end_layout
 
@@ -2589,14 +3799,14 @@ The input data for the problem is a tessellation of the unit square.
  two polygons, its intersection is at most a straight line.
  More precisely, each polygon is given as a set of ordered 2D points.
  At first, we know we will be working only with convex polygons (that is,
- all internal angles are less or equal than 180 degrees).
- The input data will be read from a *.txt file in which each line will contain
- a whole tessellation.
+ all internal angles are less or equal than 180º).
+ The input data will be read from a file defined by the user in which each
+ line will contain a whole tessellation of the unit square.
 \end_layout
 
 \begin_layout Standard
-If you are familiar with the Python programming language, you will easily
- detect that the input follows the same syntax as Python code.
+If you are familiar with the Python programming language, you will see that
+ the input follows the same syntax as Python code.
 \end_layout
 
 \begin_layout Standard
@@ -2607,13 +3817,6 @@ A Python tuple can be expressed as a list of comma separated values, with
 
 \begin_layout Standard
 \begin_inset Formula $Fruits=("Pear","Apple","Grape")$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $Numbers=[1,6,-464]$
 \end_inset
 
 
@@ -2633,8 +3836,8 @@ A Python list can be expressed as a list of comma separated values, with
 \end_layout
 
 \begin_layout Standard
-A tuple is a list of two floating point numbers, which represents both coordinat
-es.
+We will define a point as a tuple of two floating point numbers, each of
+ one representing a coordinate (X and Y respectively).
 \end_layout
 
 \begin_layout Standard
@@ -2643,7 +3846,8 @@ A polygon is a list of ordered points, following a positive or negative
 \end_layout
 
 \begin_layout Standard
-A tessellation is a list of polygons.
+A tessellation is a list of polygons (note that different polygons may have
+ different orientations).
 \end_layout
 
 \begin_layout Standard
@@ -2844,13 +4048,62 @@ Then we just have to keep substituting values until we get the following
 \uwave off
 \noun off
 \color none
-Tes=[[(0,0),(1,0),(0.25,0.25),(0,0.5)],[(0.25,0.25),(1,0),(0.75,0.5)],[(0,0.5),(0.25,0.25)
-,(0.5,0.75),
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{Tes=[[(0,0),(1,0),(0.25,0.25),(0,0.5)],[(0.25,0.25),(1,0),(0.75,0.5)],[(0,0.5),(0.
+25,0.25),(0.5,0.75),
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
-(0,1)],[(0.25,0.25),(0.5,0.75),(1,1),(0.75,0.5)],[(0.75,0.5),(1,1),(1,0)],[(0.5,0.75),(0,1
-),(1,1)]]
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{(0,1)],[(0.25,0.25),(0.5,0.75),(1,1),(0.75,0.5)],[(0.75,0.5),(1,1),(1,0)],[(0.5,0.7
+5),(0,1),(1,1)]]
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2875,7 +4128,7 @@ The program generates various files after being executed.
 \begin_inset Quotes eld
 \end_inset
 
-voronoi
+FittingVoronoi
 \begin_inset Quotes erd
 \end_inset
 
@@ -2885,8 +4138,9 @@ voronoi
 \begin_layout Itemize
 output.csv: CSV file in which each line represents each iteration of the
  algorithm.
- Each line contains information of where each seed point was at that stage
- and the symmetric difference in that precise step.
+ More specifically, each line will contain the information of where each
+ seed point was at that stage and the symmetric difference in that precise
+ step.
 \end_layout
 
 \begin_layout Itemize
@@ -2944,17 +4198,93 @@ Output image generated by the program.
 \end_layout
 
 \begin_layout Section
+Heuristics and general considerations
+\end_layout
+
+\begin_layout Standard
+We will study three different heuristic techniques for solving the inverse
+ Voronoi diagram problem.
+ Those are:
+\end_layout
+
+\begin_layout Itemize
+Gradient method.
+\end_layout
+
+\begin_layout Itemize
+Gradient method with steps.
+\end_layout
+
+\begin_layout Itemize
+Simulated annealing.
+\end_layout
+
+\begin_layout Standard
+The underlying logic of all of them is similar:
+\end_layout
+
+\begin_layout Itemize
+For each input, calculate a set of seed points from which we will start.
+ Since we know all our polygons will be convex, for each of them, we will
+ calculate the first Voronoi seed as the average of the coordinates of all
+ of the points of that polygon.
+ This guarantees that the point will lay on the inside of that polygon.
+ When calculating the Voronoi diagram from the seeds, a relation will be
+ stablished between each original polygon and the Voronoi cell obtained
+ from the seed obtained from that polygon.
+\end_layout
+
+\begin_layout Itemize
+On each iteration, move each point slightly following some criteria and
+ check if we improved the current best solution.
+ For each seed, we will compare the current solution against the solutions
+ obtained from moving the seed in four directions (up, down, left and right)
+ some distance (also called step).
+\end_layout
+
+\begin_layout Itemize
+Repeat the previous step until we cannot keep improving our solution.
+\end_layout
+
+\begin_layout Subsection
+Getting rid of the 
+\begin_inset Quotes eld
+\end_inset
+
+repetition
+\begin_inset Quotes erd
+\end_inset
+
+ problem: randomizing point order in each state
+\end_layout
+
+\begin_layout Standard
+Given the nature of the problem, it is easy to see that the order in which
+ we will move our points will play a huge role in the final result.
+ In order to avoid this cyclic effect, what do is move them in a pseudo-random
+ mannner every iteration, regardless of the heuristic used.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Gradient method
 \end_layout
 
 \begin_layout Standard
 The gradient method (also known as the hill climbing algorithm) is a simple
  heuristic used in optimization problems.
- It consists on, at any given state, compare neighbour solutions against
+ It consists on, at any given state, compare neighbor solutions against
  the current best one.
  If they are better, mark it as the new best solution and repeat.
- If the minimum or maximum we are looking for is bounded, there will be
- a point at which we will not be able to continue improving.
+ If the minimum or maximum we are looking for exists, there will be a point
+ at which we will not be able to continue improving.
  That will be our solution.
 \end_layout
 
@@ -3004,7 +4334,7 @@ The starting point will be the left arrow.
 \end_layout
 
 \begin_layout Standard
-As it can be seen in Figure 0.24, for finding the maximum of that function,
+As it can be seen in Figure 12.1, for finding the maximum of that function,
  after comparing two points close to the red arrow, the gradient method
  tells us that we have to move to the right, since the value found there
  is higher than the current one and the one on the left.
@@ -3049,7 +4379,7 @@ Ending point using a simple gradient method.
 \end_layout
 
 \begin_layout Standard
-However, when reaching this point, it would check for its neighbours and
+However, when reaching this point, it would check for its neighbors and
  see that whatever we do, we would get a worse solution.
  Therefore, the peak pointed by the red arrow would be our solution.
  
@@ -3066,13 +4396,12 @@ Improved gradient method: implementing steps
 \end_layout
 
 \begin_layout Standard
-One little improvement we can apply to the gradient method is the gradient
- method with variable step.
- It consists on iterating different gradient methods, but varying the step
- size we are taking on each one.
+One little improvement we can apply to the gradient method is to apply different
+ iterations of it, but with a different step on each one.
  We start with a high value for the step, and when we cannot improve anymore
  for that step, we reduce it to some other value.
- 
+ When we have reached the lowest step, and we cannot keep improving the
+ solution, the algorithm finishes and we return the solution found.
 \end_layout
 
 \begin_layout Standard
@@ -3081,6 +4410,10 @@ This way, we will adjust our solution more than with using the gradient
  We will also be able to get further away from the initial solution.
  However, lots of solutions are lost and this method is greatly dependent
  on the step values chosen.
+ Also, we have the problem of deciding which values to use for the step.
+ There is no combination which is guaranteed to work on every single case.
+ Therefore, intuition and testing will be key in order to find the desired
+ set of step values.
 \end_layout
 
 \begin_layout Standard
@@ -3106,7 +4439,7 @@ Simulated annealing copies a phenomenon in nature (the annealing of solids)
 
 \begin_layout Standard
 In simulated annealing we keep a temperature variable to simulate this heating
- process..
+ process.
  We initially set it high and then allow it to slowly cool as the algorithm
  runs.
  While this temperature variable is high, the algorithm will be allowed,
@@ -3120,21 +4453,13 @@ In simulated annealing we keep a temperature variable to simulate this heating
 \end_layout
 
 \begin_layout Standard
-Although the gradient method (specially with steps) can be surprisingly
- effective at finding a good solution, it also has a tendency to get stuck
- in local optimums.
- The simulated annealing algorithm is excellent at avoiding this problem
- and is much better on average at finding an approximate global optimum.
-\end_layout
-
-\begin_layout Standard
-At any given point during the process, a neighbour solution will be calculated.
+At any given point during the process, a neighbor solution will be calculated.
  The logic to whether accept it as the next solution or not is the following:
 \end_layout
 
 \begin_layout Itemize
-If the neighbour solution is better than the current one, we accept it unconditi
-onally as the new solution.
+If the neighbor solution is better than the current one, we accept it unconditio
+nally as the new solution.
 \end_layout
 
 \begin_layout Itemize
@@ -3143,20 +4468,20 @@ If it is worse, we need to consider the following factors:
 
 \begin_deeper
 \begin_layout Itemize
-How much worse the neighbour solution is.
+How much worse the neighbor solution is.
 \end_layout
 
 \begin_layout Itemize
 What is the temperature at that particular state of the algorithm.
  When the temperature is higher (near the start of the algorithm) the chances
  of accepting a worse solution will be high.
- When the temperature is low, so will be the chances.
+ When the temperature is lower, so will be the chances.
 \end_layout
 
 \end_deeper
 \begin_layout Standard
 The implementation of this is very simple.
- On each step, if the neighbour solution is worse, we calculate the following
+ On each step, if the neighbor solution is worse, we calculate the following
  value, which is called the 
 \begin_inset ERT
 status open
@@ -3255,7 +4580,7 @@ textbf{n}
 
 \end_inset
 
- is the neighbour solution value
+ is the neighbor solution value
 \end_layout
 
 \begin_layout Standard
@@ -3275,16 +4600,21 @@ textbf{T}
  Every problem will have to start with a temperature relative to it, so
  some research should be done in order to find an acceptable value for this
  variable.
+ The current implementation of the algorithm uses the current step as the
+ temperature.
 \end_layout
 
 \begin_layout Standard
 Then, we generate a random value in the range of (0, 1) and check if p is
  greater than that value.
- If it is, mark the neighbour solution as the current one, and keep searching
+ If it is, mark the neighbor solution as the current one, and keep searching
  from there.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
 The pseudo-code of the simulated annealing algorithm would look like this:
 \end_layout
 
@@ -3295,13 +4625,14 @@ Generate a initial solution S.
 \end_layout
 
 \begin_layout Itemize
-Get a neighbour solution N from the current solution.
+Get a neighbor solution N from the current solution C.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 If the N is better than the current solution: Mark it as the current solution.
- If it is better than the best solution, mark the best to the current solution.
+ If it is better than the best solution B, mark the best to be the current
+ solution.
 \end_layout
 
 \begin_layout Itemize
@@ -3311,35 +4642,16 @@ If N is worse, but we accepted it according to the acceptance probability,
 
 \end_deeper
 \begin_layout Itemize
+Repeat last step until the solution does not improve any more.
+\end_layout
+
+\begin_layout Itemize
 Reduce the temperature T.
 \end_layout
 
 \begin_layout Itemize
-Repeat until steps until a certain stop condition is met.
-\end_layout
-
-\begin_layout Standard
-The stop condition will generally be a number of X steps to check at maximum.
-\end_layout
-
-\begin_layout Subsection
-Getting rid of the 
-\begin_inset Quotes eld
-\end_inset
-
-repetition
-\begin_inset Quotes erd
-\end_inset
-
- problem: randomizing point order in each state
-\end_layout
-
-\begin_layout Standard
-Given the nature of our problem, it is easy to see that the order in which
- we will move our points will play a huge role in the final result.
- In order to avoid this cyclic effect, what do is move them in a pseudo-random
- mannner every iteration.
- This is done simply by reordering the indexes of the array each iteration.
+Repeat until steps until we cannot improve any more.
+ Return B.
 \end_layout
 
 \begin_layout Standard
@@ -3369,7 +4681,7 @@ The following sets of steps have been used during the study of the gradient
 \begin_layout Standard
 Set A is very precise.
  Its highest step is just 5% of the side of the unit square.
- We should expect mostly good results from this one, Since when increasing
+ We should expect mostly good results from this one, since when increasing
  the number of seeds, they will tend to be closer to each other.
 \end_layout
 
@@ -3381,9 +4693,9 @@ Set A is very precise.
 \end_layout
 
 \begin_layout Standard
-Set B is similar to set A, even though not being as precise.Since the biggest
- difference between the highest and the lowest step is 4%, it should only
- work well with a certain set of tessellations.
+Set B is similar to set A, even though not being as precise.
+ Since the biggest difference between the highest and the lowest step is
+ 4%, it should only work well with a certain set of tessellations.
 \end_layout
 
 \begin_layout Itemize
@@ -3408,9 +4720,18 @@ Set C tries to jump out of local minimums by starting with a 10% of the
 \end_layout
 
 \begin_layout Standard
-Set D focuses on big steps and a quick decline of the step.
+Set D focuses on big steps and a quick decline of the temperature.
  It should converge to a solution relatively fast, even though it should
  not yield the best solution when compared to the other sets.
+\end_layout
+
+\begin_layout Standard
+The following pages will contain the extracted information about the tests
+ realized.
+ For each of them, there will also be two images, showing the final result
+ of the best and worst configuration for that particular test.
+ At the end of all tests, there will be a deeper and more general conclusion
+ of the study.
 \end_layout
 
 \begin_layout Standard
@@ -4128,6 +5449,21 @@ Results obtained for lineNumber = 1.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+For the first case, it can be seen that the worst obtained solution is around
+ 10% (0.09680).
+ This converged fast.
+ In just 5 steps we managed to half the starting solution.
+ The best solution is obtained when using set C, whether applying simulated
+ annealing or the gradient method with steps.
+ The step count for both is 29.
+ It is also remarkable that when using set A (the most precise), we got
+ a solution a bit worse and it took more than twice the steps.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -4913,6 +6249,34 @@ Results obtained for lineNumber = 2.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In this case, all methods performed relatively well.
+ There are various things we must note about this example:
+\end_layout
+
+\begin_layout Itemize
+The results obtained with the gradient method for step 0.05 are surprisingly
+ good.
+ In just 6 steps, it managed to reduce the symmetric difference from 25%
+ down to 8%.
+\end_layout
+
+\begin_layout Itemize
+When using set D, whether on simulated annealing or gradient method with
+ steps, we got worst results than with any step on the gradient method.
+ This indicates that not always a complex solution will be better than a
+ simple one.
+\end_layout
+
+\begin_layout Itemize
+When using set A, the difference between the gradient method with steps
+ and the simulated annealing technique is only 0.04% at the cost of almost
+ 30% more steps.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -5700,7 +7064,8 @@ Results obtained for lineNumber = 3.
 \begin_layout Standard
 As we can see, by adjusting too much from the beginning using the gradient
  method, we failed to get better results with step 0.005 than with 0.01.
- This is because we must have fallen in a local minimum early.
+ This is because the algorithm fell in a local minimum early with step 0.005,
+ but managed to avoid it with step 0.01.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -6489,6 +7854,8 @@ Results obtained for lineNumber = 4.
 Being the first step of set C double the first step of set A, in this example
  set C managed to avoid an earlier local minimum and got a better result
  than set A in less steps, despite set A containing more precise steps.
+ Also, it managed to do it in less steps.
+ It is worth noting too that all the solutions differ 3% at maximum.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -7274,13 +8641,16 @@ Results obtained for lineNumber = 5.
 \end_layout
 
 \begin_layout Standard
-It is notable that in this example, the results obtained with the gradient
+In this example, it is notable that the results obtained with the gradient
  method for all the steps are very similar.
 \end_layout
 
 \begin_layout Standard
 Also, it is remarkable that applying the gradient method with steps for
  sets C and D, we get worse results than applying the basic gradient method.
+ Keep in mind that in other examples, set C manages to consistently get
+ the best or second best results.
+ 
 \begin_inset Newpage newpage
 \end_inset
 
@@ -8067,13 +9437,13 @@ Results obtained for lineNumber = 6.
 
 \begin_layout Standard
 It is remarkable that when first calculating the initial seeds, the symmetric
- difference is almost 0.5.
+ difference is almost 50%.
 \end_layout
 
 \begin_layout Standard
-When applying simulated annealing, this is one of the cases in which we
- got a better result for the same set (A) in less steps when compared to
- the gradient method with steps.
+When applying the simulated annealing technique, this is one of the cases
+ in which we got a better result for set A in less steps than the one obtained
+ through the gradient method with steps.
 \end_layout
 
 \begin_layout Standard
@@ -8868,10 +10238,10 @@ Results obtained for lineNumber = 7.
 
 \begin_layout Standard
 In this example, we can see that the results obtained with the simulated
- annealing technique are worse for both sets A and B than its gradient methos
+ annealing technique are worse for both sets A and B than its gradient method
  with steps counterpart.
- Also, despite getting very close results, the number of steps obtained
- with set A is quite high.
+ Also, note that despite getting very close results (a difference of 1.5%),
+ the number of steps obtained with set A is quite high.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -9663,11 +11033,8 @@ Results obtained for lineNumber = 8.
 \end_layout
 
 \begin_layout Standard
-In this example, it is remarkable that the results obtained for set A using
- the gradient method with steps are better than the ones obtained with set
- A, which has both bigger steps and smaller steps.
- This must come from the fact that set A must have searched from a set of
- suboptimal solutions from the beginning, when its steps were bigger.
+In this example, it is remarkable that the method which used the most steps
+ was the gradient method with step 0.005.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -10463,6 +11830,9 @@ Here again, we found the same problem that in some other tests: due to starting
  with a very precise step, we end up getting worse results (and with more
  steps) in the gradient method with step 0.005 when compared to the gradient
  method with step 0.01.
+ We can also see that when using the simulated annealing technique for set
+ A, we just managed to improve our solution about 0.06% at the cost of 30%
+ more steps.
 \begin_inset Newpage newpage
 \end_inset
 
@@ -12067,11 +13437,16 @@ Teatros del Canal
 \end_layout
 
 \begin_layout Standard
-Despite resembling a Voronoi diagram, the results clearly negate this theory.
+Despite resembling a Voronoi diagram, the results clearly indicate it does
+ not come from one.
  No tested configuration is capable of breaking the 10% symmetric difference.
  If we take a closer look at the best obtained result in the next page (Figure
  25.1), we can see that most vertical corners are a bit more pointy than
  what they should in order to be a perfect Voronoi diagram.
+ Also, some other polygons (mostly those around the right hand side of the
+ tessellation) do not fit very well.
+ Whether or not the architect was inspired by Voronoi diagrams to design
+ the facade will remain a mistery.
 \end_layout
 
 \begin_layout Standard
@@ -12172,14 +13547,404 @@ Teatros del Canal
 \end_layout
 
 \begin_layout Standard
-From these study, it is clear that the methods that obtain the better results
- are the gradient method with steps and the simulated annealing method.
+From all these cases, I draw the following conclusion:
+\end_layout
+
+\begin_layout Itemize
+First of all, there is no best method for all circumstances.
+ The final solution we will get will depend heavily on each input.
+ This implies that for each tessellation we want to adjust, we will have
+ to spend some time testing which method with which parameters works better.
+\end_layout
+
+\begin_layout Itemize
+Specific conclusions and thoughts about each method:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gradient method: In most of the tests, it obtained the worst results.
+ However, it is the one with the least average number of steps.
+ It might be worth using this method when we are satisfied with results
+ whose offset is around 10%.
+ 
+\end_layout
+
+\begin_layout Itemize
+Gradient method with steps: Despite being a simple improvement over the
+ gradient method, it has reported fantastic results, very similar to the
+ ones obtained with the simulated annealing technique.
+ 
+\end_layout
+
+\begin_layout Itemize
+Simulated annealing: Before testing and seeing the results, I thought that
+ the simulated annealing results would be so much better than the ones obtained
+ with any other method.
+ However, they are very similar to the ones obtained with the gradient method
+ with steps.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+From within each method, we cannot guarantee that a set of steps will work
+ better than other one under all circumstances.
+\end_layout
+
+\begin_layout Itemize
+Specific conclusions and thoughts about the different sets of steps:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Set A and Set C: These two sets are the ones that got consistently better
+ results.
+ They both provide relatively huge steps at the beginning and a small step
+ for the last iteration.
+\end_layout
+
+\begin_layout Itemize
+Set B: Set B aimed to be a hybrid between sets A and C.
+ It has managed to get similar results to both of them and in most cases,
+ using a signifant less amount of steps than A or C (an average of around
+ 40% less steps).
+\end_layout
+
+\begin_layout Itemize
+Set D: This set aimed to provide accurate enough fittings through big step
+ changes.
+ Its approach did not work as I expected.
+ In many tests, it was beaten by the simple gradient method, in both the
+ final symmetric difference and in the number of steps taken.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+USER GUIDE
+\end_layout
+
+\begin_layout Standard
+In order to run the application in your computer, you will need to:
+\end_layout
+
+\begin_layout Itemize
+Have Processing installed.
+\end_layout
+
+\begin_layout Itemize
+Download the lastest version of the source code.
+\end_layout
+
+\begin_layout Section
+Installing Processing
+\end_layout
+
+\begin_layout Standard
+You can download the lastest version of Processing from its website: https://pro
+cessing.org/
+\end_layout
+
+\begin_layout Standard
+Make sure you download the version corresponding to your operative system
+ and processor architecture.
+ When the download has finished, proceed to install it.
+\end_layout
+
+\begin_layout Section
+Downloading the lastest version of the source code and installing the applicatio
+n
+\end_layout
+
+\begin_layout Standard
+You can download the lastest version of the application from my the following
+ GitHub repository: https://github.com/Flood1993/TFG_Voronoi
+\end_layout
+
+\begin_layout Standard
+Open that link in your web browser of choice and click the 
+\begin_inset Quotes eld
+\end_inset
+
+Clone or download
+\begin_inset Quotes erd
+\end_inset
+
+ button.
+ Then click on 
+\begin_inset Quotes eld
+\end_inset
+
+Download ZIP
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ThesisImages/githubDownload.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Screenshot of the GitHub repository.
+ Click on the green button and then on 
+\begin_inset Quotes eld
+\end_inset
+
+Download ZIP
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When the download has finished, you will need to extract the 
+\begin_inset Quotes eld
+\end_inset
+
+libraries/
+\begin_inset Quotes erd
+\end_inset
+
+ folder into your 
+\begin_inset Quotes eld
+\end_inset
+
+Processing/
+\begin_inset Quotes erd
+\end_inset
+
+ folder.
+ This will copy the mesh library, used for calculating the Voronoi diagrams
+ from the seeds.
+ Then, extract the 
+\begin_inset Quotes eld
+\end_inset
+
+FittingVoronoi
+\begin_inset Quotes erd
+\end_inset
+
+ folder to a folder of your choice.
+\end_layout
+
+\begin_layout Standard
+After you have done this, open Processing and open any .pde file from the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+FittingVoronoi
+\begin_inset Quotes erd
+\end_inset
+
+ folder.
+ That should load the whole sketch.
+ Then click on the UserConfiguration tab.
  
 \end_layout
 
 \begin_layout Standard
-However, there is no predefined configuration best configuration for any
- of them, the results will heavily depend on the input tessellation.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ThesisImages/userConfiguration.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Screenshot of the Processing user interface.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That tab contains everything you should change for using the application.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{fileToReadFrom}
+\end_layout
+
+\end_inset
+
+: Modify the filename between the quotation marks for the file you want
+ to use.
+ Note that the file should be placed in the 
+\begin_inset Quotes eld
+\end_inset
+
+FittingVoronoi
+\begin_inset Quotes erd
+\end_inset
+
+ folder.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{lineNumber}
+\end_layout
+
+\end_inset
+
+: Modify this value to match the line you want to load from the file.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{useSimulatedAnnealing}
+\end_layout
+
+\end_inset
+
+: This value should be 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+false
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Set to 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ if you want to accept worse solutions according to the simulated annealing
+ technique.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+false
+\begin_inset Quotes erd
+\end_inset
+
+ otherwise.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{simulatedAnnealing[]}
+\end_layout
+
+\end_inset
+
+: This value can either be one of the predefined sets, or a custom one.
+ The syntax for creating a set can be seen in the set definition above,
+ from set A, for example.
+ Copy that structure for your own one.
+\end_layout
+
+\begin_layout Standard
+When you are ready, save your changes and click on the button with the play
+ icon (a triangle) located on the top left corner.
+\end_layout
+
+\begin_layout Standard
+Execution of the program will begin.
+ When it has finished, simply close the pop up window or hit the stop button
+ (right to the play button).
 \end_layout
 
 \begin_layout Standard
@@ -12459,6 +14224,9 @@ lstparams "language=Java,numbers=left,breaklines=true"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -12470,8 +14238,16 @@ BIBLIOGRAPHY
 \end_layout
 
 \begin_layout Itemize
+Atsuyuki Okabe, Barry Boots, Kokichi Sugihara, Sung Nok Chiu, 1992, 
+\begin_inset Quotes eld
+\end_inset
+
 Spatial tessellations: Concepts and Applications of Voronoi Diagrams (Second
- Edition) - Atsuyuki Okabe, Barry Boots, Kokichi Sugihara, Sung Nok Chiu
+ Edition)
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
