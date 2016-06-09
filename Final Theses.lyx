@@ -183,8 +183,8 @@ I would especially like to thank my family, particularly my mother, for
 
 \begin_layout Standard
 Finally, I would also like to thank my friends Francisco Casanueva, Marcos
- Maldonado, Luis Martín-Roldán and Rafael Bernar for their help and support.
- You are and always will be my family.
+ Maldonado, Luis Martín-Roldán and Rafael Bernar for their help, patience
+ and support.
 \begin_inset Newline newline
 \end_inset
 
@@ -244,7 +244,7 @@ thispagestyle{empty}
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="38" columns="2">
+<lyxtabular version="3" rows="39" columns="2">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top" width="0pt">
@@ -293,7 +293,19 @@ thispagestyle{empty}
 \begin_inset Text
 
 \begin_layout Plain Layout
-RESUMEN
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{RESUMEN}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -324,7 +336,7 @@ qquad
 
 \end_inset
 
-3
+1
 \end_layout
 
 \end_inset
@@ -335,7 +347,19 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-SUMMARY
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{SUMMARY}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -344,7 +368,7 @@ SUMMARY
 \begin_inset Text
 
 \begin_layout Plain Layout
-5
+3
 \end_layout
 
 \end_inset
@@ -375,7 +399,19 @@ SUMMARY
 \begin_inset Text
 
 \begin_layout Plain Layout
-INTRODUCTION
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{1 INTRODUCTION}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -384,7 +420,7 @@ INTRODUCTION
 \begin_inset Text
 
 \begin_layout Plain Layout
-6
+5
 \end_layout
 
 \end_inset
@@ -417,7 +453,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-6
+5
 \end_layout
 
 \end_inset
@@ -449,7 +485,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-8
+7
 \end_layout
 
 \end_inset
@@ -481,7 +517,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-9
+8
 \end_layout
 
 \end_inset
@@ -513,7 +549,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-10
+9
 \end_layout
 
 \end_inset
@@ -545,7 +581,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-12
+11
 \end_layout
 
 \end_inset
@@ -577,7 +613,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-15
+14
 \end_layout
 
 \end_inset
@@ -609,7 +645,27 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-16
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -621,18 +677,18 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-qquad
+textbf{2 OBJECTIVES}
 \end_layout
 
 \end_inset
 
- Objectives
+
 \end_layout
 
 \end_inset
@@ -641,7 +697,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-18
+17
 \end_layout
 
 \end_inset
@@ -672,7 +728,19 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-DEVELOPMENT
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{3 DEVELOPMENT}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -681,7 +749,7 @@ DEVELOPMENT
 \begin_inset Text
 
 \begin_layout Plain Layout
-19
+18
 \end_layout
 
 \end_inset
@@ -714,7 +782,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-19
+18
 \end_layout
 
 \end_inset
@@ -747,7 +815,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-19
+18
 \end_layout
 
 \end_inset
@@ -811,7 +879,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-26
+27
 \end_layout
 
 \end_inset
@@ -843,7 +911,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-27
+28
 \end_layout
 
 \end_inset
@@ -875,7 +943,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-28
+29
 \end_layout
 
 \end_inset
@@ -907,7 +975,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-29
+30
 \end_layout
 
 \end_inset
@@ -939,7 +1007,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-30
+31
 \end_layout
 
 \end_inset
@@ -970,7 +1038,19 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-RESULTS AND OBSERVATIONS
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{4 RESULTS AND OBSERVATIONS}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -979,7 +1059,7 @@ RESULTS AND OBSERVATIONS
 \begin_inset Text
 
 \begin_layout Plain Layout
-32
+33
 \end_layout
 
 \end_inset
@@ -1011,7 +1091,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-33
+34
 \end_layout
 
 \end_inset
@@ -1043,7 +1123,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-35
+36
 \end_layout
 
 \end_inset
@@ -1075,7 +1155,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-37
+38
 \end_layout
 
 \end_inset
@@ -1107,7 +1187,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-39
+40
 \end_layout
 
 \end_inset
@@ -1139,7 +1219,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-41
+42
 \end_layout
 
 \end_inset
@@ -1171,7 +1251,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-43
+44
 \end_layout
 
 \end_inset
@@ -1203,7 +1283,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-45
+46
 \end_layout
 
 \end_inset
@@ -1235,7 +1315,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-47
+48
 \end_layout
 
 \end_inset
@@ -1267,7 +1347,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-49
+50
 \end_layout
 
 \end_inset
@@ -1299,7 +1379,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-51
+52
 \end_layout
 
 \end_inset
@@ -1339,7 +1419,7 @@ Teatros del Canal
 \begin_inset Text
 
 \begin_layout Plain Layout
-53
+54
 \end_layout
 
 \end_inset
@@ -1371,7 +1451,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-55
+56
 \end_layout
 
 \end_inset
@@ -1418,7 +1498,19 @@ thispagestyle{empty}
 \begin_inset Text
 
 \begin_layout Plain Layout
-USER GUIDE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{5 USER GUIDE}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1449,7 +1541,7 @@ qquad
 
 \end_inset
 
-56
+57
 \end_layout
 
 \end_inset
@@ -1481,7 +1573,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-56
+57
 \end_layout
 
 \end_inset
@@ -1513,7 +1605,7 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-56
+57
 \end_layout
 
 \end_inset
@@ -1544,7 +1636,19 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-BIBLIOGRAPHY
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{6 RECOMMENDATIONS FOR FURTHER WORK}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1553,7 +1657,7 @@ BIBLIOGRAPHY
 \begin_inset Text
 
 \begin_layout Plain Layout
-58
+60
 \end_layout
 
 \end_inset
@@ -1584,6 +1688,18 @@ BIBLIOGRAPHY
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{7 BIBLIOGRAPHY}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1593,7 +1709,7 @@ BIBLIOGRAPHY
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+61
 \end_layout
 
 \end_inset
@@ -2334,7 +2450,7 @@ Repetimos el paso anterior hasta que no podamos seguir mejorando o hasta
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2352,7 +2468,7 @@ status collapsed
 \begin_layout Plain Layout
 Distritos escolares en Tsukuba: (a) distritos escolares y ubicación actual
  de los colegios (círculos rellenos).
- Los estudiantes de las zonas sombreadas no pueden ir al colegios más cercano;
+ Los estudiantes de las zonas sombreadas no pueden ir al colegio más cercano;
  (b) ubicación de los colegios (cuadrados rellenos) que minimizaría el área
  correspondiente a los estudiantes que no pueden ir al colegio más cercano.
  (Fuente: Suzuki and Iri, 1986a, Figure 14.)
@@ -2384,7 +2500,7 @@ La Figura 0.1(a) muestra los diferentes distritos escolares en Tsukuba (los
  Como resultado, en algunas áreas los estudiantes tienen que ir a un colegio
  que no es el más cercano.
  Si asumimos que los estudiantes pueden llegar al colegio siguiendo el camino
- Euclidiano en la Figura 0.1, las zonas en las que los estudiantes no pueden
+ Euclidiano, en la Figura 0.1, las zonas en las que los estudiantes no pueden
  ir al colegio más cercano aparecen sombreadas en la Figura 0.1(a), donde
  los polígonos se corresponden con el diagrama de Voronoi generado por la
  posición de los institutos.
@@ -2485,7 +2601,9 @@ The aim of this project is to study the inverse Voronoi diagram problem
 Note that despite the search space is bounded, it being continuous grants
  an infinite number of solution candidates.
  Therefore, we will try to solve the problem using different metaheuristics,
- which makes it impossible to tell whether the obtained solution is optimum.
+ that is, we will try to look for the optimal solution.
+ However, we will not be able to assure whether the obtained solution is
+ optimal.
 \begin_inset Newline newline
 \end_inset
 
@@ -2599,7 +2717,7 @@ vspace{1cm}
 
 \end_inset
 
-Before we start, there are some concepts the reader should be familiar with
+Before we start, there are some concepts the reader should be familiar with,
  in order to follow this document without problems.
  Those are:
 \end_layout
@@ -2850,7 +2968,7 @@ Therefore, each region
 \begin_inset Formula $S_{n}$
 \end_inset
 
-than any other seed.
+than to any other seed.
 \end_layout
 
 \begin_layout Standard
@@ -2870,16 +2988,34 @@ Problem description
 \end_layout
 
 \begin_layout Standard
-At this point, we can already state the problem we will try to solve.
+At this point, we can already state the problem we will aim to solve.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Problem*
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
 Given a tesellation of the unit square consisting of convex polygons, find
  the Voronoi diagram that best fits it
 \begin_inset Foot
 status open
 
-\begin_layout Problem*
+\begin_layout Plain Layout
 More about how to determine how well a Voronoi diagram fits a tesellation
  can be read in the 
 \begin_inset Quotes eld
@@ -2897,13 +3033,18 @@ Symmetric difference
 .
  Furthermore, if the given tesellation comes from a Voronoi diagram, we
  would like to arrive to that conclusion and obtain the seed locations.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
 
 \end_layout
 
-\begin_layout Problem*
+\begin_layout Standard
 In order to solve this problem, we will use and compare different heuristic
  approaches.
  The general outline of the solving process of all the different approaches
@@ -2983,7 +3124,7 @@ k
 
 \end_inset
 
-, which will be the last obtained Voronoi diagram.
+, which will be the best obtained Voronoi diagram.
 \end_layout
 
 \begin_layout Standard
@@ -3000,8 +3141,12 @@ Symmetric difference
 \begin_layout Standard
 For measuring how good a given solution is, we will rely on the symmetric
  difference as an indicator.
- For two given sets A and B, the symmetric difference can be calculated
- as follows:
+ 
+\end_layout
+
+\begin_layout Standard
+For two given sets A and B, the symmetric difference can be calculated as
+ follows:
 \end_layout
 
 \begin_layout Standard
@@ -3029,7 +3174,7 @@ the symmetric difference of the two would be
 \end_inset
 
 .
- That is, the elements which appear in C or D, but not in both.
+ That is, the elements which appear in either C or D, but not in both.
 \end_layout
 
 \begin_layout Standard
@@ -3164,6 +3309,10 @@ textbf{NOTE:}
 
 \begin_layout Section
 Inverse Voronoi problem
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3179,7 +3328,7 @@ As mentioned earlier, the inverse Voronoi diagram problem consists on detecting
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3196,7 +3345,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Region extracted from a Voronoi diagram.
- In blue, A, B and C are the seeds.
+ In blue, A, B and C are some of the seeds.
 \end_layout
 
 \end_inset
@@ -3466,8 +3615,8 @@ Representation of the generalized inverse Voronoi problem.
 \begin_layout Standard
 Figure 6.1 shows how this problem would look like.
  The given input would be the tessellation represented by the thick edges.
- Then, as we can see, considering the dots as the seed placement, the obtained
- Voronoi diagram would be the union of the thick lines and the thin lines.
+ Then, considering the dots as the seed placement, the obtained Voronoi
+ diagram would be the union of the thick lines and the thin lines.
  As we can see, the original input is contained in the final Voronoi diagram.
  
 \begin_inset Newpage newpage
@@ -3816,7 +3965,7 @@ For developing the final application, I opted to go with Processing.
 
 \begin_layout Itemize
 First of all, I had already used it in the past for a different project.
- One of the biggest advantages of Processing is the ease to display information
+ One of the biggest advantages of Processing is its ease to display information
  in the screen through a GUI.
 \end_layout
 
@@ -3873,10 +4022,22 @@ The second one is useful when we want to calculate the area of the intersection
 \begin_layout Standard
 There is a simple, common operation in both tasks, to which these two problems
  can be reduced to: clip a polygon with a single line.
- If we have a solid function that can do this task, then we can rely on
- it to calculate any intersection of convex polygons (note that the unit
- square is a convex polygon too), repeating the process for all lines of
- one of the polygons against the other.
+ If we have a solid function that can do this task, then we have taken a
+ big step in our problem, since if one of the polygons to be clipped is
+ convex, the result is guaranteed to be correct
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+If both polygons are concave, the result will be incorrect, and the intersection
+ of the two cannot be calculated through the line clipping method
+\end_layout
+
+\end_inset
+
+.
+ As mentioned earlier, the Voronoi cells will always be convex in this project,
+ so it is guaranteed we can take advantage of line clipping.
 \begin_inset Newline newline
 \end_inset
 
@@ -14398,6 +14559,14 @@ normalsize
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14685,13 +14854,13 @@ FittingVoronoi
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ThesisImages/userConfiguration.PNG
-	scale 60
+	scale 50
 
 \end_inset
 
