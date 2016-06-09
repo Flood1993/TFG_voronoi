@@ -3,8 +3,12 @@
 
 import megamu.mesh.*;
 
+// TODO: This values should be 
+float xClipOffset = 1;
+float yClipOffset = 0.541;
+
 final int scale = 500; // size(...) parameters should have this value
-final float squareArea = scale*scale;
+final float squareArea = scale*scale*xClipOffset*yClipOffset;
 
 boolean debugging = false;
 
@@ -59,7 +63,7 @@ void draw() {
     background(backgroundColor); // clear screen
 
     fill(150, 160, 160);
-    rect(drawingOffset, drawingOffset, scale, scale);
+    rect(drawingOffset, drawingOffset, scale*xClipOffset, scale*yClipOffset);
     fill(backgroundColor);
 
     if (!finished)
@@ -268,9 +272,9 @@ ArrayList<ArrayList<float []>> clipTessellationToSquare(ArrayList<ArrayList<floa
 ArrayList<float []> clipToSquare(ArrayList<float []> pol) {
     ArrayList<float []> res = new ArrayList<float []>();
     float c1[] = new float[]{0, 0};
-    float c2[] = new float[]{scale, 0};
-    float c3[] = new float[]{scale, scale};
-    float c4[] = new float[]{0, scale};
+    float c2[] = new float[]{scale*xClipOffset, 0};
+    float c3[] = new float[]{scale*xClipOffset, scale*yClipOffset};
+    float c4[] = new float[]{0, scale*yClipOffset};
 
     res = clipLine(pol, c1, c2);
     res = clipLine(res, c2, c3);

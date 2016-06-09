@@ -4,6 +4,7 @@
 \begin_header
 \textclass amsart
 \begin_preamble
+\usepackage{babel}
 \usepackage{chngcntr}
 \end_preamble
 \use_default_options true
@@ -82,8 +83,163 @@ figs-within-sections
 
 \begin_body
 
-\begin_layout Part*
-INDEX
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+partname}{
+\backslash
+huge}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part*{
+\backslash
+Huge ACKNOWLEDGEMENTS}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
+I would like to thank Manuel Abellanas for allowing me to develop my thesis
+ under his supervision.
+ This is our second project together and I wanted to thank him for his constant
+ guidance and support.
+ It has been a pleasure.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I would especially like to thank my family, particularly my mother, for
+ the love, support, and constant encouragement I have gotten over the years.
+ It has been very important for me to have them by my side.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, I would also like to thank my friends Francisco Casanueva, Marcos
+ Maldonado, Luis Martín-Roldán and Rafael Bernar for their help and support.
+ You are and always will be my family.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To all of you, thank you.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+‌‌ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -137,26 +293,6 @@ INDEX
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 RESUMEN
 \end_layout
 
@@ -167,7 +303,7 @@ RESUMEN
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -195,7 +331,7 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -204,7 +340,7 @@ SUMMARY
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -215,7 +351,7 @@ SUMMARY
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -224,7 +360,7 @@ SUMMARY
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -235,7 +371,7 @@ SUMMARY
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -244,7 +380,7 @@ INTRODUCTION
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -260,7 +396,7 @@ INTRODUCTION
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -293,7 +429,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -325,7 +461,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -357,7 +493,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -389,7 +525,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -421,7 +557,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -453,7 +589,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -485,7 +621,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -512,7 +648,7 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -521,7 +657,7 @@ qquad
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -532,7 +668,7 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -541,7 +677,7 @@ DEVELOPMENT
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -557,7 +693,7 @@ DEVELOPMENT
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -590,7 +726,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -623,7 +759,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -655,7 +791,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -687,7 +823,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -719,7 +855,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -751,7 +887,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -778,12 +914,12 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -799,7 +935,7 @@ qquad
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -810,7 +946,7 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -819,7 +955,7 @@ qquad
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -830,7 +966,7 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -839,7 +975,7 @@ RESULTS AND OBSERVATIONS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="right" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -855,7 +991,7 @@ RESULTS AND OBSERVATIONS
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -887,7 +1023,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -919,7 +1055,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -951,7 +1087,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -983,7 +1119,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1015,7 +1151,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1047,7 +1183,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1079,7 +1215,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1111,7 +1247,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1143,7 +1279,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1175,7 +1311,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1209,6 +1345,38 @@ Teatros del Canal
 \end_inset
 </cell>
 </row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+ General observations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+55
+\end_layout
+
+\end_inset
+</cell>
+</row>
 </lyxtabular>
 
 \end_inset
@@ -1218,6 +1386,22 @@ Teatros del Canal
 
 \begin_layout Part*
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
 \end_inset
 
 
@@ -1234,19 +1418,7 @@ Teatros del Canal
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
- General observations
+USER GUIDE
 \end_layout
 
 \end_inset
@@ -1256,7 +1428,7 @@ qquad
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1277,46 +1449,6 @@ qquad
 
 \end_inset
 
-55
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-USER GUIDE
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 56
 \end_layout
 
@@ -1329,7 +1461,7 @@ USER GUIDE
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1356,12 +1488,12 @@ qquad
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1377,7 +1509,7 @@ qquad
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1412,206 +1544,6 @@ qquad
 \begin_inset Text
 
 \begin_layout Plain Layout
-CODE
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-58
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
- FittingVoronoi.pde
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-58
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
- UserConfiguration.pde
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-70
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
- GlobalVariables.pde
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-71
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
- InitializationFunctions.pde
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-73
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-qquad
-\end_layout
-
-\end_inset
-
- DrawingFunctions.pde
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-77
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 BIBLIOGRAPHY
 \end_layout
 
@@ -1621,7 +1553,187 @@ BIBLIOGRAPHY
 \begin_inset Text
 
 \begin_layout Plain Layout
-79
+58
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -2081,15 +2193,84 @@ BIBLIOGRAPHY
 
 \end_layout
 
-\begin_layout Part*
-RESUMEN
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part*{
+\backslash
+Huge RESUMEN}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
 Los diagramas de Voronoi tienen aplicaciones tanto prácticas como teóricas
  en muchos ámbitos, la mayoría relacionados con la ciencia y tecnología,
  aunque también se aplican en otros campos como el arte visual.
- El objetivo de mi proyecto es estudiar el problema inverso del diagrama
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El objetivo de éste proyecto es estudiar el problema inverso del diagrama
  de Voronoi y diseñar, comparar y analizar diferentes estrategias para su
  resolución.
  Dicho problema consiste en detectar si una partición dada es o no un diagrama
@@ -2099,6 +2280,10 @@ Los diagramas de Voronoi tienen aplicaciones tanto prácticas como teóricas
  Para ello, necesitaremos algún método para poder conocer la calidad de
  una solución y poder comparar varias soluciones.
  Usaremos la diferencia simétrica para tal fin.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2106,17 +2291,25 @@ Nótese que el número de soluciones candidatas es infinito dado que se trata
  de un espacio de búsqueda continuo.
  Probar todas ellas y elegir la mejor es por tanto inviable.
  Por tanto, trataremos de resolver el problema mediante diferentes metaheurístic
-as, es decir, trataremos de buscar una solución lo suficientemente buena,
- no la mejor.
+as, es decir, trataremos de hallar la solución óptima, aunque no podremos
+ asegurar que la solución dada sea óptima.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 El esquema básico de todas las estrategias es el siguiente:
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Para cada datos de entrada, calcular un conjunto de puntos semilla a partir
- de los cuales comenzaremos la búsqueda.
+Para cada entrada, calcular un conjunto de puntos semilla a partir de los
+ cuales comenzaremos la búsqueda.
 \end_layout
 
 \begin_layout Itemize
@@ -2130,11 +2323,18 @@ Repetimos el paso anterior hasta que no podamos seguir mejorando o hasta
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2174,7 +2374,10 @@ El ajuste de una partición del plano mediante diagramas de Voronoi es útil
  restricciones espaciales.
  Un ejemplo es el problema de colocar colegios atendiendo a los diferentes
  distritos escolares.
- La Figura 0.1(a) muestra los diferentes distritos escolares en Tsukuba (los
+\end_layout
+
+\begin_layout Standard
+La Figura 0.1(a) muestra los diferentes distritos escolares en Tsukuba (los
  círculos muestran la ubicación de los institutos).
  En Japón, los estudiantes de un distrito deben ir al colegio asignado a
  ese distrito.
@@ -2201,15 +2404,68 @@ El problema consiste en reubicar los colegios de forma que el número de
 
 \end_layout
 
-\begin_layout Part*
-SUMMARY
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part*{
+\backslash
+Huge SUMMARY}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
 Voronoi diagrams have practical and theoretical applications to a large
  number of fields, mainly in science, technology and visual art.
- The aim of my project is to study the inverse Voronoi diagram problem and
- design, compare and analyze different strategies for its resolution.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The aim of this project is to study the inverse Voronoi diagram problem
+ and design, compare and analyze different strategies for its resolution.
  The inverse Voronoi diagram problem consists on detecting whether a given
  plane tessellation is a Voronoi diagram and finding the seed points that
  would generate such a tessellation.
@@ -2219,6 +2475,10 @@ Voronoi diagrams have practical and theoretical applications to a large
  We will be using the total symmetric difference between the two tessellations
  for that.
  
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2226,6 +2486,10 @@ Note that despite the search space is bounded, it being continuous grants
  an infinite number of solution candidates.
  Therefore, we will try to solve the problem using different metaheuristics,
  which makes it impossible to tell whether the obtained solution is optimum.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2252,7 +2516,11 @@ The method of fitting a Voronoi diagram to a given tesellation is also useful
  restricted.
  An example is the locational optimization of schools constrained by school
  districts.
- Figure 0.1(a) shows the districts of junior high schools in Tsukuba (the
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 0.1(a) shows the districts of junior high schools in Tsukuba (the
  filled circles indicate the locations of the schools).
  In Japan, students in a school district are supposed to go to the school
  assigned to that district.
@@ -2281,11 +2549,56 @@ The locational optimization problem is to relocate the schools so that the
 
 \end_layout
 
-\begin_layout Part
-INTRODUCTION
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part{
+\backslash
+Huge INTRODUCTION}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
 Before we start, there are some concepts the reader should be familiar with
  in order to follow this document without problems.
  Those are:
@@ -2362,7 +2675,26 @@ B = {1, 2}, {4, 5} - Not a partition because the element
 
 \begin_layout Standard
 In this project, instead of sets, we will be working with tesellations of
- the unit square.
+ the unit square
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+From now on, we will refer to any rectangle with side lengths less or equal
+ to 1 as 
+\begin_inset Quotes eld
+\end_inset
+
+unit square
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
  That is, a set of polygons such that the union is the unit square and the
  intersection of two polygons is, at most, a segment.
  Note that there might be points contained in more than one polygon.
@@ -2373,7 +2705,7 @@ In this project, instead of sets, we will be working with tesellations of
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2402,13 +2734,6 @@ Tesellation of the unit square.
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2472,7 +2797,7 @@ A Voronoi diagram is a partition of the plane into regions (called Voronoi
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2525,7 +2850,7 @@ Therefore, each region
 \begin_inset Formula $S_{n}$
 \end_inset
 
-.
+than any other seed.
 \end_layout
 
 \begin_layout Standard
@@ -2550,10 +2875,9 @@ At this point, we can already state the problem we will try to solve.
 
 \begin_layout Problem*
 Given a tesellation of the unit square consisting of convex polygons, find
- the Voronoi diagram that best fits it.
- Furthermore, if the given tesellation comes from a Voronoi diagram, we
- would like to arrive to that conclusion and obtain the seeds.
-\end_layout
+ the Voronoi diagram that best fits it
+\begin_inset Foot
+status open
 
 \begin_layout Problem*
 More about how to determine how well a Voronoi diagram fits a tesellation
@@ -2566,6 +2890,17 @@ Symmetric difference
 \end_inset
 
  section.
+\end_layout
+
+\end_inset
+
+.
+ Furthermore, if the given tesellation comes from a Voronoi diagram, we
+ would like to arrive to that conclusion and obtain the seed locations.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Problem*
@@ -2708,7 +3043,7 @@ When applying this concept to two related polygons, it is clear that the
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2752,10 +3087,12 @@ Applying the concept to two tessellations, we could calculate the symmetric
 \end_layout
 
 \begin_layout Standard
-Since in this project we will only be interested in working with convex
- polygons, we can use that to our advantage and calculate the symmetric
- difference in a different way: we will substract from the unit square area,
- the areas of all the intersections of each pair of related polygons.
+In this project, since we are working with the simplest case of Voronoi
+ diagrams, it is certain that all of the Voronoi cells will be convex.
+ This is particularly interesting since we can use that to our advantage
+ and calculate the symmetric difference in a different way: we will substract
+ from the unit square area, the areas of all the intersections of each pair
+ of related polygons.
  This will be explained more in detail later, in the development chapter.
 \end_layout
 
@@ -2763,7 +3100,7 @@ Since in this project we will only be interested in working with convex
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2802,7 +3139,7 @@ The new method would start with whole square painted in blue.
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2842,7 +3179,7 @@ As mentioned earlier, the inverse Voronoi diagram problem consists on detecting
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2891,7 +3228,7 @@ To prove it, we will start by assuming the tesellation comes from a perfect
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2931,7 +3268,7 @@ Therefore, we know that the angles a, b and c formed by P, an edge, and
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2964,6 +3301,10 @@ Angles between each pair of seeds.
 \begin_inset Newpage newpage
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 Finally, let d, e and f be the angles between each pair of edges coming
  out from P, as seen in Figure 0.8.
  This values can be easily obtained knowing the points of the Voronoi diagram.
@@ -2989,7 +3330,7 @@ a+c=d
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3034,8 +3375,22 @@ When we know the values for the angles a, b and c, we repeat the same process
 \begin_layout Standard
 But what happens when the tessellation does not come from a Voronoi diagram?
  Even if it did, due to computers inaccuracy when representing floating-point
- numbers, the input data we have will not perfectly be the one that would
- be generated from a Voronoi diagram, but rather an approximation of it.
+ numbers
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In base 10, there are some numbers which cannot be precisely represented,
+ such as 1/3: 0.333...
+ Computers, which operate in base 2, also have this problem.
+ For example, a computer is unable to represent the floating point number
+ 0.1 precisely.
+\end_layout
+
+\end_inset
+
+, the input data we have will not perfectly be the one that would be generated
+ from a Voronoi diagram, but rather an approximation of it.
  If we applied this method, the location of the first seed would be off
  to its real value by certain offset 
 \begin_inset Formula $\varepsilon$
@@ -3075,7 +3430,7 @@ Another problem related to the ones exposed, but beyond the scope of this
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3152,7 +3507,7 @@ Results and Observations
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3220,7 +3575,7 @@ Input data
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3271,7 +3626,7 @@ Voronoi diagrams have also been observed in nature.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3312,11 +3667,56 @@ Fitting a Voronoi diagram to the territories of mouthbreeder fish.
 
 \end_layout
 
-\begin_layout Part
-OBJECTIVES
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part{
+\backslash
+Huge OBJECTIVES}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
 The objectives of this project are:
 \end_layout
 
@@ -3346,8 +3746,57 @@ If the given tessellation is in fact a Voronoi diagram, we would like to
 
 \end_layout
 
-\begin_layout Part
-DEVELOPMENT
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part{
+\backslash
+Huge DEVELOPMENT}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3428,6 +3877,10 @@ There is a simple, common operation in both tasks, to which these two problems
  it to calculate any intersection of convex polygons (note that the unit
  square is a convex polygon too), repeating the process for all lines of
  one of the polygons against the other.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3446,7 +3899,7 @@ Suppose we want to clip the polygon ABCDEFG with the blue line.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3495,7 +3948,7 @@ The first step of the clipping algorithm is to set a starting vertex.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3540,7 +3993,7 @@ The next step is to select the next point and see whether it lies in the
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3575,7 +4028,7 @@ Since C is still on the left of the line, we add it to the final result
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3623,7 +4076,7 @@ When we check D, we see that it is lying on the right side of the line.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3663,7 +4116,7 @@ Current point D lies on the right of the line.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3700,7 +4153,7 @@ We keep repeating the same process until wee arrive to the starting point.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3742,7 +4195,7 @@ When we arrive at the starting point, we have finished clipping the polygon
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3795,28 +4248,46 @@ Input data
 
 \begin_layout Standard
 The input data for the problem is a tessellation of the unit square.
- That is, a set of polygons whose union is the unit square and, for every
- two polygons, its intersection is at most a straight line.
+ We will be treating the tessellation as a set of polygons.
  More precisely, each polygon is given as a set of ordered 2D points.
- At first, we know we will be working only with convex polygons (that is,
- all internal angles are less or equal than 180º).
  The input data will be read from a file defined by the user in which each
  line will contain a whole tessellation of the unit square.
 \end_layout
 
 \begin_layout Standard
-If you are familiar with the Python programming language, you will see that
- the input follows the same syntax as Python code.
+If the reader is familiar with the Python programming language, they will
+ notice that the input follows the same syntax as Python code.
 \end_layout
 
 \begin_layout Standard
 A Python tuple can be expressed as a list of comma separated values, with
  round brackets surrounding the whole tuple.
  For example:
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Fruits=("Pear","Apple","Grape")$
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $TupleFruits=("Pear","Apple","Grape")$
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -3826,10 +4297,31 @@ A Python tuple can be expressed as a list of comma separated values, with
 A Python list can be expressed as a list of comma separated values, with
  square brackets surrounding the whole list.
  For example:
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $Numbers=[1,6,-464]$
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $ListNumbers=[1,6.78,-464]$
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -3851,14 +4343,33 @@ A tessellation is a list of polygons (note that different polygons may have
 \end_layout
 
 \begin_layout Standard
-For example, lets say we want to adjust the following tesellation:
+For example, lets say we want to adjust the following tesellation
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This tesselation corresponds to the one found on line 11 of the example
+ file provided (
+\begin_inset Quotes eld
+\end_inset
+
+10_partitions.txt
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -3893,9 +4404,26 @@ Tesellation of the plane we want to adjust.
 
 \begin_layout Standard
 There are 8 relevant points in the example:
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $A=(0,0)$
 \end_inset
 
@@ -3903,6 +4431,19 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $B=(1,0)$
 \end_inset
 
@@ -3910,6 +4451,19 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $C=(0.25,0.25)$
 \end_inset
 
@@ -3917,6 +4471,19 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $D=(0,0.5)$
 \end_inset
 
@@ -3924,6 +4491,19 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $E=(0.75,0.5)$
 \end_inset
 
@@ -3931,6 +4511,19 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $F=(0.5,0.75)$
 \end_inset
 
@@ -3938,6 +4531,19 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $G=(0,1)$
 \end_inset
 
@@ -3945,22 +4551,52 @@ There are 8 relevant points in the example:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $H=(1,1)$
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-As we can see, the tesellation is composed by 6 polygons, each of them formed
- by an arbitrary number of points:
+As we can see, the tesellation is composed by the following 6 polygons,
+ each of them formed by an arbitrary number of points:
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Considerations of the input data:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
 \begin_inset Formula $P1=[A,B,C,D]$
 \end_inset
 
@@ -3968,6 +4604,19 @@ Considerations of the input data:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $P2=[C,B,E]$
 \end_inset
 
@@ -3975,6 +4624,19 @@ Considerations of the input data:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $P3=[D,C,F,G]$
 \end_inset
 
@@ -3982,6 +4644,19 @@ Considerations of the input data:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $P4=[C,F,H,E]$
 \end_inset
 
@@ -3989,6 +4664,19 @@ Considerations of the input data:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $P5=[E,H,B]$
 \end_inset
 
@@ -3996,7 +4684,24 @@ Considerations of the input data:
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $P6=[F,G,H]$
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -4014,28 +4719,105 @@ on (anticlockwise - i.e.
 
 \begin_layout Standard
 So our tesellation can be expressed as a list containing all the polygons:
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $Tes=[P1,P2,P3,P4,P5,P6]$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Then we just have to keep substituting values until we get the following
- representation:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $Tes=[[A,B,C,D],[C,B,E],[D,C,F,G],[C,F,H,E],[E,H,B],[F,G,H]]$
+\begin_inset Newline newline
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+Then we just have to keep substituting values until we get to the representation
+ containing the numbers on it:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+qquad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Tes=[[A,B,C,D],[C,B,E],[D,C,F,G],[C,F,H,E],[E,H,B],[F,G,H]]$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the final contents we would have to place on our file (in a single
+ line) would be:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
 
 \family roman
 \series medium
@@ -4049,26 +4831,14 @@ Then we just have to keep substituting values until we get the following
 \noun off
 \color none
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
 textbf{Tes=[[(0,0),(1,0),(0.25,0.25),(0,0.5)],[(0.25,0.25),(1,0),(0.75,0.5)],[(0,0.5),(0.
-25,0.25),(0.5,0.75),
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-}
+25,0.25),}
 \end_layout
 
 \end_inset
@@ -4079,28 +4849,42 @@ textbf{Tes=[[(0,0),(1,0),(0.25,0.25),(0,0.5)],[(0.25,0.25),(1,0),(0.75,0.5)],[(0
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-textbf{(0,1)],[(0.25,0.25),(0.5,0.75),(1,1),(0.75,0.5)],[(0.75,0.5),(1,1),(1,0)],[(0.5,0.7
-5),(0,1),(1,1)]]
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-}
+textbf{(0.5,0.75),(0,1)],[(0.25,0.25),(0.5,0.75),(1,1),(0.75,0.5)],[(0.75,0.5),(1,1),(1,0)
+],}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+textbf{[(0.5,0.75),(0,1),(1,1)]]}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -4155,7 +4939,7 @@ after.png: Image that displays the final approximation of the Voronoi diagram.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4217,6 +5001,10 @@ Gradient method with steps.
 
 \begin_layout Itemize
 Simulated annealing.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4244,26 +5032,22 @@ On each iteration, move each point slightly following some criteria and
 
 \begin_layout Itemize
 Repeat the previous step until we cannot keep improving our solution.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Getting rid of the 
-\begin_inset Quotes eld
-\end_inset
-
-repetition
-\begin_inset Quotes erd
-\end_inset
-
- problem: randomizing point order in each state
+Moiré pattern: randomizing point order in each state
 \end_layout
 
 \begin_layout Standard
 Given the nature of the problem, it is easy to see that the order in which
  we will move our points will play a huge role in the final result.
- In order to avoid this cyclic effect, what do is move them in a pseudo-random
- mannner every iteration, regardless of the heuristic used.
- 
+ In order to avoid this cyclic effect, what we will do is move them in a
+ pseudo-random mannner every iteration, regardless of the heuristic used.
+ This way, we will avoid the problems of the Moiré pattern.
 \end_layout
 
 \begin_layout Standard
@@ -4301,7 +5085,7 @@ For example, consider you want to find the maximum value of a function.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4344,7 +5128,7 @@ As it can be seen in Figure 12.1, for finding the maximum of that function,
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4389,6 +5173,14 @@ However, when reaching this point, it would check for its neighbors and
 In this example, the value obtained is fairly close to the global maximum,
  but in more complex problems, we might get stuck even at our starting solution.
  We need some way to avoid (or at least try to) local maximum values.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4484,7 +5276,7 @@ The implementation of this is very simple.
  On each step, if the neighbor solution is worse, we calculate the following
  value, which is called the 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4500,7 +5292,7 @@ textbf{Acceptance Function}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4517,7 +5309,7 @@ begin{center}
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4537,7 +5329,7 @@ where:
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4553,7 +5345,7 @@ textbf{e}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4569,7 +5361,7 @@ textbf{s}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4585,7 +5377,7 @@ textbf{n}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4661,11 +5453,56 @@ Repeat until steps until we cannot improve any more.
 
 \end_layout
 
-\begin_layout Part
-RESULTS AND OBSERVATIONS
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part{
+\backslash
+Huge RESULTS AND OBSERVATIONS}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
 The following sets of steps have been used during the study of the gradient
  method with steps and the simulated annealing technique.
  
@@ -4749,7 +5586,7 @@ Tessellation example 1
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -5474,7 +6311,7 @@ For the first case, it can be seen that the worst obtained solution is around
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -5506,7 +6343,7 @@ Result of the best tested configuration for lineNumber = 1.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -5549,7 +6386,7 @@ Tessellation example 2
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -6287,7 +7124,7 @@ When using set A, the difference between the gradient method with steps
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6319,7 +7156,7 @@ Result of the best tested configuration for lineNumber = 2.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6359,7 +7196,7 @@ Tessellation example 3
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -7076,7 +7913,7 @@ As we can see, by adjusting too much from the beginning using the gradient
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -7108,7 +7945,7 @@ Result of the best tested configuration for lineNumber = 3.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -7148,7 +7985,7 @@ Tessellation example 4
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -7866,7 +8703,7 @@ Being the first step of set C double the first step of set A, in this example
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -7898,7 +8735,7 @@ Result of the best tested configuration for lineNumber = 4.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -7938,7 +8775,7 @@ Tessellation example 5
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -8661,7 +9498,7 @@ Also, it is remarkable that applying the gradient method with steps for
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -8693,7 +9530,7 @@ Result of the best tested configuration for lineNumber = 5.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -8733,7 +9570,7 @@ Tessellation example 6
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -9459,7 +10296,7 @@ In the other hand, for set C, we got worse results in the same number of
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9491,7 +10328,7 @@ Result of the best tested configuration for lineNumber = 6.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -9534,7 +10371,7 @@ Tessellation example 7
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -10252,7 +11089,7 @@ In this example, we can see that the results obtained with the simulated
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -10287,7 +11124,7 @@ Result of the best tested configuration for lineNumber = 7.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -10330,7 +11167,7 @@ Tessellation example 8
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -11045,7 +11882,7 @@ In this example, it is remarkable that the method which used the most steps
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11080,7 +11917,7 @@ Result of the best tested configuration for lineNumber = 8.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11123,7 +11960,7 @@ Tessellation example 9
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -11843,7 +12680,7 @@ Here again, we found the same problem that in some other tests: due to starting
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11878,7 +12715,7 @@ Result of the best tested configuration for lineNumber = 9.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11921,7 +12758,7 @@ Tessellation example 10
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -12651,7 +13488,7 @@ Yet again, some results obtained with the simulated annealing are better
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -12683,7 +13520,7 @@ Result of the best tested configuration for lineNumber = 10.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -12726,7 +13563,7 @@ Teatros del Canal facade
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -12807,7 +13644,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -12816,7 +13653,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.15619
+0.10128
 \end_layout
 
 \end_inset
@@ -12825,7 +13662,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-4
+3
 \end_layout
 
 \end_inset
@@ -12854,7 +13691,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -12863,7 +13700,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.11353
+0.05433
 \end_layout
 
 \end_inset
@@ -12872,7 +13709,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-11
+7
 \end_layout
 
 \end_inset
@@ -12901,7 +13738,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -12910,7 +13747,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.11055
+0.04572
 \end_layout
 
 \end_inset
@@ -12919,7 +13756,7 @@ Grad.
 \begin_inset Text
 
 \begin_layout Plain Layout
-23
+18
 \end_layout
 
 \end_inset
@@ -12996,7 +13833,7 @@ Set A
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -13005,151 +13842,7 @@ Set A
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.10795
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-38
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Grad.
- steps
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Set B
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.18664
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.11692
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Grad.
- steps
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Set C
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.18664
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.11205
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-20
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Grad.
- steps
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Set D
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.18664
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.13561
+0.04059
 \end_layout
 
 \end_inset
@@ -13165,6 +13858,150 @@ Set D
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grad.
+ steps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10607
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.04889
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grad.
+ steps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10607
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.04891
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grad.
+ steps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Set D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10607
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.08582
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -13235,7 +14072,7 @@ Set A
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -13244,7 +14081,7 @@ Set A
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.10795
+0.04059
 \end_layout
 
 \end_inset
@@ -13253,7 +14090,7 @@ Set A
 \begin_inset Text
 
 \begin_layout Plain Layout
-38
+32
 \end_layout
 
 \end_inset
@@ -13283,7 +14120,7 @@ Set B
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -13292,7 +14129,7 @@ Set B
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.11692
+0.04889
 \end_layout
 
 \end_inset
@@ -13301,7 +14138,7 @@ Set B
 \begin_inset Text
 
 \begin_layout Plain Layout
-13
+12
 \end_layout
 
 \end_inset
@@ -13331,7 +14168,7 @@ Set C
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -13340,7 +14177,7 @@ Set C
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.11205
+0.04891
 \end_layout
 
 \end_inset
@@ -13349,7 +14186,7 @@ Set C
 \begin_inset Text
 
 \begin_layout Plain Layout
-21
+17
 \end_layout
 
 \end_inset
@@ -13379,7 +14216,7 @@ Set D
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.18664
+0.10607
 \end_layout
 
 \end_inset
@@ -13388,7 +14225,7 @@ Set D
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.13561
+0.08582
 \end_layout
 
 \end_inset
@@ -13397,7 +14234,7 @@ Set D
 \begin_inset Text
 
 \begin_layout Plain Layout
-12
+9
 \end_layout
 
 \end_inset
@@ -13437,16 +14274,15 @@ Teatros del Canal
 \end_layout
 
 \begin_layout Standard
-Despite resembling a Voronoi diagram, the results clearly indicate it does
- not come from one.
- No tested configuration is capable of breaking the 10% symmetric difference.
- If we take a closer look at the best obtained result in the next page (Figure
- 25.1), we can see that most vertical corners are a bit more pointy than
- what they should in order to be a perfect Voronoi diagram.
- Also, some other polygons (mostly those around the right hand side of the
- tessellation) do not fit very well.
- Whether or not the architect was inspired by Voronoi diagrams to design
- the facade will remain a mistery.
+Despite resembling a Voronoi diagram, the results indicate it is not a perfect
+ one.
+ However, it can be seen that most areas fit almost perfectly.This suggests
+ that the architect probably started with a base design of a Voronoi diagram
+ which was slightly modified for the final version.
+ It can be seen that most of the area of the symmetric difference comes
+ from two main spots of the tessellation: one located in the left hand side
+ and the other in the middle right part.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -13460,7 +14296,7 @@ Despite resembling a Voronoi diagram, the results clearly indicate it does
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -13486,7 +14322,7 @@ Teatros del Canal
 \begin_inset Quotes erd
 \end_inset
 
- facade.
+ facade (lineNumber = 13).
 \end_layout
 
 \end_inset
@@ -13503,7 +14339,7 @@ Teatros del Canal
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -13529,7 +14365,7 @@ Teatros del Canal
 \begin_inset Quotes erd
 \end_inset
 
- facade.
+ facade (lineNumber = 13).
 \end_layout
 
 \end_inset
@@ -13541,6 +14377,24 @@ Teatros del Canal
 
 
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+huge General conclusion and observations 
+\backslash
+normalsize
+\end_layout
+
 \end_inset
 
 
@@ -13626,11 +14480,56 @@ Set D: This set aimed to provide accurate enough fittings through big step
 
 \end_layout
 
-\begin_layout Part
-USER GUIDE
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part{
+\backslash
+Huge USER GUIDE}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
+\end_inset
+
 In order to run the application in your computer, you will need to:
 \end_layout
 
@@ -13692,7 +14591,7 @@ Download ZIP
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13786,7 +14685,7 @@ FittingVoronoi
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -13826,7 +14725,7 @@ That tab contains everything you should change for using the application.
 
 \begin_layout Itemize
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -13852,7 +14751,7 @@ FittingVoronoi
 
 \begin_layout Itemize
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -13868,7 +14767,7 @@ textbf{lineNumber}
 
 \begin_layout Itemize
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -13919,7 +14818,7 @@ false
 
 \begin_layout Itemize
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -13954,68 +14853,37 @@ Execution of the program will begin.
 
 \end_layout
 
-\begin_layout Part
-CODE
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{2cm} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+part{
+\backslash
+Huge RECOMMENDATIONS FOR FURTHER WORK}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
 width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textbf{FittingVoronoi.pde}:
-\end_layout
-
-\end_inset
-
- Source file which contains most of the geometry related functions.
- It also contains the 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textit{setup()}
-\end_layout
-
-\end_inset
-
- method (which is called once at the start of the application, for initializing
- purposes) and the 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textit{draw()}
-\end_layout
-
-\end_inset
-
- method (which is called every frame), responsible for executing the logic
- of the program.
-\end_layout
+height "1pt"
 
 \end_inset
 
@@ -14023,14 +14891,49 @@ textit{draw()}
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "FittingVoronoi/FittingVoronoi.pde"
-lstparams "language=Java,numbers=left,breaklines=true"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
 
 \end_inset
 
+There are various ideas I would have loved to implement in this project
+ which I finally did not.
+ Here I will expose the most important ones, in no particular order:
+\end_layout
 
+\begin_layout Itemize
+The only implemented way for calculating the initial seeds as of now is
+ calculating the average coordinates for all points, for each polygon.
+ It would be interesting to compare the results to other starting seeds.
+ For example, we could calculate the barycenter (center of mass) of each
+ polygon for the starting points.
+\end_layout
+
+\begin_layout Itemize
+It could be interesting to develop some kind of genetic algorithm which
+ would search for good configurations for each input, instead of having
+ to manually test them.
+\end_layout
+
+\begin_layout Itemize
+Another option to be considered would be feeding the program with the initial
+ seeds.
+ This would be useful to compare how the different algorithms work when
+ starting from any non-favorable position.
+\end_layout
+
+\begin_layout Itemize
+Improve the way in which the user interacts with the application.
+ Perhaps it would be interesting to make a true GUI in which the user can
+ load the file in the same way than most common programs, save its results,
+ load a previous step of the algorithm...
 \end_layout
 
 \begin_layout Standard
@@ -14041,20 +14944,6 @@ lstparams "language=Java,numbers=left,breaklines=true"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -14062,13 +14951,16 @@ status open
 
 
 \backslash
-textbf{UserConfiguration.pde}:
+vspace*{2cm} 
 \end_layout
 
-\end_inset
+\begin_layout Plain Layout
 
- This is the file the final user is intended to modify in order to use the
- application.
+
+\backslash
+part{
+\backslash
+Huge BIBLIOGRAPHY}
 \end_layout
 
 \end_inset
@@ -14077,149 +14969,11 @@ textbf{UserConfiguration.pde}:
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "FittingVoronoi/UserConfiguration.pde"
-lstparams "language=Java,numbers=left,breaklines=true"
-
-\end_inset
-
-
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
 width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textbf{GlobalVariables.pde}:
-\end_layout
-
-\end_inset
-
- File containing the definition of the most important global variables used
- by the program.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "FittingVoronoi/GlobalVariables.pde"
-lstparams "language=Java,numbers=left,breaklines=true"
-
-\end_inset
-
-
-\begin_inset Newpage newpage
-\end_inset
-
-
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textbf{InitializationFunctions.pde}:
-\end_layout
-
-\end_inset
-
- File containing the functions used for initializing different parts of
- the program, such as calculating the initial seeds or reading the tessellation
- from the file.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "FittingVoronoi/InitializationFunctions.pde"
-lstparams "language=Java,numbers=left,breaklines=true"
-
-\end_inset
-
-
-\begin_inset Newpage newpage
-\end_inset
-
-
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textbf{DrawingFunctions.pde}:
-\end_layout
-
-\end_inset
-
- File containing the functions used for drawing the current state to the
- screen.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "FittingVoronoi/DrawingFunctions.pde"
-lstparams "language=Java,numbers=left,breaklines=true"
+height "1pt"
 
 \end_inset
 
@@ -14227,14 +14981,19 @@ lstparams "language=Java,numbers=left,breaklines=true"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1cm}
+\end_layout
+
 \end_inset
 
 
-\end_layout
-
-\begin_layout Part
-BIBLIOGRAPHY
 \end_layout
 
 \begin_layout Itemize
@@ -14247,7 +15006,7 @@ Spatial tessellations: Concepts and Applications of Voronoi Diagrams (Second
 \begin_inset Quotes erd
 \end_inset
 
-
+ (Wiley series in probability and stadistics)
 \end_layout
 
 \begin_layout Itemize
@@ -14260,35 +15019,37 @@ Fitting Voronoi Diagrams to Planar Tesselations
 \begin_inset Quotes erd
 \end_inset
 
-
+ - View online @ http://arxiv.org/pdf/1308.5550.pdf
 \end_layout
 
 \begin_layout Itemize
-https://processing.org – Open source programming language and IDE in which
- the whole project is coded 
+https://processing.org [Online] - Open source programming language and IDE
+ in which the whole project is coded 
 \end_layout
 
 \begin_layout Itemize
-http://leebyron.com/mesh/ - External processing library used for calculating
+http://leebyron.com/mesh/ [Online] - Processing library used for calculating
  the Voronoi diagrams
 \end_layout
 
 \begin_layout Itemize
-http://www.lyx.org/ - Document processor used for writing this thesis
+http://www.lyx.org/ [Online] - Document processor used for writing this thesis
 \end_layout
 
 \begin_layout Itemize
-https://github.com/Flood1993/TFG_voronoi - Git repository containing everything
- about this project
+https://github.com/Flood1993/TFG_voronoi [Online] - Git repository containing
+ everything about this project
 \end_layout
 
 \begin_layout Itemize
-http://apmonitor.com/me575/index.php/Main/SimulatedAnnealing - Simulated annealing
+http://katrinaeg.com/simulated-annealing.html [Online] (Checked 2016/04/02)
+ - Used for consulting details about the simulated annealing
 \end_layout
 
 \begin_layout Itemize
-http://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
- - Inaccuracy of computers when dealing with floating-point numbers
+http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-begi
+nners/6 [Online] (Checked 2016/03/27) - Used for consulting details about
+ the simulated annealing
 \end_layout
 
 \end_body
