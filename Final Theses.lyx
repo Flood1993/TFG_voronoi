@@ -160,8 +160,8 @@ vspace{1cm}
 
 \end_inset
 
-I would like to thank Manuel Abellanas for allowing me to develop my thesis
- under his supervision.
+I would like to thank Manuel Abellanas for allowing me to develop my final
+ project under his supervision.
  This is our second project together and I wanted to thank him for his constant
  guidance and support.
  It has been a pleasure.
@@ -3010,8 +3010,8 @@ height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-Given a tesellation of the unit square consisting of convex polygons, find
- the Voronoi diagram that best fits it
+Given a tesellation of the unit square, find the Voronoi diagram that best
+ fits it
 \begin_inset Foot
 status open
 
@@ -4013,8 +4013,8 @@ The first one is needed because, theoretically, there will always be some
 \begin_layout Standard
 The second one is useful when we want to calculate the area of the intersection
  of two polygons for calculating the symmetric difference as explained earlier.
- However, note that this is doable since we will be working exclusively
- with convex polygons.
+ However, note that this is doable since we will be working with at least
+ one convex polygon from within each pair of related polygons.
  An easy way to do it is calculate the actual intersection, and then, get
  the area of that polygon.
 \end_layout
@@ -15092,6 +15092,12 @@ It could be interesting to develop some kind of genetic algorithm which
 \end_layout
 
 \begin_layout Itemize
+It would be great to see how well the algorithm works if apart from searching
+ for neighbour solutions moving our seeds in the four main directions (up,
+ down, left and right), we also checked moving in the diagonals.
+\end_layout
+
+\begin_layout Itemize
 Another option to be considered would be feeding the program with the initial
  seeds.
  This would be useful to compare how the different algorithms work when
@@ -15202,7 +15208,7 @@ http://leebyron.com/mesh/ [Online] - Processing library used for calculating
 \end_layout
 
 \begin_layout Itemize
-http://www.lyx.org/ [Online] - Document processor used for writing this thesis
+http://www.lyx.org/ [Online] - Document processor used for writing this document
 \end_layout
 
 \begin_layout Itemize
